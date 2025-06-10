@@ -1,0 +1,44 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: gray;
+    width: 100%;
+    height: 200px;
+    gap: 20px;
+}
+
+.socialMediaLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.socialMediaLinks .insta,
+.socialMediaLinks .fb,
+.socialMediaLinks .twitter {
+    font-size: 28px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    transition: all 0.4s ease;
+}
+
+.socialMediaLinks .insta:hover,
+.socialMediaLinks .fb:hover,
+.socialMediaLinks .twitter:hover {
+    background-color: rgb(70, 97, 176);
+    color: white;
+}
+
+.emailAddress span,
+.contactNumber span {
+    font-weight: 800;
+    margin-right: 10px;
+}

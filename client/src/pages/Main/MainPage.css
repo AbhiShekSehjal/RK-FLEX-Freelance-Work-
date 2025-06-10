@@ -1,0 +1,69 @@
+.mainBox {
+    height: 100vh;
+    /* background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749571899/heroImage_spbzxd.webp"); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+}
+
+.image {
+    height: 100vh;
+    width: 100%;
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749571899/heroImage_spbzxd.webp");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.mainBox h1 {
+    font-size: 150px;
+    font-weight: 900;
+    z-index: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mainBox p {
+    z-index: 1;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: serif;
+}
+
+.shopBtn {
+    z-index: 1;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.shopBtn button {
+    z-index: 2;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 16px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.shopBtn button:hover {
+    background-color: rgb(70, 97, 176);
+    color: white;
+}
+
+.overShade {
+    background-color: rgba(0, 0, 0, 0.237);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
