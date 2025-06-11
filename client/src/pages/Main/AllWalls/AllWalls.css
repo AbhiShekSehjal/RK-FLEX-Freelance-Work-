@@ -1,0 +1,59 @@
+.ourSpecialWallpapers {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ourSpecialWallpapers h1 {
+    /* font-size: 36px; */
+    font-weight: bolder;
+    margin: 40px 0px;
+}
+
+.specials {
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 400px;
+    height: 480px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    /* font-size: 26px; */
+    position: absolute;
+    color: white;
+    top: 200px;
+}
+
+.product-card p {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.btn {
+    position: absolute;
+    top: 300px;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+}

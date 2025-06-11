@@ -24,7 +24,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* <Route path='/' element={authUser ? <AllWallpapers /> : <Navigate to="/login" replace />} /> */}
+        <Route path='/allWalls' element={authUser ? <AllWallpapers /> : <Navigate to="/login" replace />} />
         <Route path='/' element={authUser ? <MainPage /> : <Navigate to="/login" replace />} />
         <Route path="/login" element={!authUser ? <LogIn /> : <Navigate to="/" replace />} />
         <Route path='/signup' element={!authUser ? <SignUp /> : <Navigate to="/" replace />} />

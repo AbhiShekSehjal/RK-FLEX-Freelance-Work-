@@ -1,6 +1,8 @@
 import React from 'react'
 import "./MainPage.css"
 import SelectByColors from './SelectByColors/SelectByColors'
+import SelectByRoom from './SelectByRoom/SelectByRoom'
+import AllWalls from './AllWalls/AllWalls'
 
 function MainPage() {
     return (
@@ -16,6 +18,10 @@ function MainPage() {
             </main>
 
             <SelectByColors />
+
+            <SelectByRoom />
+
+            <AllWalls/>
 
         </>
     )

@@ -12,5 +12,30 @@ export const useWallsStore = create((set) => ({
         } catch (error) {
             console.error("Error in allAllWalls:", error);
         }
+    },
+
+    selectedColor: async (color) => {
+        try {
+            const res = await axiosInstance.get("/home/selectByColor/colors", {
+                params: { color }
+            });
+            console.log(res.data);
+
+        } catch (error) {
+            console.error("Error in selectedColor:", error);
+            
+        }
+    },
+    
+    selectedByRoom: async (room) => {
+        try {
+            const res = await axiosInstance.get("/home/selectByRoomType/rooms", {
+                params: { room }
+            });
+            console.log(res.data);
+        } catch (error) {
+            console.error("Error in selectedByRoom:", error);
+
+        }
     }
 }));
