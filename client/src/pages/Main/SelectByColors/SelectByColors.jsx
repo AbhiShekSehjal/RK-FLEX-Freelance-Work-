@@ -12,7 +12,7 @@ function SelectByColors() {
 
     return (
         <section className="SelectByColors">
-            <h1 className="animate__animated animate__slideInRight">Select Wallpaper by colors</h1>
+            <h1>Select Wallpaper by colors</h1>
 
             <div className="wallpaperColors">
                 <div className="redColor">

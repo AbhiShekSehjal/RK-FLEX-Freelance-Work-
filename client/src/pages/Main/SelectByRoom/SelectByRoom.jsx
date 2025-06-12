@@ -12,7 +12,7 @@ function SelectByRoom() {
 
     return (
         <section className="selectByRoom">
-            <h1 className="animate__animated animate__slideInRight">Select Wallpaper by Room Type</h1>
+            <h1>Select Wallpaper by Room Type</h1>
 
             <div className="leftsideleafsPng"></div>
             <div className="rigntsideleafsPng"></div>

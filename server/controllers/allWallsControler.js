@@ -26,10 +26,11 @@ export const getWallsByColor = async (req, res) => {
 
 export const getWallByDesignType = async (req, res) => {
 
-    let { designType } = req.query;
+    let { design } = req.query;
+    console.log("Filltered design : ", design);
 
     try {
-        const walls = await AllWalls.find({ "wallDesignType": designType });
+        const walls = await AllWalls.find({ "wallDesignType": design });
 
         res.json(walls);
     } catch (error) {

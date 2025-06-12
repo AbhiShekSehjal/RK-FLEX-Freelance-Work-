@@ -1,59 +1,138 @@
-.ourSpecialWallpapers {
-    padding: 30px;
-    text-align: center;
+.ourAllWalls {
+    display: flex;
+    justify-content: center;
+    padding: 0 60px;
+    margin: 30px 0;
+}
+
+.sideFilterBar {
+    flex: 0.2;
+    padding: 70px 0px;
+}
+
+.walls {
+    flex: 0.9;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
-
-.ourSpecialWallpapers h1 {
-    /* font-size: 36px; */
-    font-weight: bolder;
-    margin: 40px 0px;
-}
-
-.specials {
-    padding: 50px 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
 }
 
-.product-card {
-    position: relative;
+.wallCard {
+    width: 350px;
+    height: 500px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
-}
-
-.product-card img {
-    width: 400px;
-    height: 480px;
-    object-fit: cover;
-}
-
-.product-card h3 {
-    /* font-size: 26px; */
-    position: absolute;
-    color: white;
-    top: 200px;
-}
-
-.product-card p {
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-}
-
-.btn {
-    position: absolute;
-    top: 300px;
-    background-color: rgb(255, 255, 255);
-    padding: 8px 12px;
-    border: none;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 2px solid #1A1F36;
     cursor: pointer;
+}
+
+.wallCard:hover .moreInfo {
+    bottom: 0px;
+}
+
+.moreInfo {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: -140px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 0;
+    transition: all 0.3s ease-in;
+}
+
+.wallPrice {
+    color: rgb(70, 97, 176);
+    font-weight: 500;
+}
+
+.wallImage {
+    transition: all 0.2s ease;
+}
+
+.wallCard:hover .wallImage {
+    transform: scale(1.2);
+}
+
+.buyOrAddCart {
+    display: flex;
+    gap: 20px;
+    margin: 5px 0;
+}
+
+.buyWall {
+    padding: 8px 10px;
+    border: none;
+    background-color: #046C4E;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.buyWall:hover {
+    /* padding: 0px 15px; */
+}
+
+.addOnCartWall {
+    padding: 8px 10px;
+    border: none;
+    background-color: #D4AF37;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    cursor:grab;
+
+}
+
+.addOnCartWall:hover {
+
+}
+
+.byDesign {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.selectByDesignList {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.selectByDesignListItem {
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.selectByDesignListItem input {
+    display: none;
+}
+
+.selectByDesignListItem:hover{
+    text-decoration: double;
+}
+
+.selectByDesignListItem:active {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.byPrice {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
