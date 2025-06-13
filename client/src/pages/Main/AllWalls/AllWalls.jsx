@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import "./AllWalls.css"
 import { useEffect } from 'react';
 import { useWallsStore } from '../../../store/useAllWallpapers.js';
+// import { useNavigate } from 'react-router-dom';
 
 function AllWalls() {
 
+    // const navigate = useNavigate();
+
     const [selectDesign, setSelectDesign] = useState(false)
 
-    const { allWall, allAllWalls, selectByDesign, selectedWallByDesign } = useWallsStore();
+    const { allWall, allAllWalls, selectByDesign, selectedWallByDesign, productCard, selectedProductCard } = useWallsStore();
 
     useEffect(() => {
         allAllWalls();
@@ -25,6 +28,15 @@ function AllWalls() {
             }
             console.log(selectDesign);
         }
+    }
+
+    const handleShowProductCard = (id) => {
+        productCard(id);
+        
+    }
+
+    if(selectedProductCard){
+        console.log(selectedProductCard);
     }
 
     return (
@@ -49,7 +61,7 @@ function AllWalls() {
                         <div className="byDesignText"><h4 style={{ fontWeight: "400" }}>By Design</h4></div>
 
                         <ul className='selectByDesignList'>
-                            <li className='selectByDesignListItem' style={{cursor:"pointer"}}>
+                            <li className='selectByDesignListItem' style={{ cursor: "pointer" }}>
                                 <input
                                     type="checkbox"
                                     id="Botanical"
@@ -143,7 +155,6 @@ function AllWalls() {
                                 <input
                                     type="checkbox"
                                     id="Wood"
-                                    checked={selectedDesign}
                                     onChange={(e) => selectedDesign(e.target.checked && "Wood")}
                                 />
                                 <label htmlFor="Wood">Wood</label>
@@ -157,7 +168,7 @@ function AllWalls() {
                 <div className="walls">
                     {selectedWallByDesign && selectedWallByDesign.length > 0 &&
                         selectedWallByDesign.map((wall) => (
-                            <div className="wallCard" key={wall._id} style={{boxShadow:"rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.55) 0px 10px 8px -5px"}}>
+                            <div onClick={() => handleShowProductCard({ id: wall._id })} className="wallCard" key={wall._id} style={{ boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.55) 0px 10px 8px -5px" }}>
                                 <div className="wallImage">
                                     <img
                                         src={wall.wallImages[1].url}
@@ -184,7 +195,7 @@ function AllWalls() {
                     {allWall && allWall.length > 0 ?
                         allWall.map((wall) => (
 
-                            <div className="wallCard" key={wall._id}>
+                            <div className="wallCard" key={wall._id} onClick={() => handleShowProductCard({ id: wall._id })}>
                                 <div className="wallImage">
                                     <img
                                         src={wall.wallImages[1].url}
@@ -206,7 +217,7 @@ function AllWalls() {
 
                             </div>
                         ))
-                        : <h2>Loading ....</h2>
+                        : <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
                     }
 
                 </div>

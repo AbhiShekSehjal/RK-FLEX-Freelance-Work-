@@ -1,0 +1,67 @@
+.userProfilePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+}
+
+.userProfileContainer {
+    width: 40%;
+    height: 80%;
+    padding: 10px;
+    display: flex;
+}
+
+.authUserInfoContainer {
+    flex: 0.9;
+    height: 100%;
+    display: flex;
+    margin-left: 20px;
+}
+
+.authUserInfoContainerInfoBox {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.authUserInfoContainerOrdersBox {
+    display: none;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.authUserInfoContainerAddressBox {
+    display: none;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.authUserInfoContainerLogoutBox {
+    display: none;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.sideOptionsContainer {
+    flex: 0.1;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.sideOptionsContainerIcon {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sideOptionsContainerIcon:hover {
+    background-color: burlywood;
+}
+
+.sideOptionsContainerIcon:active {
+    color: white;
+}

@@ -1,8 +1,28 @@
+import { useEffect, useState } from "react";
+import { userAuthStore } from "../../store/useAuthUser.js";
 import "./Navbar.css"
+import { useNavigate } from 'react-router-dom';
+import { useWallsStore } from "../../store/useAllWallpapers.js";
+// import BottomNav from "./BottomNav.jsx";
 
 function Navbar() {
 
-    // const [isOpenSidebar, setIsOpenSidebar] = useState(false)
+    const navigate = useNavigate();
+    const [isOpenSearchBar, setIsOpenSearchBar] = useState(false);
+
+    const { searchedItem, searchedItemInput } = useWallsStore();
+
+    const [searchItem, setSearchItem] = useState("");
+
+    useEffect(() => {
+        if (searchItem.length > 0) {
+            searchedItem(searchItem)
+        }
+    }, [searchItem, searchedItem]);
+
+
+
+    const { authUser } = userAuthStore();
 
     const handleHamburger = () => {
         let line2 = document.getElementById("line2");
@@ -21,9 +41,11 @@ function Navbar() {
             line3.style.width = "35px";
             sidebar.style.display = "flex";
         };
+
+        console.log(authUser);
     }
 
-    const closeSideNavabr = () => {
+    const closeSideNavabar = () => {
         let sidebar = document.getElementById("sidebar");
 
         if (sidebar.style.display == "flex") {
@@ -36,51 +58,142 @@ function Navbar() {
 
     }
 
+    const openSearchBox = () => {
+        setIsOpenSearchBar(true);
+    }
+
+    const closeSearchBox = (e) => {
+        e.stopPropagation()
+        setIsOpenSearchBar(false);
+        setSearchItem("")
+    }
+
+    // console.log(searchItem);
+
     return (
-        <nav className="navbar" id="navbar">
-            <div className="logo animate__animated animate__slideInLeft" id="logo">
-                Rk FleX
-            </div>
-
-            <div className="search-box">
-                <i className="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search" className="search" />
-            </div>
-
-            {window.innerWidth > 500 &&
-                <ul className="nav-links" id="navLinks">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about/about.html">About</a></li>
-                    <li><a href="#ourworks">Our works</a></li>
-                    <li><a href="#joinus">Join us</a></li>
-                </ul>
-            }
-
-
-            {window.innerWidth < 500 &&
-                <div className="hamburger animate__animated animate__slideInRight" onClick={handleHamburger}>
-                    <span className="line1" id="line1"></span>
-                    <span className="line2" id="line2"></span>
-                    <span className="line3" id="line3"></span>
+        <>
+            <nav className="navbar" id="navbar">
+                <div className="logo animate__animated animate__slideInLeft" id="logo">
+                    Rk FleX
                 </div>
 
-            }
+                <div className="search-box" onClick={openSearchBox} style={{ width: isOpenSearchBar ? "35%" : "10%", borderRadius: isOpenSearchBar ? "0px" : "30px" }}>
+                    <i className="fa-solid fa-magnifying-glass"></i>
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        className="search"
+                        value={searchItem}
+                        onChange={(e) => setSearchItem(e.target.value)}
+                    />
 
-            <div className="sidebar" id="sidebar">
-                <ul className="sidebar-nav-links">
-                    <li><a href="#home" id="link">Home</a></li>
-                    <li><a href="#about" id="link">About</a></li>
-                    <li><a href="#ourworks" id="link">Our works</a></li>
-                    <li><a href="#joinus" id="link">Join us</a></li>
-                </ul>
+                    {isOpenSearchBar && (
+                        <>
+                            <i className="fa-solid fa-xmark fa-lg crossMark" onClick={closeSearchBox}></i>
+                        </>
+                    )}
 
-                <div className="crossbtn" id="crossbtn" onClick={closeSideNavabr}>
-                    <i className="fa-solid fa-xmark"></i>
+
                 </div>
 
-            </div>
 
-        </nav>
+                {searchItem.trim() !== "" && searchedItemInput && searchedItemInput.length > 0 && (
+                    <ul className="wallCard2">
+                        {searchedItemInput.map((wall) => {
+                            const regex = new RegExp(`(${searchItem})`, "i");
+                            const wallName = wall.wallName.split(regex);
+                            const wallColorType = wall.wallColorType.split(regex);
+                            const wallDesignType = wall.wallDesignType.split(regex);
+                            const wallRoomType = wall.wallRoomType.split(regex);
+
+                            return (
+                                <li key={wall._id} className="listItem">
+                                    {wallName.map((part, index) =>
+                                        regex.test(part) ? (
+                                            <mark key={index}>{part}</mark>
+                                        ) : (
+                                            <span key={index}>{part}</span>
+                                        )
+                                    )
+                                    }
+                                    {wallColorType.map((part, index) =>
+                                        regex.test(part) ? (
+                                            <mark key={index}>{part}</mark>
+                                        ) : (
+                                            <span key={index}>{part}</span>
+                                        )
+                                    )}
+                                    {wallDesignType.map((part, index) =>
+                                        regex.test(part) ? (
+                                            <mark key={index}>{part}</mark>
+                                        ) : (
+                                            <span key={index}>{part}</span>
+                                        )
+                                    )}
+                                    {wallRoomType.map((part, index) =>
+                                        regex.test(part) ? (
+                                            <mark key={index}>{part}</mark>
+                                        ) : (
+                                            <span key={index}>{part}</span>
+                                        )
+                                    )}
+                                    <img src={wall.wallImages[1].url} alt={wall.wallImages[0].altText} width={60} style={{ marginLeft: "10px" }} />
+                                </li>
+                            );
+                        })}
+                    </ul>
+                )}
+
+
+                {window.innerWidth > 500 &&
+                    <ul className="nav-links" id="navLinks">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="#ourworks">Our works</a></li>
+                        <li><a href="#joinus">Join us</a></li>
+                    </ul>
+                }
+
+                <div className="authUserSection">
+
+                    <div className="authUser">
+                        {authUser && <i className="fa-regular fa-circle-user fa-2xl" onClick={() => navigate("/userProfile")}></i>}
+                    </div>
+
+                    <div className="userCart">
+                        <i className="fa-solid fa-cart-shopping fa-2xl" onClick={() => navigate("/userCart")}></i>
+                    </div>
+
+                </div>
+
+
+                {window.innerWidth < 500 &&
+                    <div className="hamburger animate__animated animate__slideInRight" onClick={handleHamburger}>
+                        <span className="line1" id="line1"></span>
+                        <span className="line2" id="line2"></span>
+                        <span className="line3" id="line3"></span>
+                    </div>
+
+                }
+
+                <div className="sidebar" id="sidebar">
+                    <ul className="sidebar-nav-links">
+                        <li><a href="#home" id="link">Home</a></li>
+                        <li><a href="#about" id="link">About</a></li>
+                        <li><a href="#ourworks" id="link">Our works</a></li>
+                        <li><a href="#joinus" id="link">Join us</a></li>
+                    </ul>
+
+                    <div className="crossbtn" id="crossbtn" onClick={closeSideNavabar}>
+                        <i className="fa-solid fa-xmark"></i>
+                    </div>
+
+                </div>
+
+            </nav>
+
+            {/* <BottomNav /> */}
+        </>
     )
 }
 

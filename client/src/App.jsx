@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { userAuthStore } from './store/useAuthUser.js';
 import { Toaster } from 'react-hot-toast';
 
-import AllWallpapers from './components/allWallpaers/AllWallpaers';
-import LogIn from './pages/Login.jsx';
-import SignUp from './pages/SignUp';
+import LogIn from './pages/LogIn.jsx';
+import SignUp from './pages/SignUp.jsx';
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import MainPage from "./pages/Main/MainPage.jsx";
+import { userAuthStore } from "./store/useAuthUser.js";
+import UserProfile from "./pages/userPage/UserProfile/UserProfile.jsx";
 
 function App() {
 
@@ -24,10 +24,10 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path='/allWalls' element={authUser ? <AllWallpapers /> : <Navigate to="/login" replace />} />
         <Route path='/' element={authUser ? <MainPage /> : <Navigate to="/login" replace />} />
         <Route path="/login" element={!authUser ? <LogIn /> : <Navigate to="/" replace />} />
         <Route path='/signup' element={!authUser ? <SignUp /> : <Navigate to="/" replace />} />
+        <Route path="/userProfile" element={authUser ? <UserProfile /> : <Navigate to="/login" />} />
       </Routes>
 
       <Footer />

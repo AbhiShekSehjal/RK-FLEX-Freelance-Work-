@@ -1,0 +1,28 @@
+.bottomNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.111) 0px 3px 8px;
+}
+
+/* .forShowMore{
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+} */
+
+.showMore{
+    cursor: pointer;
+    padding: 15px 0px;
+    position: relative;
+}
+
+/* .showMore:hover */
+
+.more{
+    position: absolute;
+    top: 55px;
+    z-index: 222;
+    background-color: white;
+    display: none;
+}

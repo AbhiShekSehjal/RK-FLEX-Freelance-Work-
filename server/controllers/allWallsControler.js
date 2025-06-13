@@ -27,7 +27,9 @@ export const getWallsByColor = async (req, res) => {
 export const getWallByDesignType = async (req, res) => {
 
     let { design } = req.query;
-    console.log("Filltered design : ", design);
+    if (design) {
+        console.log("Filltered design : ", design);
+    }
 
     try {
         const walls = await AllWalls.find({ "wallDesignType": design });
@@ -50,4 +52,41 @@ export const getWallRoomType = async (req, res) => {
     } catch (error) {
         console.log("Error happened in getWallRoomType : ", error);
     }
+};
+
+export const getSearchItem = async (req, res) => {
+    let { item } = req.query;
+    console.log("Searched item : ", item);
+
+    try {
+
+        let items = await AllWalls.find({
+            $or: [
+                { wallName: { $regex: item, $options: "i" } },
+                { wallColorType: { $regex: item, $options: "i" } },
+                { wallDesignType: { $regex: item, $options: "i" } },
+                { wallRoomType: { $regex: item, $options: "i" } }
+            ]
+        });
+
+        res.json(items);
+    } catch (error) {
+        console.log("Error happened in getSearchItem : ", error);
+    }
+};
+
+export const getProdictCard = async (req, res) => {
+    const { product } = req.query;
+
+    // console.log("I recieved a product in backend : ", product);
+
+    try {
+        const wall = await AllWalls.findById(product.id);
+
+        res.json(wall);
+    } catch (error) {
+        console.log("Error happened in getProdictCard : ", error);
+
+    }
+
 }

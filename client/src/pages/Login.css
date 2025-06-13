@@ -1,0 +1,47 @@
+.loginPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 65vh;
+}
+
+.loginForm {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 15px 25px;
+    width: 20%;
+    height: 60%;
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lableName {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.inputField {
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid;
+    padding: 2px 5px;
+    font-size: 18px;
+}
+
+.authBtn {
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background-color: #D4AF37;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.authBtn:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
