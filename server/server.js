@@ -17,7 +17,7 @@ connectDB();
 import allWallsRoute from "./routes/allWallsRoute.js";
 import authUserRoute from "./routes/authUserRoute.js"
 
-app.use("/api/home", allWallsRoute);
+app.use("/api", allWallsRoute);
 app.use("/api/auth", authUserRoute);
 
 app.listen(port, () => {

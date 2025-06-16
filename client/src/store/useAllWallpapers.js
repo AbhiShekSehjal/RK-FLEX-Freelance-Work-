@@ -4,12 +4,23 @@ import { axiosInstance } from "../lib/axios.js";
 export const useWallsStore = create((set) => ({
     allWall: null,
     selectedWallByDesign: null,
+
     searchedItemInput: null,
+    searchedInput: null,
+
     selectedProductCard: null,
+
+    selectedRoom: [],
+    selectedRoomType: null,
+
+    selectedColorType: null,
+    selectedColorWalls: [],
+
+    cartItems: [],
 
     allAllWalls: async () => {
         try {
-            const res = await axiosInstance.get("/home/allWalls");
+            const res = await axiosInstance.get("/allWalls");
             set({ allWall: res.data });
             // console.log("Fetched data:", res.data);
         } catch (error) {
@@ -19,10 +30,12 @@ export const useWallsStore = create((set) => ({
 
     selectedColor: async (color) => {
         try {
-            const res = await axiosInstance.get("/home/selectByColor/colors", {
+            const res = await axiosInstance.get("/selectByColor/colors", {
                 params: { color }
             });
-            console.log(res.data);
+            // console.log(res.data);
+            set({ selectedColorType: color });
+            set({ selectedColorWalls: res.data });
 
         } catch (error) {
             console.error("Error in selectedColor:", error);
@@ -32,10 +45,12 @@ export const useWallsStore = create((set) => ({
 
     selectedByRoom: async (room) => {
         try {
-            const res = await axiosInstance.get("/home/selectByRoomType/rooms", {
+            const res = await axiosInstance.get("/selectByRoomType/rooms", {
                 params: { room }
             });
-            console.log(res.data);
+            set({ selectedRoom: res.data });
+            set({ selectedRoomType: room });
+            // console.log(res.data);
         } catch (error) {
             console.error("Error in selectedByRoom:", error);
 
@@ -44,11 +59,13 @@ export const useWallsStore = create((set) => ({
 
     selectByDesign: async (design) => {
         try {
-            const res = await axiosInstance.get("/home/selectByDesignType/designs", {
+            const res = await axiosInstance.get("/selectByDesignType/designs", {
                 params: { design }
             });
             set({ selectedWallByDesign: res.data });
-            console.log(res.data);
+            if (design) {
+                console.log(res.data);
+            }
 
         } catch (error) {
             console.error("Error in seletByDesign:", error);
@@ -57,25 +74,34 @@ export const useWallsStore = create((set) => ({
 
     searchedItem: async (item) => {
         try {
-            const res = await axiosInstance.get(`/home/searchItem?item=${item}`)
+            set({ searchedInput: item });
+            const res = await axiosInstance.get(`/searchItem?item=${item}`)
             set({ searchedItemInput: res.data });
-            console.log(res.data);
-
         } catch (error) {
             console.error("Error in searchedItem:", error);
         }
     },
-    
+
     productCard: async (product) => {
         try {
-            const res = await axiosInstance.get("/home/productCard", {
+            const res = await axiosInstance.get("/productCard", {
                 params: { product }
             });
-            // console.log(res.data);
-            set({ selectedProductCard: res.data })
+            if (res) {
+                set({ selectedProductCard: res.data })
+            }
+            console.log(res.data);
+
         } catch (error) {
             console.error("Error in productCard:", error);
         }
-    }
+    },
 
+    setCartItems: async (product) => {
+        try {
+            set({ cartItems: product })
+        } catch (error) {
+            console.error("Error in setCartItems:", error);
+        }
+    }
 }));

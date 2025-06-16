@@ -1,18 +1,44 @@
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { userAuthStore } from "../../store/useAuthUser.js";
 import "./Navbar.css"
 import { useNavigate } from 'react-router-dom';
 import { useWallsStore } from "../../store/useAllWallpapers.js";
-// import BottomNav from "./BottomNav.jsx";
+import Cart from "../cart/Cart.jsx";
 
 function Navbar() {
 
     const navigate = useNavigate();
+
     const [isOpenSearchBar, setIsOpenSearchBar] = useState(false);
+    const [refresh, setRefresh] = useState(false);
 
     const { searchedItem, searchedItemInput } = useWallsStore();
 
     const [searchItem, setSearchItem] = useState("");
+    const [isCartOpen, setIsCartOpen] = useState(false);
+    const cartRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (cartRef.current && !cartRef.current.contains(event.target)) {
+                setIsCartOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    useEffect(() => {
+        const handleEsc = (event) => {
+            if (event.key === "Escape") {
+                setIsCartOpen(false);
+            }
+        };
+
+        document.addEventListener("keydown", handleEsc);
+        return () => document.removeEventListener("keydown", handleEsc);
+    }, []);
 
     useEffect(() => {
         if (searchItem.length > 0) {
@@ -20,6 +46,21 @@ function Navbar() {
         }
     }, [searchItem, searchedItem]);
 
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if (isCartOpen) {
+    //             setIsCartOpen(false);
+    //         }
+    //     };
+
+    //     if (isCartOpen) {
+    //         window.addEventListener("scroll", handleScroll);
+    //     }
+
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, [isCartOpen]);
 
 
     const { authUser } = userAuthStore();
@@ -59,7 +100,15 @@ function Navbar() {
     }
 
     const openSearchBox = () => {
+
         setIsOpenSearchBar(true);
+
+        setTimeout(() => {
+            const search = document.querySelector(".search");
+            if (search) {
+                search.focus();
+            }
+        }, 100);
     }
 
     const closeSearchBox = (e) => {
@@ -68,12 +117,29 @@ function Navbar() {
         setSearchItem("")
     }
 
+    const handleSearchItem = (e) => {
+        e.stopPropagation()
+        if (e.key === "Enter" && searchItem.trim() !== "") {
+            navigate(`/search?query=${encodeURIComponent(searchItem)}`);
+            setIsOpenSearchBar(false);
+            setSearchItem("");
+        }
+    }
+
+    const handleOnClickCart = () => {
+        setIsCartOpen(prev => !prev);
+    };
+
+    const handleRefresh = () => {
+        setRefresh(prev => !prev)
+    }
+
     // console.log(searchItem);
 
     return (
         <>
             <nav className="navbar" id="navbar">
-                <div className="logo animate__animated animate__slideInLeft" id="logo">
+                <div className="logo" id="logo" onClick={() => navigate("/")}>
                     Rk FleX
                 </div>
 
@@ -85,6 +151,7 @@ function Navbar() {
                         className="search"
                         value={searchItem}
                         onChange={(e) => setSearchItem(e.target.value)}
+                        onKeyDown={handleSearchItem}
                     />
 
                     {isOpenSearchBar && (
@@ -137,7 +204,7 @@ function Navbar() {
                                             <span key={index}>{part}</span>
                                         )
                                     )}
-                                    <img src={wall.wallImages[1].url} alt={wall.wallImages[0].altText} width={60} style={{ marginLeft: "10px" }} />
+                                    <img src={wall.wallImages[2].url} alt={wall.wallImages[2].altText} width={60} style={{ marginLeft: "10px" }} />
                                 </li>
                             );
                         })}
@@ -160,8 +227,8 @@ function Navbar() {
                         {authUser && <i className="fa-regular fa-circle-user fa-2xl" onClick={() => navigate("/userProfile")}></i>}
                     </div>
 
-                    <div className="userCart">
-                        <i className="fa-solid fa-cart-shopping fa-2xl" onClick={() => navigate("/userCart")}></i>
+                    <div className="userCart" >
+                        <i className="fa-solid fa-cart-shopping fa-2xl" onClick={() => handleOnClickCart()} ></i>
                     </div>
 
                 </div>
@@ -178,7 +245,7 @@ function Navbar() {
 
                 <div className="sidebar" id="sidebar">
                     <ul className="sidebar-nav-links">
-                        <li><a href="#home" id="link">Home</a></li>
+                        <li><a href="/" id="link">Home</a></li>
                         <li><a href="#about" id="link">About</a></li>
                         <li><a href="#ourworks" id="link">Our works</a></li>
                         <li><a href="#joinus" id="link">Join us</a></li>
@@ -189,6 +256,17 @@ function Navbar() {
                     </div>
 
                 </div>
+
+                {isCartOpen && (
+                    <div className="cart-backdrop" onClick={() => setIsCartOpen(false)}></div>
+                )}
+
+                <Cart
+                    className={isCartOpen ? "cart open" : "cart"}
+                    onClose={() => setIsCartOpen(false)}
+                    refreshTrigger={refresh}
+                    handleRefresh={handleRefresh}
+                />
 
             </nav>
 

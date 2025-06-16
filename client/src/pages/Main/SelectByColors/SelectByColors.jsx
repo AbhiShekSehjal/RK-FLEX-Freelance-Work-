@@ -1,18 +1,25 @@
 import "./SelectByColors.css"
 import { useWallsStore } from '../../../store/useAllWallpapers.js';
+import { useNavigate } from 'react-router-dom';
 
 function SelectByColors() {
 
-    const { selectedColor } = useWallsStore()
+    const navigate = useNavigate();
+
+    const { selectedColor } = useWallsStore();
 
     const SelectByColor = (color) => {
         console.log("BTn clicked", color);
         selectedColor(color);
+
+        if (selectedColor) {
+            navigate(`/selectedColor/${color}`);
+        }
     }
 
     return (
         <section className="SelectByColors">
-            <h1>Select Wallpaper by colors</h1>
+            <div className="haedingTextforcolors">Select Wallpaper by colors</div>
 
             <div className="wallpaperColors">
                 <div className="redColor">

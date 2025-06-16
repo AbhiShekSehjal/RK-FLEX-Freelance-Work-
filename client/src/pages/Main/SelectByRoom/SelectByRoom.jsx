@@ -1,18 +1,25 @@
 import "./SelectByRoom.css"
 import { useWallsStore } from '../../../store/useAllWallpapers.js';
+import { useNavigate } from 'react-router-dom';
 
 function SelectByRoom() {
 
-    const { selectedByRoom } = useWallsStore();
+    const navigate = useNavigate();
+
+    const { selectedByRoom, selectedRoom } = useWallsStore();
+
 
     const SelectByRomm = (room) => {
         console.log(room);
-        selectedByRoom(room)
+        selectedByRoom(room);
+        if (selectedRoom) {
+            navigate(`/selectedRoom/${room}`);
+        }
     }
 
     return (
         <section className="selectByRoom">
-            <h1>Select Wallpaper by Room Type</h1>
+            <div className="haedingText">Select Wallpaper by Room Type</div>
 
             <div className="leftsideleafsPng"></div>
             <div className="rigntsideleafsPng"></div>

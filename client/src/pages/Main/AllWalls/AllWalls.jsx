@@ -1,178 +1,115 @@
-import { useState } from 'react'
-import "./AllWalls.css"
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import "./AllWalls.css";
 import { useWallsStore } from '../../../store/useAllWallpapers.js';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 function AllWalls() {
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
-    const [selectDesign, setSelectDesign] = useState(false)
+    const [selectDesign, setSelectDesign] = useState(false);
+    const [priceRange, setPriceRange] = useState(2500);
 
     const { allWall, allAllWalls, selectByDesign, selectedWallByDesign, productCard, selectedProductCard } = useWallsStore();
 
     useEffect(() => {
         allAllWalls();
-        selectByDesign()
+        selectByDesign();
     }, [allAllWalls, selectByDesign]);
 
     const selectedDesign = (design) => {
         if (design) {
             if (!selectDesign) {
                 setSelectDesign(false);
-                console.log("Selected Design : ", design);
                 selectByDesign(design);
             } else {
                 setSelectDesign(false);
             }
-            console.log(selectDesign);
         }
     }
 
     const handleShowProductCard = (id) => {
         productCard(id);
-        
+        if (selectedProductCard) {
+            navigate(`/productCard/${id.id}`);
+        }
     }
 
-    if(selectedProductCard){
-        console.log(selectedProductCard);
+    const handleOnClickAddOnCart = (product) => {
+        const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+        const isAllreadyInCart = existingCart.find(item => item._id === product._id);
+
+        if (!isAllreadyInCart) {
+            const updatedCart = [product, ...existingCart];
+            localStorage.setItem("cart", JSON.stringify(updatedCart));
+            toast.success("Product added to cart");
+        } else {
+            toast.error("Product already in cart");
+        }
     }
+
+    const filteredWalls = (selectedWallByDesign && selectedWallByDesign.length > 0
+        ? selectedWallByDesign
+        : allWall
+    )?.filter(wall => wall.wallPrice <= priceRange);
 
     return (
         <>
-            <h1 style={{ textAlign: "center" }}>Special design Wallpapers</h1>
+            <div className="haedingText">Special design Wallpapers</div>
             <div className="ourAllWalls">
 
-                <div className="sideFilterBar" style={{ fontWeight: "300" }}>
-                    <div className="filterByText"><h3>Choose wallpaper</h3></div>
+                <div className="sideFilterBar">
+                    <div className="filterByText">
+                        <h2 className="filterHeading">Choose Your Style</h2>
+                    </div>
 
                     <div className="byPrice">
-                        <div className="byPriceText"><h4 style={{ fontWeight: "400" }}>By Price</h4></div>
-
-                        <label htmlFor="priceRange"></label>
-                        <br />
-                        <input type="range" id="priceRange" min={0} max={1000} />
-
+                        <h4 className="filterSubHeading">Filter by Price</h4>
+                        <input
+                            type="range"
+                            id="priceRange"
+                            min={1100}
+                            max={10000}
+                            step={100}
+                            value={priceRange}
+                            onChange={(e) => setPriceRange(Number(e.target.value))}
+                        />
+                        <p className="priceRangeDisplay">Up to ₹{priceRange.toLocaleString()}</p>
                     </div>
-                    <hr />
+
+                    <hr className="luxuryDivider" />
 
                     <div className="byDesign">
-                        <div className="byDesignText"><h4 style={{ fontWeight: "400" }}>By Design</h4></div>
-
-                        <ul className='selectByDesignList'>
-                            <li className='selectByDesignListItem' style={{ cursor: "pointer" }}>
-                                <input
-                                    type="checkbox"
-                                    id="Botanical"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Botanical")}
-                                />
-                                <label htmlFor="Botanical">Botanical</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Solid"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Solid")}
-                                />
-                                <label htmlFor="Solid">Solid</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Damask"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Damask")}
-                                />
-                                <label htmlFor="Damask">Damask</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Texture"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Texture")}
-                                />
-                                <label htmlFor="Texture">Texture</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Stripes"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Stripes")}
-                                />
-                                <label htmlFor="Stripes">Stripes</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Metallic"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Metallic")}
-                                />
-                                <label htmlFor="Metallic">Metallic</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Minimal"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Minimal")}
-                                />
-                                <label htmlFor="Minimal">Minimal</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Gradient"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Gradient")}
-                                />
-                                <label htmlFor="Gradient">Gradient</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Marble"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Marble")}
-                                />
-                                <label htmlFor="Marble">Marble</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Floral"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Floral")}
-                                />
-                                <label htmlFor="Floral">Floral</label>
-                            </li>
-
-                            <li className='selectByDesignListItem'>
-                                <input
-                                    type="checkbox"
-                                    id="Wood"
-                                    onChange={(e) => selectedDesign(e.target.checked && "Wood")}
-                                />
-                                <label htmlFor="Wood">Wood</label>
-                            </li>
+                        <h4 className="filterSubHeading">Filter by Design</h4>
+                        <ul className="selectByDesignList">
+                            {[
+                                "Botanical", "Solid", "Damask", "Texture", "Stripes",
+                                "Metallic", "Minimal", "Gradient", "Marble", "Floral", "Wood"
+                            ].map((design) => (
+                                <li key={design} className="selectByDesignListItem">
+                                    <input
+                                        type="checkbox"
+                                        id={design}
+                                        onChange={(e) => selectedDesign(e.target.checked && design)}
+                                    />
+                                    <label htmlFor={design}>{design}</label>
+                                </li>
+                            ))}
                         </ul>
                     </div>
-                    <hr />
 
+                    <hr className="luxuryDivider" />
                 </div>
 
                 <div className="walls">
-                    {selectedWallByDesign && selectedWallByDesign.length > 0 &&
-                        selectedWallByDesign.map((wall) => (
-                            <div onClick={() => handleShowProductCard({ id: wall._id })} className="wallCard" key={wall._id} style={{ boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.55) 0px 10px 8px -5px" }}>
-                                <div className="wallImage">
+                    {filteredWalls && filteredWalls.length > 0 ? (
+                        filteredWalls.map((wall) => (
+                            <div className="wallCard" key={wall._id} style={{ boxShadow: "rgba(0, 0, 0, 0.55) 0px 10px 8px -5px" }}>
+                                <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
                                     <img
-                                        src={wall.wallImages[1].url}
-                                        alt={wall.wallImages[1].altText}
+                                        src={wall.wallImages[1]?.url}
+                                        alt={wall.wallImages[1]?.altText || "Wallpaper"}
                                     />
                                 </div>
 
@@ -184,47 +121,18 @@ function AllWalls() {
 
                                     <div className="buyOrAddCart">
                                         <button className='buyWall'>Buy</button>
-                                        <button className='addOnCartWall'>Add on Cart</button>
+                                        <button className='addOnCartWall' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
                                     </div>
                                 </div>
-
-                            </div>
-                        ))}
-
-
-                    {allWall && allWall.length > 0 ?
-                        allWall.map((wall) => (
-
-                            <div className="wallCard" key={wall._id} onClick={() => handleShowProductCard({ id: wall._id })}>
-                                <div className="wallImage">
-                                    <img
-                                        src={wall.wallImages[1].url}
-                                        alt={wall.wallImages[1].altText}
-                                    />
-                                </div>
-
-                                <div className="moreInfo">
-                                    <div className="wallName"><b>{wall.wallName}</b></div>
-                                    <div className="wallDiscription">{wall.wallDiscription}</div>
-                                    <div className="wallPrice">Rs. {wall.wallPrice}</div>
-                                    <div className="wallDesign">{wall.wallDesignType}</div>
-
-                                    <div className="buyOrAddCart">
-                                        <button className='buyWall'>Buy</button>
-                                        <button className='addOnCartWall'>Add on Cart</button>
-                                    </div>
-                                </div>
-
                             </div>
                         ))
-                        : <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
-                    }
-
+                    ) : (
+                        <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
+                    )}
                 </div>
-
-            </div >
+            </div>
         </>
-    )
+    );
 }
 
-export default AllWalls
+export default AllWalls;

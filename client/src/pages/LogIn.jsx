@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useState } from "react";
 import { userAuthStore } from "../store/useAuthUser.js";
-import "../pages/Login.css"
+import "../pages/Login.css";
 
 function LogIn() {
 

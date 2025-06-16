@@ -3,6 +3,11 @@
     align-items: center;
     justify-content: space-evenly;
     box-shadow: rgba(0, 0, 0, 0.111) 0px 3px 8px;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 222;
+    background-color: white;
 }
 
 /* .forShowMore{
@@ -26,3 +31,4 @@
     background-color: white;
     display: none;
 }
+

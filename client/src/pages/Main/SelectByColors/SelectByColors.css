@@ -1,13 +1,17 @@
 .SelectByColors {
-    padding: 30px;
     text-align: center;
     height: 100%;
-    margin: 30px 0;
 }
 
-.SelectByColors h1 {
-    font-size: 36px;
-    font-weight: bolder;
+.haedingTextforcolors {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-family: "Style Script", cursive;
+    font-style: normal;
+    text-align: center;
 }
 
 .wallpaperColors {

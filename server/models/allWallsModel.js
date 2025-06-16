@@ -18,11 +18,11 @@ const allWallsSchema = new schema({
     wallColorType: String,
     wallDesignType: String,
     wallRoomType: String,
-    // coustomerReviews: [{
-    //     type: schema.Types.ObjectId,
-    //     ref: "coustomerReviews"
-    // }],
 });
+// coustomerReviews: [{
+//     type: schema.Types.ObjectId,
+//     ref: "coustomerReviews"
+// }],
 
 const AllWalls = mongoose.model("AllWalls", allWallsSchema);
 
