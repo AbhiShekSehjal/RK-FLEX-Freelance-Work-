@@ -1,54 +1,158 @@
+@import url("/src/globle.css");
+
 .selectByRoom {
-    height: 100%;
-    /* padding: 30px; */
-    text-align: center;
-    position: relative;
-    /* margin: 30px 0; */
-}
-
-/* .selectByRoom h1 {
-    font-size: 36px;
-    font-weight: bolder;
-} */
-
-.leftsideleafsPng {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 500px;
-    width: 500px;
-    background: url("/images/leafs.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.8;
-    z-index: 1;
-}
-
-.rigntsideleafsPng {
-    position: absolute;
-    right: 0;
-    bottom: 100px;
-    rotate: 180deg;
-    height: 400px;
-    width: 400px;
-    background: url("/images/leafs.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.8;
-    z-index: 1;
+    width: 100vw;
 }
 
 .typeOfRooms {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
     flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px 20px;
 }
 
+.kidsRoom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575980/kids_wtn8pb.webp");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.boysRoom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575978/boys_qxl9fa.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.girlsRoom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575979/girls_oyav34.webp");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.pujaRoom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575992/puja_k52o1m.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.drawingRoom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575989/living_belnmf.avif");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.kitchenroom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575988/kitchen_jar3vv.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.livingRoom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575978/forTestimonials_wgmxxc.avif");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.library {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575990/library_hld74z.webp");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.diningRoom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575976/dining_osjstq.webp");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.kidsRoom h1,
+.boysRoom h1,
+.girlsRoom h1,
+.pujaRoom h1,
+.drawingRoom h1,
+.kitchenroom h1,
+.livingRoom h1,
+.library h1,
+.diningRoom h1 {
+    font-family: var(--font-body);
+    color: var(--color-bg-soft);
+    font-size: 1.5rem;
+    text-align: center;
+}
 
 .kidsRoom:hover,
 .boysRoom:hover,
@@ -61,225 +165,4 @@
 .diningRoom:hover {
     background-position: right;
     background-size: cover;
-}
-
-.kidsRoom {
-    height: 350px;
-    width: 300px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575980/kids_wtn8pb.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-}
-
-.kidsRoom h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
-}
-
-.boysRoom {
-    height: 350px;
-    width: 300px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575978/boys_qxl9fa.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-
-}
-
-.boysRoom h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
-}
-
-.girlsRoom {
-    height: 350px;
-    width: 300px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575979/girls_oyav34.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-
-}
-
-.girlsRoom h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
-}
-
-
-.pujaRoom {
-    height: 350px;
-    width: 300px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575992/puja_k52o1m.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-
-
-
-}
-
-.pujaRoom h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
-
-}
-
-.drawingRoom {
-    height: 350px;
-    width: 300px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575989/living_belnmf.avif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    z-index: 2;
-
-
-}
-
-
-.drawingRoom h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
-
-}
-
-.kitchenroom {
-    height: 350px;
-    width: 300px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575988/kitchen_jar3vv.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    z-index: 2;
-
-
-}
-
-
-.kitchenroom h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
-
-}
-
-.livingRoom {
-    height: 350px;
-    width: 300px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575978/forTestimonials_wgmxxc.avif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    z-index: 2;
-
-
-}
-
-
-.livingRoom h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
-
-}
-
-.library {
-    height: 350px;
-    width: 300px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575990/library_hld74z.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    z-index: 2;
-
-
-}
-
-
-.library h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
-
-}
-
-.diningRoom {
-    height: 350px;
-    width: 300px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575976/dining_osjstq.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-
-    z-index: 2;
-
-}
-
-
-.diningRoom h1 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
-
 }

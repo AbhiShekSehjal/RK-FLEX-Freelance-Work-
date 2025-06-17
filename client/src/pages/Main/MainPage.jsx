@@ -17,8 +17,8 @@ function MainPage() {
         <>
             <main className="mainBox">
                 <div className="image"></div>
-                <p>Transforming Walls, Creating Attractive Spaces!</p>
-                <h1>Rk FleX</h1>
+                <p className='mainBoxPera'>Transforming Walls, Creating Attractive Spaces!</p>
+                <h1 className='mainBoxHeading'>Rk FleX</h1>
                 <div className="shopBtn">
                     <button onClick={() => handleShopWallsBtn()}>Shop Wallpaper</button>
                 </div>

@@ -10,7 +10,7 @@ function ProductCard() {
   const { selectedProductCard, allWall, productCard } = useWallsStore();
 
 
-  
+
   const handleShowProductCard = (id) => {
     productCard(id);
     if (selectedProductCard) {
@@ -84,37 +84,40 @@ function ProductCard() {
       </div>
 
 
-      <div className="youMayLikeText">You may also like these wallpapers</div>
-      <div className="walls">
 
-        {allWall && allWall.length > 0 ?
-          allWall.map((wall) => (
+      <div className="ourAllWallsAtProductCart">
+      <div className="haedingText">You will also like these wallpapers</div>
 
-            <div className="wallCard" key={wall._id}>
-              <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
-                <img
-                  src={wall.wallImages[1].url}
-                  alt={wall.wallImages[1].altText}
-                />
-              </div>
+        <div className="wallsAtProductCart">
+          {allWall && allWall.length > 0 ? (
+            allWall.map((wall) => (
+              <div className="wallCardAtProductCart" key={wall._id}>
+                <div className="wallImageAtProductCart" onClick={() => handleShowProductCard({ id: wall._id })}>
+                  <img
+                    src={wall.wallImages[1]?.url}
+                    alt={wall.wallImages[1]?.altText || "Wallpaper"}
+                  />
+                </div>
 
-              <div className="moreInfo">
-                <div className="wallName"><b>{wall.wallName}</b></div>
-                <div className="wallDiscription">{wall.wallDiscription}</div>
-                <div className="wallPrice">Rs. {wall.wallPrice}</div>
-                <div className="wallDesign">{wall.wallDesignType}</div>
+                <div className="moreInfoAtProductCart">
+                  <div className="wallNameAtProductCart"><b>{wall.wallName}</b></div>
+                  <div className="wallDiscriptionAtProductCart">{wall.wallDiscription}</div>
+                  <div className="wallPriceAtProductCart">Rs. {wall.wallPrice}</div>
+                  <div className="wallRatingAtProductCart">{wall.wallRating} stars</div>
 
-                <div className="buyOrAddCart">
-                  <button className='buyWall'>Buy</button>
-                  <button className='addOnCartWall' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
+                  <div className="buyOrAddCartAtProductCart">
+                    <button className='buyWallAtProductCart'>Buy</button>
+                    <button className='addOnCartWallAtProductCart' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
+                  </div>
                 </div>
               </div>
+            ))
+          ) : (
+            <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
+          )}
+        </div>
 
-            </div>
-          ))
-          : <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
-        }
-      </div>
+      </div >
 
     </>
   )

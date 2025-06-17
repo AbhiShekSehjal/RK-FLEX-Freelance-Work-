@@ -57,12 +57,16 @@ function AllWalls() {
     return (
         <>
             <div className="haedingText">Special design Wallpapers</div>
+
             <div className="ourAllWalls">
 
                 <div className="sideFilterBar">
                     <div className="filterByText">
                         <h2 className="filterHeading">Choose Your Style</h2>
                     </div>
+
+                    <hr className="luxuryDivider" />
+
 
                     <div className="byPrice">
                         <h4 className="filterSubHeading">Filter by Price</h4>
@@ -102,10 +106,11 @@ function AllWalls() {
                     <hr className="luxuryDivider" />
                 </div>
 
+
                 <div className="walls">
                     {filteredWalls && filteredWalls.length > 0 ? (
                         filteredWalls.map((wall) => (
-                            <div className="wallCard" key={wall._id} style={{ boxShadow: "rgba(0, 0, 0, 0.55) 0px 10px 8px -5px" }}>
+                            <div className="wallCard" key={wall._id}>
                                 <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
                                     <img
                                         src={wall.wallImages[1]?.url}
@@ -117,7 +122,7 @@ function AllWalls() {
                                     <div className="wallName"><b>{wall.wallName}</b></div>
                                     <div className="wallDiscription">{wall.wallDiscription}</div>
                                     <div className="wallPrice">Rs. {wall.wallPrice}</div>
-                                    <div className="wallDesign">{wall.wallDesignType}</div>
+                                    <div className="wallRating">{wall.wallRating} stars</div>
 
                                     <div className="buyOrAddCart">
                                         <button className='buyWall'>Buy</button>

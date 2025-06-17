@@ -57,6 +57,8 @@ function LogIn() {
                     {isLogingIn ? <i className="fa-solid fa-spinner fa-spin fa-2xl"></i> : "Login"}
                 </button>
             </form>
+
+            <div className="redirectLink">Don’t have an account? <a href="/signup">Join</a></div>
         </div>
     )
 }

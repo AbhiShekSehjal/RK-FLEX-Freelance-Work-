@@ -1,26 +1,16 @@
-.SelectByColors {
-    text-align: center;
-    height: 100%;
-}
+@import url("/src/globle.css");
 
-.haedingTextforcolors {
-    text-align: center;
-    margin-top: 70px;
-    margin-bottom: 40px;
-    font-size: 40px;
-    letter-spacing: 4px;
-    font-family: "Style Script", cursive;
-    font-style: normal;
-    text-align: center;
+.SelectByColors {
+    width: 100vw;
 }
 
 .wallpaperColors {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 30px;
     flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px 20px;
 }
 
 .redColor {
@@ -30,55 +20,207 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     position: relative;
-    overflow: hidden;
-    flex-direction: column;
+    gap: 20px;
 }
 
-.redColor button {
+
+.blueColor {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575992/skyblue_fadta6.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    gap: 20px;
+}
+
+.greenColor {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575979/green_qspjfw.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    gap: 20px;
+}
+
+.blackColor {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575974/black_ec7erm.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    gap: 20px;
+}
+
+.orangeColor {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575991/orange_tybyfz.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    gap: 20px;
+}
+
+.goldenColor {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575979/golden_ndvfsv.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    gap: 20px;
+}
+
+.whiteColor {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575993/white_yx18h1.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    gap: 20px;
+}
+
+.yellowColor {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575993/yellow_mba6ys.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    gap: 20px;
+}
+
+.skyBlueColor {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575992/skyblue_fadta6.jpg");
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    gap: 20px;
+}
+
+.redColor button,
+.blueColor button,
+.greenColor button,
+.blackColor button,
+.orangeColor button,
+.goldenColor button,
+.whiteColor button,
+.yellowColor button,
+.skyBlueColor button {
     opacity: 0;
-    width: 60%;
+    width: 50%;
     height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
+    font-size: 1rem;
     z-index: 33;
     border: none;
     background-color: rgba(0, 0, 0, 0.58);
-    color: white;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 10px;
+    color: var(--color-bg-soft);
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.redColor button:hover {
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: white;
-    color: black;
+.redColor button:hover,
+.blueColor button:hover,
+.greenColor button:hover,
+.blackColor button:hover,
+.orangeColor button:hover,
+.goldenColor button:hover,
+.whiteColor button:hover,
+.yellowColor button:hover,
+.skyBlueColor button:hover {
+    background-color: var(--color-bg-soft);
+    color: var(--color-secondary);
 }
 
-.redColor h1 {
+.redColor h1,
+.blueColor h1,
+.greenColor h1,
+.blackColor h1,
+.orangeColor h1,
+.goldenColor h1,
+.whiteColor h1,
+.yellowColor h1,
+.skyBlueColor h1 {
     opacity: 0;
-    color: white;
+    color: var(--color-bg-soft);
     text-transform: capitalize;
-    font-weight: 800;
     transition: all 0.3s ease;
     z-index: 22;
+    font-family: var(--font-body);
+    font-size: 1.5rem;
 }
 
-.redColor .overFade {
+.redColor .overFade,
+.blueColor .overFade,
+.greenColor .overFade,
+.blackColor .overFade,
+.orangeColor .overFade,
+.goldenColor .overFade,
+.whiteColor .overFade,
+.yellowColor .overFade,
+.skyBlueColor .overFade {
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.482);
+    background-color: rgba(0, 0, 0, 0.511);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -87,575 +229,28 @@
 
 .redColor:hover h1,
 .redColor:hover button,
-.redColor:hover .overFade {
-    opacity: 1;
-}
-
-.blueColor {
-    height: 200px;
-    width: 200px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575992/skyblue_fadta6.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-
-.blueColor button {
-    opacity: 0;
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.58);
-    color: white;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 10px;
-    cursor: pointer;
-}
-
-.blueColor button:hover {
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: white;
-    color: black;
-}
-
-.blueColor h1 {
-    opacity: 0;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    z-index: 22;
-}
-
-.blueColor .overFade {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.482);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
+.redColor:hover .overFade,
 .blueColor:hover button,
 .blueColor:hover h1,
-.blueColor:hover .overFade {
-    opacity: 1;
-}
-
-
-.greenColor {
-    height: 200px;
-    width: 200px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575979/green_qspjfw.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-
-}
-
-
-.greenColor button {
-    opacity: 0;
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.58);
-    color: white;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 10px;
-    cursor: pointer;
-}
-
-.greenColor button:hover {
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: white;
-    color: black;
-}
-
-.greenColor h1 {
-    opacity: 0;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    z-index: 22;
-}
-
-.greenColor .overFade {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.482);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
+.blueColor:hover .overFade,
 .greenColor:hover button,
 .greenColor:hover h1,
-.greenColor:hover .overFade {
-    opacity: 1;
-}
-
-
-.blackColor {
-    height: 200px;
-    width: 200px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575974/black_ec7erm.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-
-}
-
-
-.blackColor button {
-    opacity: 0;
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.58);
-    color: white;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 10px;
-    cursor: pointer;
-}
-
-.blackColor button:hover {
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: white;
-    color: black;
-}
-
-.blackColor h1 {
-    opacity: 0;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    z-index: 22;
-}
-
-.blackColor .overFade {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.482);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
+.greenColor:hover .overFade,
 .blackColor:hover button,
 .blackColor:hover h1,
-.blackColor:hover .overFade {
-    opacity: 1;
-}
-
-
-
-.orangeColor {
-    height: 200px;
-    width: 200px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575991/orange_tybyfz.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-
-}
-
-
-.orangeColor button {
-    opacity: 0;
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.58);
-    color: white;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 10px;
-    cursor: pointer;
-}
-
-.orangeColor button:hover {
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: white;
-    color: black;
-}
-
-
-
-.orangeColor h1 {
-    opacity: 0;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    z-index: 22;
-}
-
-.orangeColor .overFade {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.482);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
+.blackColor:hover .overFade,
 .orangeColor:hover button,
 .orangeColor:hover h1,
-.orangeColor:hover .overFade {
-    opacity: 1;
-}
-
-
-.goldenColor {
-    height: 200px;
-    width: 200px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575979/golden_ndvfsv.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-
-}
-
-
-.goldenColor button {
-    opacity: 0;
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.58);
-    color: white;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 10px;
-    cursor: pointer;
-}
-
-.goldenColor button:hover {
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: white;
-    color: black;
-}
-
-
-.goldenColor h1 {
-    opacity: 0;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    z-index: 22;
-}
-
-.goldenColor .overFade {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.482);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
+.orangeColor:hover .overFade,
 .goldenColor:hover button,
 .goldenColor:hover h1,
-.goldenColor:hover .overFade {
-    opacity: 1;
-}
-
-.whiteColor {
-    height: 200px;
-    width: 200px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575993/white_yx18h1.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-
-}
-
-
-
-.whiteColor button {
-    opacity: 0;
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.58);
-    color: white;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 10px;
-    cursor: pointer;
-}
-
-.whiteColor button:hover {
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: white;
-    color: black;
-}
-
-.whiteColor h1 {
-    opacity: 0;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    z-index: 22;
-}
-
-.whiteColor .overFade {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.482);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
+.goldenColor:hover .overFade,
 .whiteColor:hover button,
 .whiteColor:hover h1,
-.whiteColor:hover .overFade {
-    opacity: 1;
-}
-
-
-.yellowColor {
-    height: 200px;
-    width: 200px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575993/yellow_mba6ys.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-
-}
-
-
-
-.yellowColor button {
-    opacity: 0;
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.58);
-    color: white;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 10px;
-    cursor: pointer;
-}
-
-.yellowColor button:hover {
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: white;
-    color: black;
-}
-
-.yellowColor h1 {
-    opacity: 0;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    z-index: 22;
-}
-
-.yellowColor .overFade {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.482);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
-
+.whiteColor:hover .overFade,
 .yellowColor:hover button,
 .yellowColor:hover h1,
-.yellowColor:hover .overFade {
-    opacity: 1;
-}
-
-.skyBlueColor {
-    height: 200px;
-    width: 200px;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575992/skyblue_fadta6.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-
-}
-
-
-
-.skyBlueColor button {
-    opacity: 0;
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.58);
-    color: white;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 10px;
-    cursor: pointer;
-}
-
-.skyBlueColor button:hover {
-    width: 60%;
-    height: 15%;
-    border-radius: 30px;
-    font-size: 18px;
-    z-index: 33;
-    border: none;
-    background-color: white;
-    color: black;
-}
-
-.skyBlueColor h1 {
-    opacity: 0;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 800;
-    transition: all 0.3s ease;
-    z-index: 22;
-}
-
-.skyBlueColor .overFade {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.482);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
+.yellowColor:hover .overFade,
 .skyBlueColor:hover button,
 .skyBlueColor:hover h1,
 .skyBlueColor:hover .overFade {

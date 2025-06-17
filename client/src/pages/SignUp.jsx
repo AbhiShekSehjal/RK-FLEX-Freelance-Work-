@@ -33,18 +33,14 @@ function SignUp() {
         if (success == true) {
             signUp(formData);
         }
-
-        // setFormData({
-        //     userName: "",
-        //     userEmail: "",
-        //     userPassword: ""
-        // });
-
     }
 
     return (
         <div className="signUpPage">
-            <h1 className="signUpText">Create Account</h1>
+            <h1 className="signupText">Create an account</h1>
+            <br />
+
+            <div className="redirectLink">Already have an account? <a href="/login">Login</a></div>
 
             <form onSubmit={handleSubmit} className="signUpForm">
                 <label htmlFor="userName" className="lableName">Name <i className="fa-solid fa-user"></i></label>

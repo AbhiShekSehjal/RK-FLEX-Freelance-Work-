@@ -21,7 +21,7 @@ function UserProfile() {
 
     return (
         <div className="userProfilePage">
-            <h1 className="haedingText">Welcome, {authUser.userName}</h1>
+            <div className="haedingText">Welcome, {authUser.userName}</div>
 
             <div className="userProfileContainer">
                 <div className="sideOptionsContainer">
@@ -79,10 +79,13 @@ function UserProfile() {
 
                     <div className="authUserInfoContainerLogoutBox">
                         <h2 className="sectionTitle">Logout</h2>
+
+
                         <button className="luxuryLogoutBtn" onClick={logOut}>
                             <span>Logout</span>
                             <i className="fa-solid fa-arrow-right-from-bracket"></i>
                         </button>
+                        
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ import SearchedItems from "./pages/Main/AllWalls/SearchedItems/SearchedItems.jsx
 import Cart from "./components/cart/Cart.jsx";
 import UserProfile from "./pages/UserProfile/UserProfile.jsx";
 import SelectedRoom from "./pages/Main/SelectByRoom/SelectedRoom/SelectedRoom.jsx";
-import AllWalls2 from "./pages/AllWalls2/AllWalls2.jsx";
+import ShopWalls from "./pages/AllWalls2/ShopWalls.jsx";
 
 function App() {
 
@@ -39,7 +39,7 @@ function App() {
         <Route path="/selectedColor/:id" element={authUser ? <SelectedColor /> : <Navigate to="/login" replace />} />
         <Route path="/search" element={authUser ? <SearchedItems /> : <Navigate to="/login" replace />} />
         <Route path="/cart" element={authUser ? <Cart /> : <Navigate to="/login" replace />} />
-        <Route path="/shopWalls" element={authUser ? <AllWalls2 /> : <Navigate to="/login" replace />} />
+        <Route path="/shopWalls" element={authUser ? <ShopWalls /> : <Navigate to="/login" replace />} />
       </Routes>
 
       <Footer />

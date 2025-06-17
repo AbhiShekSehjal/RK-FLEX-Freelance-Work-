@@ -1,88 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Style+Script&display=swap');
-
-.haedingText {
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 40px;
-    font-size: 40px;
-    letter-spacing: 4px;
-    font-family: "Style Script", cursive;
-    font-style: normal;
-    text-align: center;
-}
+@import url("/src/globle.css");
 
 .mainBox {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--color-bg-soft);
     flex-direction: column;
     text-align: center;
+    padding: 0 20px;
 }
 
 .image {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749571899/heroImage_spbzxd.webp");
     background-position: center;
     background-size: cover;
     position: absolute;
 }
 
-.mainBox h1 {
-    font-size: 150px;
-    font-weight: 900;
+.mainBox .mainBoxHeading {
+    font-size: 9rem;
+    font-weight: bolder;
     z-index: 1;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #F9F6F0;
-    /* margin-bottom: 20px; */
+    font-family: var(--font-heading);
+    color: var(--color-bg-soft);
 }
 
-.mainBox p {
-    margin-top: 50px;
-    letter-spacing: 4px;
+.mainBox .mainBoxPera {
+    letter-spacing: 0.2rem;
     z-index: 1;
-    font-size: 28px;
-    font-weight: 800;
-    color: #F9F6F0;
-    font-family: "Style Script", cursive;
-    font-style: normal;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-bg-soft);
+    font-family: var(--font-cursive);
 }
 
 .shopBtn {
     z-index: 1;
-    width: 200px;
-    height: 50px;
-    border-radius: 30px;
-    background-color: white;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 8px;
 }
 
 .shopBtn button {
-    z-index: 2;
-    width: 200px;
-    height: 50px;
-    border-radius: 30px;
-    background-color: white;
     cursor: pointer;
-    font-weight: 900;
-    font-size: 16px;
-    border: none;
+    background-color: var(--color-bg-soft);
+    box-shadow: var(--shadow-soft);
+    font-family: var(--font-heading);
+    padding: 15px 30px;
+    font-weight: bolder;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
-    box-shadow: #2E2E2E 0px 8px 24px;
+    border: none;
 }
 
 .shopBtn button:hover {
-    background-color: #1A1F36;
-    box-shadow: #f9f6f055 0px 8px 24px;
-    color: white;
+    background-color: var(--color-hover);
+    box-shadow: var(--shadow-soft-hover);
+    color: var(--color-bg-soft);
 }
 
 .overShade {
     background-color: rgba(0, 0, 0, 0.511);
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+}
+
+/* For tablets */
+@media (max-width: 1024px) {
+    .mainBox .mainBoxHeading {
+        font-size: 8rem;
+    }
+
+    .mainBox .mainBoxPera {
+        font-size: 1.5rem;
+    }
+
+    .shopBtn button {
+        padding: 10px 20px;
+        font-size: 1.4rem;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+    .mainBox .mainBoxHeading {
+        font-size: 6rem;
+    }
+
+    .mainBox .mainBoxPera {
+        font-size: 1.3rem;
+    }
+
+    .shopBtn button {
+        padding: 8px 16px;
+        font-size: 1.1rem;
+    }
+}
+
+/* For mini mobile phones */
+@media (max-width: 530px) {
+    .mainBox .mainBoxHeading {
+        font-size: 3rem;
+    }
+
+    .mainBox .mainBoxPera {
+        font-size: 1rem;
+    }
+
+    .shopBtn button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
 }

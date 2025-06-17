@@ -1,6 +1,7 @@
 import { useWallsStore } from "../../../../store/useAllWallpapers.js";
 import { useNavigate } from 'react-router-dom';
 import toast from "react-hot-toast";
+import "./SelectedColor.css"
 
 function SelectedColor() {
 
@@ -33,7 +34,7 @@ function SelectedColor() {
 
     return (
         <>
-            <div className="haedingText">
+            <div className="haedingTextforSelectedColor">
                 Wallpapers in {selectedColorType}
                 <p style={{ fontSize: "14px", margin: "20px 0px" }}><b>Found : </b>{selectedColorWalls.length} results</p>
             </div>
@@ -42,36 +43,38 @@ function SelectedColor() {
             <br />
             <br />
 
-            <div className="walls">
-                {selectedColorWalls && selectedColorWalls.length > 0 ?
-                    selectedColorWalls.map((wall) => (
+            <div className="ourAllWallsforSelectedColor">
 
-                        <div className="wallCard" key={wall._id} >
-                            <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
-                                <img
-                                    src={wall.wallImages[1].url}
-                                    alt={wall.wallImages[1].altText}
-                                />
-                            </div>
+                <div className="wallsforSelectedColor">
+                    {selectedColorWalls && selectedColorWalls.length > 0 ? (
+                        selectedColorWalls.map((wall) => (
+                            <div className="wallCardforSelectedColor" key={wall._id}>
+                                <div className="wallImageforSelectedColor" onClick={() => handleShowProductCard({ id: wall._id })}>
+                                    <img
+                                        src={wall.wallImages[1]?.url}
+                                        alt={wall.wallImages[1]?.altText || "Wallpaper"}
+                                    />
+                                </div>
 
-                            <div className="moreInfo">
-                                <div className="wallName"><b>{wall.wallName}</b></div>
-                                <div className="wallDiscription">{wall.wallDiscription}</div>
-                                <div className="wallPrice">Rs. {wall.wallPrice}</div>
-                                <div className="wallDesign">{wall.wallDesignType}</div>
+                                <div className="moreInfoforSelectedColor">
+                                    <div className="wallNameforSelectedColor"><b>{wall.wallName}</b></div>
+                                    <div className="wallDiscriptionforSelectedColor">{wall.wallDiscription}</div>
+                                    <div className="wallPriceforSelectedColor">Rs. {wall.wallPrice}</div>
+                                    <div className="wallRatingforSelectedColor">{wall.wallRating} stars</div>
 
-                                <div className="buyOrAddCart">
-                                    <button className='buyWall'>Buy</button>
-                                    <button className='addOnCartWall' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
+                                    <div className="buyOrAddCartforSelectedColor">
+                                        <button className='buyWallforSelectedColor'>Buy</button>
+                                        <button className='addOnCartWallforSelectedColor' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
+                                    </div>
                                 </div>
                             </div>
+                        ))
+                    ) : (
+                        <div className="emptyTextForPage">No wallpaper yet, coming soon are wallpapers for {selectedColorType}</div>
+                    )}
+                </div>
 
-                        </div>
-                    ))
-                    :
-                    <div className="emptyPageForNoRooms">No wallpaper yet, coming soon are wallpapers for {selectedColorType}</div>
-                }
-            </div>
+            </div >
         </>
     )
 }

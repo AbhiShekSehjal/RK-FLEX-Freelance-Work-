@@ -1,20 +1,40 @@
+@import url("/src/globle.css");
+
 .footer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: gray;
-    width: 100%;
-    height: 200px;
+    width: 100vw;
+    height: 80vh;
     gap: 20px;
     margin-top: 50px;
+    position: relative;
+}
+
+.imageForFooter {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750161388/mitchell-luo-8LtQ7zAJ5pI-unsplash_xwfhew.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.footerImageFade {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.511);
+    position: absolute;
 }
 
 .socialMediaLinks {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 200px;
+    width: 30%;
+    z-index: 1;
 }
 
 .socialMediaLinks .insta,
@@ -27,19 +47,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: var(--color-bg-soft);
     transition: all 0.4s ease;
+    z-index: 1;
 }
 
 .socialMediaLinks .insta:hover,
 .socialMediaLinks .fb:hover,
 .socialMediaLinks .twitter:hover {
-    background-color: rgb(70, 97, 176);
-    color: white;
+    background-color: var(--color-hover);
+    color: var(--color-bg-soft);
+    z-index: 1;
 }
 
-.emailAddress span,
-.contactNumber span {
-    font-weight: 800;
+.emailAddress,
+.contactNumber {
+    font-weight: bold;
     margin-right: 10px;
+    z-index: 1;
+    color: var(--color-bg-soft);
+    letter-spacing: 0.2rem;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
 }

@@ -1,110 +1,80 @@
+@import url("/src/globle.css");
+
 .ourAllWalls {
+    width: 100vw;
     display: flex;
-    justify-content: center;
 }
 
 .sideFilterBar {
-    flex: 0.25;
-    /* background-color: #f8f5f0; */
-    padding: 30px 20px;
-    border-radius: 12px;
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-    /* font-family: 'Segoe UI', sans-serif; */
-    /* color: #2b2b2b; */
+    width: 15vw;
+    padding-left: 20px;
 }
 
 .filterHeading {
-    font-size: 24px;
-    font-weight: 600;
-    /* color: #1a1a1a; */
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-secondary);
     margin-bottom: 20px;
-    border-bottom: 2px solid;
     padding-bottom: 8px;
+    font-family: var(--font-body);
 }
 
 .filterSubHeading {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: bold;
     margin-bottom: 10px;
-    /* color: #444; */
+    color: var(--color-secondary);
+    font-family: var(--font-body);
 }
 
 .byPrice {
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
     gap: 10px;
+    font-family: var(--font-body);
 }
+
 .byPrice input[type="range"] {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(90deg, #d4af37, #fff6cc);
-  border-radius: 4px;
-  cursor: pointer;
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
 }
-
-.byPrice input[type="range"]::-webkit-slider-thumb,
-.byPrice input[type="range"]::-moz-range-thumb {
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  background: #fff;
-  border: 2px solid #d4af37;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
-}
-
-.byPrice input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.1);
-}
-
 
 .priceRangeDisplay {
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 500;
-    color: #6a6a6a;
+    color: var(--color-accent);
     margin-top: 5px;
-}
-
-.priceRangeDisplay {
-    margin-top: 8px;
-    font-size: 14px;
-    /* color: #555; */
 }
 
 .luxuryDivider {
     margin: 30px 0;
     border: none;
     height: 1px;
-    background-color: #ccc;
+    background-color: var(--color-accent);
 }
 
 .byDesign {
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
+    font-family: var(--font-body);
 }
 
 .selectByDesignList {
     list-style: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .selectByDesignListItem {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 400;
     transition: all 0.2s ease;
     cursor: pointer;
-    /* color: #333; */
+    color: var(--color-accent);
 }
 
 .selectByDesignListItem input {
@@ -115,31 +85,20 @@
     cursor: pointer;
 }
 
-.selectByDesignListItem:hover {
-    /* color: #d4af37; */
-    font-weight: 500;
-}
-
 .walls {
-    flex: 0.9;
+    width: 85vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 20px;
 }
 
 .wallCard {
     width: 300px;
     height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     overflow: hidden;
     position: relative;
-    border-bottom: 2px solid;
-    cursor: pointer;
 }
 
 .wallCard:hover .moreInfo {
@@ -148,9 +107,9 @@
 
 .moreInfo {
     width: 100%;
-    background-color: white;
+    background-color: var(--color-bg-soft);
     position: absolute;
-    bottom: -140px;
+    bottom: -130px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -158,15 +117,28 @@
     transition: all 0.3s ease-in;
 }
 
+.wallName {
+    font-family: var(--font-body);
+}
+
+.wallDiscription,
+.wallRating,
 .wallPrice {
-    color: rgb(70, 97, 176);
-    font-weight: 500;
+    font-family: var(--font-heading);
+}
+
+.wallPrice {
+    color: var(--color-secondary);
+    font-weight: bold;
 }
 
 .wallImage {
     transition: all 0.2s ease;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
+    width: 100%;
+    height: fit-content;
 }
 
 .wallCard:hover .wallImage {
@@ -180,29 +152,76 @@
 }
 
 .buyWall {
-    padding: 8px 10px;
+    padding: 6px 10px;
     border: none;
     background-color: #046C4E;
-    color: white;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
+    color: var(--color-bg-soft);
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
 
 .buyWall:hover {
-    background-color: black;
+    background-color: var(--color-secondary);
 }
 
 .addOnCartWall {
-    padding: 8px 10px;
+    padding: 6px 10px;
     border: none;
-    background-color: #D4AF37;
-    color: white;
-    font-weight: 500;
-    transition: all 0.1s ease-in-out;
+    background-color: var(--color-primary);
+    color: var(--color-bg-soft);
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
 
 .addOnCartWall:hover {
-    background-color: black;
+    background-color: var(--color-secondary);
+}
+
+
+/* For tablets */
+@media (max-width: 1024px) {
+    
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+    
+}
+
+/* For mini mobile phones */
+@media (max-width: 530px) {
+    .sideFilterBar {
+        display: none;
+    }
+
+    .walls {
+        width: 100vw;
+    }
+
+    .wallCard {
+        width: 80%;
+        height: 400px;
+    }
+
+    .wallCard .moreInfo {
+        bottom: 0px;
+    }
+
+    .moreInfo {
+        width: 100%;
+    }
+
+    .wallCard:hover .wallImage {
+        transform: scale(1);
+    }
+
+    .buyWall {
+        padding: 5px 8px;
+    }
+    
+    .addOnCartWall{
+        padding: 5px 8px;
+    }
 }

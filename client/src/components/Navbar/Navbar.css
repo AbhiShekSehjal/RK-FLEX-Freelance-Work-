@@ -1,33 +1,37 @@
+@import url("/src/globle.css");
+
 .navbar {
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    width: 100vw;
     height: 60px;
     background-color: white;
     position: fixed;
     top: 0;
-    z-index: 111111;
-    box-shadow: rgba(0, 0, 0, 0.219) 0px 3px 8px;
+    z-index: 100;
+    box-shadow: var(--shadow-soft);
 }
 
 .logo {
-    /* flex: 0.2; */
-    font-size: 26px;
-    font-weight: bolder;
     display: flex;
     align-items: center;
-    margin-left: 15px;
     cursor: pointer;
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750134407/Firefly_we_have_a_business_for_designing_walls_with_wallpaper__designing_wallpapers___so_for__3976922-removebg-preview_1_1_afrehb.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    margin: 0 20px;
 }
 
 .search-box {
     padding: 6px;
     align-self: center;
-    border: 2px solid;
+    border: 1.6px solid var(--color-secondary);
     border-radius: 30px;
     display: flex;
     align-items: center;
-    transition: all 0.6s ease;
+    transition: all 0.5s ease;
 }
 
 .crossMark {
@@ -37,35 +41,34 @@
 .search {
     width: 100%;
     height: 100%;
-    margin-left: 10px;
+    margin-left: 8px;
     outline: none;
-    background-color: transparent;
     border: none;
-}
-
-.search::placeholder {
-    /* color: white; */
+    font-family: var(--font-heading);
+    letter-spacing: 0.1rem;
 }
 
 .nav-links {
-    /* flex: 0.5; */
-    width: 30%;
+    width: 35%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     list-style: none;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    margin-left: 20px;
+    letter-spacing: 0.1rem;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    font-weight: 600;
-    transition: all 0.5s ease;
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: rgb(144, 144, 183);
+    color: var(--color-hover);
 }
 
 .authUserSection {
@@ -81,35 +84,35 @@
 }
 
 .authUserSection i:active {
-    color: gray;
+    color: var(--color-hover);
 }
 
 .hamburger {
-    /* flex: 0.5; */
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: end;
     cursor: pointer;
-    margin-right: 15px;
+    padding: 15px 0;
+    margin: 0 20px;
 }
 
 .line1 {
-    background-color: black;
+    background-color: var(--color-secondary);
     height: 3px;
     width: 28px;
     transition: all 0.7s ease;
 }
 
 .line2 {
-    background-color: black;
+    background-color: var(--color-secondary);
     height: 3px;
     width: 40px;
     transition: all 0.3s ease;
 }
 
 .line3 {
-    background-color: black;
+    background-color: var(--color-secondary);
     height: 3px;
     width: 15px;
     transition: all 0.7s ease;
@@ -122,12 +125,13 @@
     width: 100%;
     height: 100vh;
     z-index: 40;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.4s ease;
     display: none;
+    font-family: var(--font-body);
 }
 
 .sidebar-nav-links {
@@ -136,38 +140,37 @@
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    color: black;
 }
 
 .sidebar-nav-links li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--color-bg-soft);
     font-size: 22px;
-    font-weight: 800;
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .sidebar-nav-links li a:hover {
-    /* color: gray; */
     text-decoration: underline;
 }
 
 .crossbtn {
     margin-top: 80px;
-    padding: 10px;
-    border-radius: 50px;
-    font-size: 24px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
-}
-
-.crossbtn:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--color-bg-soft);
+    color: var(--color-secondary);
 }
 
 .wallCard2 {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-bg-soft);
     position: absolute;
     top: 70px;
     display: flex;
@@ -175,7 +178,7 @@
     flex-direction: column;
     z-index: 111;
     padding: 20px 30px;
-    box-shadow: rgba(0, 0, 0, 0.811) 0px 3px 8px;
+    box-shadow: var(--color-primary) 0px 3px 8px;
     gap: 20px;
     box-sizing: border-box;
     max-height: 400px;
@@ -188,4 +191,64 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+
+/* For tablets */
+@media (max-width: 1024px) {
+    .logo {
+        width: 60px;
+    }
+
+    .search-box {
+        padding: 4px 8px;
+        border-radius: 25px;
+    }
+
+    .nav-links {
+        width: 50%;
+    }
+
+    .authUserSection {
+        width: 20%;
+    }
+
+    .authUserSection i {
+        font-size: 28px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+    .logo {
+        width: 55px;
+    }
+
+    .search-box {
+        padding: 4px 8px;
+        border-radius: 25px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .authUserSection {
+        width: 15%;
+    }
+
+    .authUserSection i {
+        font-size: 26px;
+    }
+}
+
+/* For mini mobile phones */
+@media (max-width: 530px) {
+    .authUserSection {
+        display: none;
+    }
 }

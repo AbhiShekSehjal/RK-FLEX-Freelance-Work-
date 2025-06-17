@@ -1,48 +1,53 @@
+@import url("/src/globle.css");
+
 .loginPage {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 65vh;
-    margin-top: 80px;
+}
+
+.loginText {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    font-family: var(--font-heading);
 }
 
 .loginForm {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 15px 25px;
-    width: 20%;
-    height: 60%;
-    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    padding: 20px 30px;
     margin: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: var(--color-bg-highlight);
 }
 
 .lableName {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .inputField {
-    height: 30px;
-    margin-top: 5px;
-    border-radius: 6px;
+    margin-top: 6px;
     border: 1px solid;
-    padding: 2px 5px;
-    font-size: 18px;
+    padding: 6px 12px;
+    font-size: 1.2rem;
 }
 
 .authBtn {
     height: 40px;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     border: none;
-    background-color: #D4AF37;
+    background-color: var(--color-primary);
     cursor: pointer;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .authBtn:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--color-hover);
 }

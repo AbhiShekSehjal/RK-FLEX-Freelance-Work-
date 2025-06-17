@@ -33,7 +33,7 @@ function SelectedRoom() {
 
     return (
         <>
-            <div className="haedingText">
+            <div className="haedingTextforSelectedRoom">
                 Wallpapers for {selectedRoomType}
                 <p style={{ fontSize: "14px", margin: "20px 0px" }}><b>Found : </b>{selectedRoom.length} results</p>
             </div>
@@ -42,36 +42,38 @@ function SelectedRoom() {
             <br />
             <br />
 
-            <div className="walls">
-                {selectedRoom && selectedRoom.length > 0 ?
-                    selectedRoom.map((wall) => (
+            <div className="ourAllWallsforSelectedRoom">
 
-                        <div className="wallCard" key={wall._id}>
-                            <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
-                                <img
-                                    src={wall.wallImages[1].url}
-                                    alt={wall.wallImages[1].altText}
-                                />
-                            </div>
+                <div className="wallsforSelectedRoom">
+                    {selectedRoom && selectedRoom.length > 0 ? (
+                        selectedRoom.map((wall) => (
+                            <div className="wallCardforSelectedRoom" key={wall._id}>
+                                <div className="wallImageforSelectedRoom" onClick={() => handleShowProductCard({ id: wall._id })}>
+                                    <img
+                                        src={wall.wallImages[1]?.url}
+                                        alt={wall.wallImages[1]?.altText || "Wallpaper"}
+                                    />
+                                </div>
 
-                            <div className="moreInfo">
-                                <div className="wallName"><b>{wall.wallName}</b></div>
-                                <div className="wallDiscription">{wall.wallDiscription}</div>
-                                <div className="wallPrice">Rs. {wall.wallPrice}</div>
-                                <div className="wallDesign">{wall.wallDesignType}</div>
+                                <div className="moreInfoforSelectedRoom">
+                                    <div className="wallNameforSelectedRoom"><b>{wall.wallName}</b></div>
+                                    <div className="wallDiscriptionforSelectedRoom">{wall.wallDiscription}</div>
+                                    <div className="wallPriceforSelectedRoom">Rs. {wall.wallPrice}</div>
+                                    <div className="wallRatingforSelectedRoom">{wall.wallRating} stars</div>
 
-                                <div className="buyOrAddCart">
-                                    <button className='buyWall'>Buy</button>
-                                    <button className='addOnCartWall' onClick={() => handleOnClickAddOnCart(wall)} >Add on Cart</button>
+                                    <div className="buyOrAddCartforSelectedRoom">
+                                        <button className='buyWallforSelectedRoom'>Buy</button>
+                                        <button className='addOnCartWallforSelectedRoom' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
+                                    </div>
                                 </div>
                             </div>
+                        ))
+                    ) : (
+                        <div className="emptyTextForPage">No wallpaper yet, coming soon are wallpapers for {selectedRoom}</div>
+                    )}
+                </div>
 
-                        </div>
-                    ))
-                    :
-                    <div className="emptyPageForNoRooms">No wallpaper yet, coming soon are wallpapers for {selectedRoomType}</div>
-                }
-            </div>
+            </div >
         </>
     )
 }

@@ -46,23 +46,6 @@ function Navbar() {
         }
     }, [searchItem, searchedItem]);
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         if (isCartOpen) {
-    //             setIsCartOpen(false);
-    //         }
-    //     };
-
-    //     if (isCartOpen) {
-    //         window.addEventListener("scroll", handleScroll);
-    //     }
-
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, [isCartOpen]);
-
-
     const { authUser } = userAuthStore();
 
     const handleHamburger = () => {
@@ -82,8 +65,6 @@ function Navbar() {
             line3.style.width = "35px";
             sidebar.style.display = "flex";
         };
-
-        console.log(authUser);
     }
 
     const closeSideNavabar = () => {
@@ -94,9 +75,6 @@ function Navbar() {
         } else {
             sidebar.style.display = "flex"
         }
-
-        console.log("btn clicked");
-
     }
 
     const openSearchBox = () => {
@@ -134,16 +112,12 @@ function Navbar() {
         setRefresh(prev => !prev)
     }
 
-    // console.log(searchItem);
-
     return (
         <>
             <nav className="navbar" id="navbar">
-                <div className="logo" id="logo" onClick={() => navigate("/")}>
-                    Rk FleX
-                </div>
+                <div className="logo" onClick={() => navigate("/")}></div>
 
-                <div className="search-box" onClick={openSearchBox} style={{ width: isOpenSearchBar ? "35%" : "10%", borderRadius: isOpenSearchBar ? "0px" : "30px" }}>
+                <div className="search-box" onClick={openSearchBox} style={{ width: isOpenSearchBar ? "35%" : "30%", borderRadius: isOpenSearchBar ? "0px" : "30px" }}>
                     <i className="fa-solid fa-magnifying-glass"></i>
                     <input
                         type="text"
@@ -212,14 +186,12 @@ function Navbar() {
                 )}
 
 
-                {window.innerWidth > 500 &&
-                    <ul className="nav-links" id="navLinks">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="#ourworks">Our works</a></li>
-                        <li><a href="#joinus">Join us</a></li>
-                    </ul>
-                }
+                <ul className="nav-links" id="navLinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/ourworks">Our works</a></li>
+                    <li><a href="/joinus">Join us</a></li>
+                </ul>
 
                 <div className="authUserSection">
 
@@ -234,14 +206,12 @@ function Navbar() {
                 </div>
 
 
-                {window.innerWidth < 500 &&
-                    <div className="hamburger animate__animated animate__slideInRight" onClick={handleHamburger}>
-                        <span className="line1" id="line1"></span>
-                        <span className="line2" id="line2"></span>
-                        <span className="line3" id="line3"></span>
-                    </div>
+                <div className="hamburger" onClick={handleHamburger}>
+                    <span className="line1" id="line1"></span>
+                    <span className="line2" id="line2"></span>
+                    <span className="line3" id="line3"></span>
+                </div>
 
-                }
 
                 <div className="sidebar" id="sidebar">
                     <ul className="sidebar-nav-links">
@@ -249,6 +219,13 @@ function Navbar() {
                         <li><a href="#about" id="link">About</a></li>
                         <li><a href="#ourworks" id="link">Our works</a></li>
                         <li><a href="#joinus" id="link">Join us</a></li>
+                        <li>
+                            {window.innerWidth < 530 && <a onClick={() => handleOnClickCart()}>Cart</a>}
+                        </li>
+                        <li>
+                            {window.innerWidth < 530 && <a href="/userProfile" id="link">Profile</a>}
+                        </li>
+
                     </ul>
 
                     <div className="crossbtn" id="crossbtn" onClick={closeSideNavabar}>
@@ -268,7 +245,7 @@ function Navbar() {
                     handleRefresh={handleRefresh}
                 />
 
-            </nav>
+            </nav >
 
             {/* <BottomNav /> */}
         </>

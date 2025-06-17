@@ -9,7 +9,6 @@ function SelectByColors() {
     const { selectedColor } = useWallsStore();
 
     const SelectByColor = (color) => {
-        console.log("BTn clicked", color);
         selectedColor(color);
 
         if (selectedColor) {
@@ -19,7 +18,7 @@ function SelectByColors() {
 
     return (
         <section className="SelectByColors">
-            <div className="haedingTextforcolors">Select Wallpaper by colors</div>
+            <div className="haedingText">Select Wallpaper by colors</div>
 
             <div className="wallpaperColors">
                 <div className="redColor">
