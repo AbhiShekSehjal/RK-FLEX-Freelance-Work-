@@ -3,13 +3,10 @@ import { useWallsStore } from "../../store/useAllWallpapers.js"
 import { useNavigate } from 'react-router-dom';
 import toast from "react-hot-toast";
 
-
 function ProductCard() {
 
   const navigate = useNavigate();
   const { selectedProductCard, allWall, productCard } = useWallsStore();
-
-
 
   const handleShowProductCard = (id) => {
     productCard(id);
@@ -19,13 +16,11 @@ function ProductCard() {
   }
 
   if (!selectedProductCard) {
-    return <div className="productCard"><i className="fa-solid fa-spinner fa-spin fa-2xl"></i></div>; // Or a spinner
+    return <div className="productCard"><i className="fa-solid fa-spinner fa-spin fa-2xl"></i></div>;
   }
 
   const handleOnClickAddOnCart = (product) => {
-
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-
     const isAllreadyInCart = existingCart.find(item => item._id == product._id);
 
     if (!isAllreadyInCart) {
@@ -39,20 +34,18 @@ function ProductCard() {
 
   return (
     <>
-      <div className="productCard">
+      <div className="productCard responsiveCardWrapper">
 
         <div className="leftSideCard">
-          {selectedProductCard.wallImages ?
-
+          {selectedProductCard.wallImages ? (
             selectedProductCard.wallImages.map((image) => (
               <img src={image.url} alt={image.altText} key={image._id} className="selectedProductCardWallImage" />
             ))
-            :
+          ) : (
             <div>
               <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
             </div>
-          }
-
+          )}
         </div>
 
         <div className="rightSideCard">
@@ -73,24 +66,28 @@ function ProductCard() {
               <img
                 src="https://res.cloudinary.com/dtotogjvb/image/upload/v1749883648/whatsapp_k92ryi.png"
                 alt="whatsapp_logo"
-                style={{ marginRight: "1rem" }}
               />
-              <p>Order on Whatsapp</p></button>
+              <p>Order on Whatsapp</p>
+            </button>
           </div>
-
         </div>
-
 
       </div>
 
+      <div className="haedingTextforShopWallsPage">
+        Special design Wallpapers
+        <p style={{ fontSize: "14px", margin: "30px 0px" }}>
+          <b>Found : </b>{allWall.length} results
+        </p>
+      </div>
 
+      <hr />
+      <br /><br />
 
       <div className="ourAllWallsAtProductCart">
-      <div className="haedingText">You will also like these wallpapers</div>
-
         <div className="wallsAtProductCart">
           {allWall && allWall.length > 0 ? (
-            allWall.map((wall) => (
+            allWall.slice(15, 25).map((wall) => (
               <div className="wallCardAtProductCart" key={wall._id}>
                 <div className="wallImageAtProductCart" onClick={() => handleShowProductCard({ id: wall._id })}>
                   <img
@@ -116,11 +113,9 @@ function ProductCard() {
             <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
           )}
         </div>
-
-      </div >
-
+      </div>
     </>
   )
 }
 
-export default ProductCard
+export default ProductCard;

@@ -2,16 +2,17 @@
 
 .productCard {
     display: flex;
-    padding: 50px 100px;
     flex-wrap: wrap;
-    margin-top: 10px;
+    padding: 50px 100px;
+    margin-top: 50px;
+    gap: 40px;
+    justify-content: center;
 }
 
 .leftSideCard {
     flex: 0.6;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     gap: 10px;
 }
 
@@ -23,11 +24,11 @@
 }
 
 .rightSideCard {
-    padding: 20px;
     flex: 0.4;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
 }
 
 .rightSideCardWallName {
@@ -35,7 +36,12 @@
     font-weight: 300;
 }
 
-.rightSideCardWallPrice {
+.rightSideCardWallPrice,
+.rightSideCardWallRating,
+.rightSideCardWallDiscription,
+.rightSideCardWallColorType,
+.rightSideCardWallDesignType,
+.rightSideCardWallRoomType {
     font-size: 18px;
 }
 
@@ -45,48 +51,38 @@
 
 .buyOrAddCart2 {
     display: flex;
-    gap: 20px;
-    margin: 5px 0;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.buyWall2,
+.addOnCartWall2,
+.orderOnWhatsapp {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: large;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
 }
 
 .buyWall2 {
-    width: 100%;
-    padding: 10px 0px;
-    border: none;
-    border-radius: 30px;
     background-color: #046C4E;
     color: white;
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    font-size: large;
 }
 
 .addOnCartWall2 {
-    font-size: large;
-    border-radius: 30px;
-    width: 100%;
-    padding: 10px 0px;
-    border: none;
     background-color: #D4AF37;
     color: white;
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-    cursor: grab;
 }
 
 .orderOnWhatsapp {
-    font-size: large;
-    border-radius: 30px;
-    width: 100%;
-    padding: 10px 0px;
-    border: none;
-    background-color: rgba(128, 128, 128, 0.301);
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-    cursor: grab;
+    background-color: rgba(128, 128, 128, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,6 +90,7 @@
 
 .orderOnWhatsapp img {
     width: 30px;
+    margin-right: 1rem;
 }
 
 .buyWall2:hover,
@@ -104,14 +101,16 @@
 }
 
 
+/* All Walls Section */
 .ourAllWallsAtProductCart {
-    width: 100vw;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .wallsAtProductCart {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -122,10 +121,23 @@
     height: 400px;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .wallCardAtProductCart:hover .moreInfoAtProductCart {
     bottom: 0px;
+}
+
+.wallImageAtProductCart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.wallCardAtProductCart:hover .wallImageAtProductCart img {
+    transform: scale(1.1);
 }
 
 .moreInfoAtProductCart {
@@ -136,8 +148,9 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 5px 0;
+    padding: 5px 10px;
     transition: all 0.3s ease-in;
+    box-sizing: border-box;
 }
 
 .wallNameAtProductCart {
@@ -155,47 +168,113 @@
     font-weight: bold;
 }
 
-.wallImageAtProductCart {
-    transition: all 0.2s ease;
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.wallCardAtProductCart:hover .wallImageAtProductCart {
-    transform: scale(1.2);
-}
-
 .buyOrAddCartAtProductCart {
     display: flex;
-    gap: 20px;
-    margin: 5px 0;
+    gap: 10px;
+    margin-top: 5px;
 }
 
-.buyWallAtProductCart {
-    padding: 6px 10px;
-    border: none;
-    background-color: #046C4E;
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.buyWallAtProductCart:hover {
-    background-color: var(--color-secondary);
-}
-
+.buyWallAtProductCart,
 .addOnCartWallAtProductCart {
     padding: 6px 10px;
     border: none;
-    background-color: var(--color-primary);
-    color: var(--color-bg-soft);
     font-weight: bold;
-    transition: all 0.2s ease-in-out;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
 }
 
+.buyWallAtProductCart {
+    background-color: #046C4E;
+    color: var(--color-bg-soft);
+}
+
+.addOnCartWallAtProductCart {
+    background-color: var(--color-primary);
+    color: var(--color-bg-soft);
+}
+
+.buyWallAtProductCart:hover,
 .addOnCartWallAtProductCart:hover {
     background-color: var(--color-secondary);
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .productCard {
+        padding: 30px 40px;
+    }
+
+    .rightSideCardWallName {
+        font-size: 32px;
+    }
+
+    .selectedProductCardWallImage {
+        height: 60vh;
+    }
+
+    .moreInfoAtProductCart{
+        bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .productCard {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .rightSideCard,
+    .leftSideCard {
+        flex: 1;
+        /* width: 100%; */
+    }
+
+    .selectedProductCardWallImage {
+        height: 50vh;
+    }
+
+    .rightSideCardWallName {
+        font-size: 28px;
+    }
+
+    .buyWall2,
+    .addOnCartWall2,
+    .orderOnWhatsapp {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 480px) {
+    .rightSideCardWallName {
+        font-size: 24px;
+    }
+
+    .rightSideCardWallPrice,
+    .rightSideCardWallRating,
+    .rightSideCardWallDiscription,
+    .rightSideCardWallColorType,
+    .rightSideCardWallDesignType,
+    .rightSideCardWallRoomType {
+        font-size: 16px;
+    }
+
+    .buyOrAddCart2 {
+        gap: 10px;
+    }
+
+    .moreInfoAtProductCart {
+        font-size: 14px;
+    }
+
+    .buyOrAddCartAtProductCart {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .wallCardAtProductCart {
+        width: 100%;
+        height: auto;
+    }
 }

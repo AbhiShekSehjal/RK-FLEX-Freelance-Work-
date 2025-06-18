@@ -256,3 +256,52 @@
 .skyBlueColor:hover .overFade {
     opacity: 1;
 }
+
+
+/* For tablets */
+@media (max-width: 1024px) {
+
+    .redColor button,
+    .blueColor button,
+    .greenColor button,
+    .blackColor button,
+    .orangeColor button,
+    .goldenColor button,
+    .whiteColor button,
+    .yellowColor button,
+    .skyBlueColor button {
+        opacity: 1;
+    }
+
+    .redColor .overFade,
+    .blueColor .overFade,
+    .greenColor .overFade,
+    .blackColor .overFade,
+    .orangeColor .overFade,
+    .goldenColor .overFade,
+    .whiteColor .overFade,
+    .yellowColor .overFade,
+    .skyBlueColor .overFade {
+        opacity: 1;
+    }
+
+    .redColor h1,
+    .blueColor h1,
+    .greenColor h1,
+    .blackColor h1,
+    .orangeColor h1,
+    .goldenColor h1,
+    .whiteColor h1,
+    .yellowColor h1,
+    .skyBlueColor h1 {
+        opacity: 1;
+    }
+
+    
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {}
+
+/* For mini mobile phones */
+@media (max-width: 530px) {}

@@ -10,7 +10,7 @@ function SelectByRoom() {
 
 
     const SelectByRomm = (room) => {
-        console.log(room);
+        // console.log(room);
         selectedByRoom(room);
         if (selectedRoom) {
             navigate(`/selectedRoom/${room}`);

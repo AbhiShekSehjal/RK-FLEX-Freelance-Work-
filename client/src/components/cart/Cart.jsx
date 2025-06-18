@@ -94,7 +94,7 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
                             </div>
 
                             <div className="ProductPrice">
-                                <p>Price: Rs. {item.wallPrice}</p>
+                                <p>Price: Rs. {item.wallPrice.toLocaleString('en-IN')}</p>
                             </div>
                         </div>
                     ))

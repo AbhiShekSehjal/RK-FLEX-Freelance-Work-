@@ -9,7 +9,8 @@
 }
 
 .ourAllWallsforShopWalls {
-    width: 100vw;
+    /* width: 100vw; */
+    /* padding: 0 20px; */
 }
 
 .wallsforShopWalls {
@@ -102,4 +103,50 @@
 
 .addOnCartWallforShopWalls:hover {
     background-color: var(--color-secondary);
+}
+
+
+/* For tablets */
+@media (max-width: 1024px) {
+
+    .haedingTextforShopWallsPage {
+        font-size: 28px;
+    }
+
+
+    .moreInfoforShopWalls {
+        bottom: 0;
+    }
+
+    .buyWallforShopWalls ,
+    .addOnCartWallforShopWalls{
+        width: 100%;
+    }
+
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+
+    .haedingTextforShopWallsPage {
+        font-size: 24px;
+    }
+
+    .moreInfoforShopWalls {
+        bottom: 0;
+    }
+
+}
+
+/* For mini mobile phones */
+@media (max-width: 530px) {
+
+    .haedingTextforShopWallsPage {
+        font-size: 18px;
+    }
+
+    .moreInfoforShopWalls {
+        bottom: 0;
+    }
+
 }

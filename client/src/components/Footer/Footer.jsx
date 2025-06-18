@@ -20,8 +20,8 @@ function Footer() {
                 </div>
             </div>
             
-            <div className="contactNumber"><span>Mobile no</span>+22511 5555</div>
-            <div className="emailAddress"><span>Email address</span>rk44@gmail.com</div>
+            <div className="haedingTextForMobile"><span>Mobile no</span>+22511 5555</div>
+            <div className="haedingTextForEmail"><span>Email address</span>rk44@gmail.com</div>
         </footer>
     )
 }

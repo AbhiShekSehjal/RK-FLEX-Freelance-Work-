@@ -15,6 +15,8 @@ import Cart from "./components/cart/Cart.jsx";
 import UserProfile from "./pages/UserProfile/UserProfile.jsx";
 import SelectedRoom from "./pages/Main/SelectByRoom/SelectedRoom/SelectedRoom.jsx";
 import ShopWalls from "./pages/AllWalls2/ShopWalls.jsx";
+import CartPage from "./components/cart/CartPage/CartPage.jsx";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
     <>
 
       <Navbar />
+      <ScrollToTop/>
 
       <Routes>
         <Route path='/' element={authUser ? <MainPage /> : <Navigate to="/login" replace />} />
@@ -40,6 +43,7 @@ function App() {
         <Route path="/search" element={authUser ? <SearchedItems /> : <Navigate to="/login" replace />} />
         <Route path="/cart" element={authUser ? <Cart /> : <Navigate to="/login" replace />} />
         <Route path="/shopWalls" element={authUser ? <ShopWalls /> : <Navigate to="/login" replace />} />
+        <Route path="/cartPage" element={authUser ? <CartPage /> : <Navigate to="/login" replace />} />
       </Routes>
 
       <Footer />

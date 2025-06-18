@@ -11,7 +11,7 @@
     /* Luxury Gold */
     --color-secondary: #1A1A1A;
     /* Rich Charcoal */
-    --color-accent: rgb(76 79 83);
+    --color-accent: rgba(0, 0, 0, 0.555);
     /* White */
 
     /* === BACKGROUND COLORS === */
@@ -41,7 +41,6 @@
     font-size: 2rem;
     letter-spacing: 0.3rem;
     font-family: var(--font-heading);
-    padding: 0px 20px;
 }
 
 .emptyTextForPage,
@@ -52,6 +51,7 @@
     gap: 10px;
     font-size: 1.1rem;
     font-family: var(--font-heading);
+    padding: 0px 20px;
 }
 
 /* For tablets */
@@ -72,5 +72,9 @@
 @media (max-width: 530px) {
     .haedingText {
         font-size: 18px;
+    }
+    .emptyTextForPage,
+    .redirectLink {
+        font-size: 16px;
     }
 }

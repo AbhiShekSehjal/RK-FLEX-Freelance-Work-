@@ -54,7 +54,7 @@ export const userAuthStore = create((set) => ({
             set({ authUser: null });
             toast.success("Logged out successfully");
         } catch (error) {
-            // console.log("Error in logOut at userAuthStore : ", error);
+            console.log("Error in logOut at userAuthStore : ", error);
             toast.error(error.response.data.message)
         }
     },

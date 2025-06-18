@@ -42,6 +42,7 @@
     gap: 5px;
     padding: 5px 0;
     transition: all 0.3s ease-in;
+    border-bottom: 1px solid gray;
 }
 
 .wallNameforSelectedRoom {
@@ -102,4 +103,51 @@
 
 .addOnCartWallforSelectedRoom:hover {
     background-color: var(--color-secondary);
+}
+
+
+
+/* For tablets */
+@media (max-width: 1024px) {
+
+    .haedingTextforSelectedRoom {
+        font-size: 28px;
+    }
+
+
+    .moreInfoforSelectedRoom {
+        bottom: 0;
+    }
+
+    .buyWallforSelectedRoom,
+    .addOnCartWallforSelectedRoom {
+        width: 100%;
+    }
+
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+
+    .haedingTextforSelectedRoom {
+        font-size: 24px;
+    }
+
+    .moreInfoforSelectedRoom {
+        bottom: 0;
+    }
+
+}
+
+/* For mini mobile phones */
+@media (max-width: 530px) {
+
+    .haedingTextforSelectedRoom {
+        font-size: 18px;
+    }
+
+    .moreInfoforSelectedRoom {
+        bottom: 0;
+    }
+
 }

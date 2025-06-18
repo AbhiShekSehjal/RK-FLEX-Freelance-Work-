@@ -64,7 +64,7 @@ export const useWallsStore = create((set) => ({
             });
             set({ selectedWallByDesign: res.data });
             if (design) {
-                console.log(res.data);
+                // console.log(res.data);
             }
 
         } catch (error) {
@@ -90,7 +90,7 @@ export const useWallsStore = create((set) => ({
             if (res) {
                 set({ selectedProductCard: res.data })
             }
-            console.log(res.data);
+            // console.log(res.data);
 
         } catch (error) {
             console.error("Error in productCard:", error);

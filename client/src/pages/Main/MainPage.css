@@ -14,7 +14,7 @@
 .image {
     height: 100vh;
     width: 100vw;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749571899/heroImage_spbzxd.webp");
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750239296/heroImage-Picsart-AiImageEnhancer_tn0m6l.png");
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -37,6 +37,25 @@
     font-family: var(--font-cursive);
 }
 
+.mainBox i {
+    font-size: 2.6rem;
+    position: absolute;
+    bottom: 50px;
+    opacity: 0.2;
+    animation: scrollIcon 2s infinite ease-in-out;
+}
+
+@keyframes scrollIcon {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
+
 .shopBtn {
     z-index: 1;
     margin-top: 8px;
@@ -47,17 +66,11 @@
     background-color: var(--color-bg-soft);
     box-shadow: var(--shadow-soft);
     font-family: var(--font-heading);
-    padding: 15px 30px;
+    padding: 10px 20px;
     font-weight: bolder;
     font-size: 1.5rem;
     transition: all 0.3s ease;
     border: none;
-}
-
-.shopBtn button:hover {
-    background-color: var(--color-hover);
-    box-shadow: var(--shadow-soft-hover);
-    color: var(--color-bg-soft);
 }
 
 .overShade {
@@ -78,7 +91,7 @@
     }
 
     .shopBtn button {
-        padding: 10px 20px;
+        padding: 10px 15px;
         font-size: 1.4rem;
     }
 }
@@ -102,15 +115,17 @@
 /* For mini mobile phones */
 @media (max-width: 530px) {
     .mainBox .mainBoxHeading {
-        font-size: 3rem;
+        font-size: 3.5rem;
+        margin: 20px 0;
     }
 
     .mainBox .mainBoxPera {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        letter-spacing: 0.4rem;
     }
 
     .shopBtn button {
-        padding: 5px 10px;
+        padding: 8px 12px;
         font-size: 0.9rem;
     }
 }

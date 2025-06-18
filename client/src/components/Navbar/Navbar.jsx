@@ -112,6 +112,14 @@ function Navbar() {
         setRefresh(prev => !prev)
     }
 
+    const handleCartLinkClick = () => {
+        navigate("/cartPage")
+    }
+
+    const handleProfileLinkClick = () => {
+        navigate("/userProfile")
+    }
+
     return (
         <>
             <nav className="navbar" id="navbar">
@@ -191,6 +199,7 @@ function Navbar() {
                     <li><a href="/about">About</a></li>
                     <li><a href="/ourworks">Our works</a></li>
                     <li><a href="/joinus">Join us</a></li>
+                    <li><a onClick={() => handleCartLinkClick()}>Cart</a></li>
                 </ul>
 
                 <div className="authUserSection">
@@ -215,17 +224,16 @@ function Navbar() {
 
                 <div className="sidebar" id="sidebar">
                     <ul className="sidebar-nav-links">
-                        <li><a href="/" id="link">Home</a></li>
-                        <li><a href="#about" id="link">About</a></li>
-                        <li><a href="#ourworks" id="link">Our works</a></li>
-                        <li><a href="#joinus" id="link">Join us</a></li>
-                        <li>
-                            {window.innerWidth < 530 && <a onClick={() => handleOnClickCart()}>Cart</a>}
+                        <li onClick={closeSideNavabar}><a href="/" id="link">Home</a></li>
+                        <li onClick={closeSideNavabar}><a href="#about" id="link">About</a></li>
+                        <li onClick={closeSideNavabar}><a href="#ourworks" id="link">Our works</a></li>
+                        <li onClick={closeSideNavabar}><a href="#joinus" id="link">Join us</a></li>
+                        <li onClick={() => { handleCartLinkClick(); closeSideNavabar(); }}>
+                            <a>Cart</a>
                         </li>
-                        <li>
-                            {window.innerWidth < 530 && <a href="/userProfile" id="link">Profile</a>}
+                        <li onClick={() => { handleProfileLinkClick(); closeSideNavabar(); }}>
+                            <a>Profile</a>
                         </li>
-
                     </ul>
 
                     <div className="crossbtn" id="crossbtn" onClick={closeSideNavabar}>

@@ -115,6 +115,7 @@
     gap: 5px;
     padding: 5px 0;
     transition: all 0.3s ease-in;
+    border-bottom: 1px solid gray;
 }
 
 .wallName {
@@ -182,12 +183,21 @@
 
 /* For tablets */
 @media (max-width: 1024px) {
-    
+     .wallCard .moreInfo {
+        bottom: 0px;
+    }
+
+    .buyWall,
+    .addOnCartWall {
+        width: 100%;
+    }
 }
 
 /* For mobile phones */
 @media (max-width: 768px) {
-    
+     .wallCard .moreInfo {
+        bottom: 0px;
+    }
 }
 
 /* For mini mobile phones */

@@ -14,7 +14,6 @@
 
 .imageForFooter {
     background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750161388/mitchell-luo-8LtQ7zAJ5pI-unsplash_xwfhew.jpg");
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -33,16 +32,16 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 30%;
     z-index: 1;
+    margin-bottom: 6px;
 }
 
 .socialMediaLinks .insta,
 .socialMediaLinks .fb,
 .socialMediaLinks .twitter {
     font-size: 28px;
-    border-radius: 50%;
     width: 50px;
+    border-radius: 50%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -50,6 +49,7 @@
     background-color: var(--color-bg-soft);
     transition: all 0.4s ease;
     z-index: 1;
+    margin: 0 10px;
 }
 
 .socialMediaLinks .insta:hover,
@@ -60,13 +60,42 @@
     z-index: 1;
 }
 
-.emailAddress,
-.contactNumber {
-    font-weight: bold;
-    margin-right: 10px;
-    z-index: 1;
-    color: var(--color-bg-soft);
+.haedingTextForMobile,
+.haedingTextForEmail {
+    text-align: center;
+    font-size: 18px;
     letter-spacing: 0.2rem;
     font-family: var(--font-heading);
-    font-size: 1.2rem;
+    padding: 0px 20px;
+    color: var(--color-bg-soft);
+    z-index: 11;
+    font-weight: bold
+}
+
+
+/* For tablets */
+@media (max-width: 1024px) {
+
+    .haedingTextForMobile,
+    .haedingTextForEmail {
+        font-size: 17px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+
+    .haedingTextForMobile,
+    .haedingTextForEmail {
+        font-size: 16px;
+    }
+}
+
+/* For mini mobile phones */
+@media (max-width: 530px) {
+
+    .haedingTextForMobile,
+    .haedingTextForEmail {
+        font-size: 14px;
+    }
 }
