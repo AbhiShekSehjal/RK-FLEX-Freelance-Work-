@@ -12,13 +12,17 @@ function SelectByColors() {
         selectedColor(color);
 
         if (selectedColor) {
-            navigate(`/selectedColor/${color}`);
+            navigate(`/walls/color/${color}`);
         }
     }
 
     return (
         <section className="SelectByColors">
             <div className="haedingText">Select Wallpaper by colors</div>
+            <small className="littleDiscription">A stylish and user-friendly section that lets users explore wallpapers by color, making it easy to find the perfect match for any space.</small>
+            <br />
+            <br />
+            <br />
 
             <div className="wallpaperColors">
                 <div className="redColor">

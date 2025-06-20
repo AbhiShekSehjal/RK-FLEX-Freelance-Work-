@@ -8,146 +8,23 @@
     font-family: var(--font-heading);
 }
 
-.ourAllWallsforSelectedRoom {
-    width: 100vw;
-}
-
-.wallsforSelectedRoom {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.wallCardforSelectedRoom {
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-}
-
-.wallCardforSelectedRoom:hover .moreInfoforSelectedRoom {
-    bottom: 0px;
-}
-
-.moreInfoforSelectedRoom {
-    width: 100%;
-    background-color: var(--color-bg-soft);
-    position: absolute;
-    bottom: -130px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px 0;
-    transition: all 0.3s ease-in;
-    border-bottom: 1px solid gray;
-}
-
-.wallNameforSelectedRoom {
-    font-family: var(--font-body);
-}
-
-.wallDiscriptionforSelectedRoom,
-.wallRatingforSelectedRoom,
-.wallPriceforSelectedRoom {
-    font-family: var(--font-heading);
-}
-
-.wallPriceforSelectedRoom {
-    color: var(--color-secondary);
-    font-weight: bold;
-}
-
-.wallImageforSelectedRoom {
-    transition: all 0.2s ease;
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.wallCardforSelectedRoom:hover .wallImageforSelectedRoom {
-    transform: scale(1.2);
-}
-
-.buyOrAddCartforSelectedRoom {
-    display: flex;
-    gap: 20px;
-    margin: 5px 0;
-}
-
-.buyWallforSelectedRoom {
-    padding: 6px 10px;
-    border: none;
-    background-color: #046C4E;
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.buyWallforSelectedRoom:hover {
-    background-color: var(--color-secondary);
-}
-
-.addOnCartWallforSelectedRoom {
-    padding: 6px 10px;
-    border: none;
-    background-color: var(--color-primary);
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.addOnCartWallforSelectedRoom:hover {
-    background-color: var(--color-secondary);
-}
-
-
-
 /* For tablets */
 @media (max-width: 1024px) {
-
     .haedingTextforSelectedRoom {
         font-size: 28px;
     }
-
-
-    .moreInfoforSelectedRoom {
-        bottom: 0;
-    }
-
-    .buyWallforSelectedRoom,
-    .addOnCartWallforSelectedRoom {
-        width: 100%;
-    }
-
 }
 
 /* For mobile phones */
 @media (max-width: 768px) {
-
     .haedingTextforSelectedRoom {
         font-size: 24px;
     }
-
-    .moreInfoforSelectedRoom {
-        bottom: 0;
-    }
-
 }
 
 /* For mini mobile phones */
 @media (max-width: 530px) {
-
     .haedingTextforSelectedRoom {
         font-size: 18px;
     }
-
-    .moreInfoforSelectedRoom {
-        bottom: 0;
-    }
-
 }

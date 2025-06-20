@@ -12,117 +12,12 @@
     width: 100vw;
 }
 
-.wallsforSearchedItems {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.wallCardforSearchedItems {
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-}
-
-.wallCardforSearchedItems:hover .moreInfoforSearchedItems {
-    bottom: 0px;
-}
-
-.moreInfoforSearchedItems {
-    width: 100%;
-    background-color: var(--color-bg-soft);
-    position: absolute;
-    bottom: -130px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px 0;
-    transition: all 0.3s ease-in;
-    border-bottom: 1px solid gray;
-}
-
-.wallNameforSearchedItems {
-    font-family: var(--font-body);
-}
-
-.wallDiscriptionforSearchedItems,
-.wallRatingforSearchedItems,
-.wallPriceforSearchedItems {
-    font-family: var(--font-heading);
-}
-
-.wallPriceforSearchedItems {
-    color: var(--color-secondary);
-    font-weight: bold;
-}
-
-.wallImageforSearchedItems {
-    transition: all 0.2s ease;
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.wallCardforSearchedItems:hover .wallImageforSearchedItems {
-    transform: scale(1.2);
-}
-
-.buyOrAddCartforSearchedItems {
-    display: flex;
-    gap: 20px;
-    margin: 5px 0;
-}
-
-.buyWallforSearchedItems {
-    padding: 6px 10px;
-    border: none;
-    background-color: #046C4E;
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.buyWallforSearchedItems:hover {
-    background-color: var(--color-secondary);
-}
-
-.addOnCartWallforSearchedItems {
-    padding: 6px 10px;
-    border: none;
-    background-color: var(--color-primary);
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.addOnCartWallforSearchedItems:hover {
-    background-color: var(--color-secondary);
-}
-
-
 /* For tablets */
 @media (max-width: 1024px) {
 
     .haedingTextforSearchedItem {
         font-size: 28px;
     }
-
-
-    .moreInfoforSearchedItems {
-        bottom: 0;
-    }
-
-    .buyWallforSearchedItems,
-    .addOnCartWallforSearchedItems {
-        width: 100%;
-    }
-
 }
 
 /* For mobile phones */
@@ -131,11 +26,6 @@
     .haedingTextforSearchedItem {
         font-size: 24px;
     }
-
-    .moreInfoforSearchedItems {
-        bottom: 0;
-    }
-
 }
 
 /* For mini mobile phones */
@@ -144,9 +34,4 @@
     .haedingTextforSearchedItem {
         font-size: 18px;
     }
-
-    .moreInfoforSearchedItems {
-        bottom: 0;
-    }
-
 }

@@ -23,9 +23,9 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
 
     const handleShowProductCard2 = (id) => {
         onClose();
-        productCard(id);
+        productCard(id.id);
         if (selectedProductCard) {
-            navigate(`/productCard/${id.id}`);
+            navigate(`/walls/${id.id}`);
         }
     }
 
@@ -76,8 +76,8 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
                     cartItems.map((item) => (
                         <div key={item._id} className="cartItem">
                             <img
-                                src={item.wallImages[1].url}
-                                alt={item.wallImages[1].altText}
+                                src={item.wallImages[0].url}
+                                alt={item.wallImages[0].altText}
                                 width={100}
                             />
                             <div className="productInfo">

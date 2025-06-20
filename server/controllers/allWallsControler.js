@@ -3,7 +3,6 @@ import AllWalls from "../models/allWallsModel.js";
 export const getAllWalls = async (req, res) => {
     try {
         const walls = await AllWalls.find().populate("wallImages");
-
         res.json(walls);
     } catch (error) {
         console.log("Error happened in getAllWalls : ", error);
@@ -17,7 +16,6 @@ export const getWallsByColor = async (req, res) => {
 
     try {
         const walls = await AllWalls.find({ "wallColorType": color });
-
         res.json(walls);
     } catch (error) {
         console.log("Error happened in getWallsByColor : ", error);
@@ -33,7 +31,6 @@ export const getWallByDesignType = async (req, res) => {
 
     try {
         const walls = await AllWalls.find({ "wallDesignType": design });
-
         res.json(walls);
     } catch (error) {
         console.log("Error happened in getWallByDesignType : ", error);
@@ -47,7 +44,6 @@ export const getWallRoomType = async (req, res) => {
 
     try {
         let walls = await AllWalls.find({ "wallRoomType": room });
-
         res.json(walls);
     } catch (error) {
         console.log("Error happened in getWallRoomType : ", error);
@@ -75,18 +71,19 @@ export const getSearchItem = async (req, res) => {
     }
 };
 
-export const getProdictCard = async (req, res) => {
-    const { product } = req.query;
+export const getProductCard = async (req, res) => {
+    const { id } = req.params;
 
-    // console.log("I recieved a product in backend : ", product);
+    // console.log("I received a product ID in backend:", id);
 
     try {
-        const wall = await AllWalls.findById(product.id);
-
+        const wall = await AllWalls.findById(id);
+        if (!wall) {
+            return res.status(404).json({ message: "Product not found" });
+        }
         res.json(wall);
     } catch (error) {
-        console.log("Error happened in getProdictCard : ", error);
-
+        console.log("Error happened in getProductCard:", error);
+        res.status(500).json({ message: "Server Error" });
     }
-
-}
+};

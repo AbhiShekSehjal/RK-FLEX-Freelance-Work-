@@ -16,9 +16,11 @@ function ShopWalls() {
     }, [allAllWalls, selectByDesign]);
 
     const handleShowProductCard = (id) => {
-        productCard(id);
+        productCard(id.id);
+        console.log(id.id);
+
         if (selectedProductCard) {
-            navigate(`/home/productCard/${id.id}`);
+            navigate(`/walls/${id.id}`);
         }
     }
 
@@ -42,45 +44,39 @@ function ShopWalls() {
     return (
         <>
             <div className="haedingTextforShopWallsPage">Special design Wallpapers
-                <p style={{ fontSize: "14px", margin: "30px 0px" }}><b>Found : </b>{allWall.length} results</p>
+                <p style={{ fontSize: "14px", margin: "30px 0px" }}><b>Found : </b>{allWall && allWall.length} results</p>
             </div>
 
             <hr />
             <br />
             <br />
 
-            <div className="ourAllWallsforShopWalls">
+            <div className="walls">
+                {allWall && allWall.length > 0 ? (
+                    allWall.map((wall) => (
+                        <div className="wallCard" key={wall._id}>
+                            <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
+                                <img
+                                    src={wall.wallImages[0]?.url}
+                                    alt={wall.wallImages[0]?.altText || "Wallpaper"}
+                                />
+                            </div>
 
-                <div className="wallsforShopWalls">
-                    {allWall && allWall.length > 0 ? (
-                        allWall.map((wall) => (
-                            <div className="wallCardforShopWalls" key={wall._id}>
-                                <div className="wallImageforShopWalls" onClick={() => handleShowProductCard({ id: wall._id })}>
-                                    <img
-                                        src={wall.wallImages[1]?.url}
-                                        alt={wall.wallImages[1]?.altText || "Wallpaper"}
-                                    />
-                                </div>
+                            <div className="moreInfo">
+                                <div className="wallName">{wall.wallName}</div>
+                                <div className="wallPrice">Rs. {wall.wallPrice.toLocaleString('en-IN')}</div>
+                                <div className="wallRating">{wall.wallRating} stars &#9733;</div>
 
-                                <div className="moreInfoforShopWalls">
-                                    <div className="wallNameforShopWalls"><b>{wall.wallName}</b></div>
-                                    <div className="wallDiscriptionforShopWalls">{wall.wallDiscription}</div>
-                                    <div className="wallPriceforShopWalls">Rs. {wall.wallPrice}</div>
-                                    <div className="wallRatingforShopWalls">{wall.wallRating} stars</div>
-
-                                    <div className="buyOrAddCartforShopWalls">
-                                        <button className='buyWallforShopWalls'>Buy</button>
-                                        <button className='addOnCartWallforShopWalls' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
-                                    </div>
+                                <div className="buyOrAddCart">
+                                    <button className='addOnCartWall' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
                                 </div>
                             </div>
-                        ))
-                    ) : (
-                        <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
-                    )}
-                </div>
-
-            </div >
+                        </div>
+                    ))
+                ) : (
+                    <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
+                )}
+            </div>
         </>
     )
 }

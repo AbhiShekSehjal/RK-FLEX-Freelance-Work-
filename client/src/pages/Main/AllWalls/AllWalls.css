@@ -3,35 +3,36 @@
 .ourAllWalls {
     width: 100vw;
     display: flex;
+    /* flex-direction: column; */
 }
 
 .sideFilterBar {
-    width: 15vw;
     padding-left: 20px;
+    margin: 10px 20px;
 }
 
 .filterHeading {
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: 300;
     color: var(--color-secondary);
     margin-bottom: 20px;
     padding-bottom: 8px;
-    font-family: var(--font-body);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .filterSubHeading {
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 200;
     margin-bottom: 10px;
     color: var(--color-secondary);
-    font-family: var(--font-body);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .byPrice {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-family: var(--font-body);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .byPrice input[type="range"] {
@@ -45,6 +46,7 @@
     font-weight: 500;
     color: var(--color-accent);
     margin-top: 5px;
+    letter-spacing: 0.1rem;
 }
 
 .luxuryDivider {
@@ -57,7 +59,8 @@
 .byDesign {
     display: flex;
     flex-direction: column;
-    font-family: var(--font-body);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.1rem;
 }
 
 .selectByDesignList {
@@ -75,6 +78,7 @@
     transition: all 0.2s ease;
     cursor: pointer;
     color: var(--color-accent);
+
 }
 
 .selectByDesignListItem input {
@@ -86,65 +90,56 @@
 }
 
 .walls {
-    width: 85vw;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .wallCard {
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
+    margin: 20px;
+
 }
 
-.wallCard:hover .moreInfo {
-    bottom: 0px;
+.wallCard img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
+
 
 .moreInfo {
-    width: 100%;
+    width: 300px;
     background-color: var(--color-bg-soft);
-    position: absolute;
-    bottom: -130px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 5px 0;
     transition: all 0.3s ease-in;
-    border-bottom: 1px solid gray;
 }
+
 
 .wallName {
-    font-family: var(--font-body);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
-.wallDiscription,
-.wallRating,
-.wallPrice {
-    font-family: var(--font-heading);
+.wallRating {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 .wallPrice {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--color-secondary);
-    font-weight: bold;
+    font-size: 20px;
 }
 
 .wallImage {
-    transition: all 0.2s ease;
-    background-position: center;
-    background-size: cover;
     cursor: pointer;
-    width: 100%;
-    height: fit-content;
 }
 
-.wallCard:hover .wallImage {
-    transform: scale(1.2);
-}
+.wallImage img:hover {}
 
 .buyOrAddCart {
     display: flex;
@@ -152,86 +147,69 @@
     margin: 5px 0;
 }
 
-.buyWall {
-    padding: 6px 10px;
-    border: none;
-    background-color: #046C4E;
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.buyWall:hover {
-    background-color: var(--color-secondary);
-}
-
 .addOnCartWall {
-    padding: 6px 10px;
-    border: none;
-    background-color: var(--color-primary);
+    width: 100%;
+    padding: 10px 10px;
+    background-color: var(--color-secondary);
     color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 .addOnCartWall:hover {
-    background-color: var(--color-secondary);
+    background-color: transparent;
+    color: var(--color-secondary);
 }
+
+
+.paginationControls {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 10px;
+}
+
+.paginationBtn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-bg-soft);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.paginationBtn:hover {
+    background-color: var(--color-accent);
+}
+
+.activePage {
+    background-color: var(--color-secondary);
+    color: var(--color-bg-soft);
+    font-weight: bold;
+}
+
 
 
 /* For tablets */
 @media (max-width: 1024px) {
-     .wallCard .moreInfo {
-        bottom: 0px;
-    }
-
-    .buyWall,
-    .addOnCartWall {
-        width: 100%;
+    .sideFilterBar {
+        display: none;
     }
 }
 
 /* For mobile phones */
 @media (max-width: 768px) {
-     .wallCard .moreInfo {
-        bottom: 0px;
+    .moreInfo {
+        /* margin-bottom: 20px; */
     }
 }
 
 /* For mini mobile phones */
 @media (max-width: 530px) {
-    .sideFilterBar {
-        display: none;
-    }
-
-    .walls {
-        width: 100vw;
-    }
-
     .wallCard {
-        width: 80%;
         height: 400px;
-    }
-
-    .wallCard .moreInfo {
-        bottom: 0px;
-    }
-
-    .moreInfo {
-        width: 100%;
-    }
-
-    .wallCard:hover .wallImage {
-        transform: scale(1);
-    }
-
-    .buyWall {
-        padding: 5px 8px;
-    }
-    
-    .addOnCartWall{
-        padding: 5px 8px;
+        margin-bottom: 50px;
     }
 }

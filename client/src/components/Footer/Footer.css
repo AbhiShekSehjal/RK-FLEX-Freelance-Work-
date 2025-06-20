@@ -8,8 +8,9 @@
     width: 100vw;
     height: 80vh;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 35px;
     position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .imageForFooter {
@@ -65,11 +66,9 @@
     text-align: center;
     font-size: 18px;
     letter-spacing: 0.2rem;
-    font-family: var(--font-heading);
     padding: 0px 20px;
     color: var(--color-bg-soft);
     z-index: 11;
-    font-weight: bold
 }
 
 

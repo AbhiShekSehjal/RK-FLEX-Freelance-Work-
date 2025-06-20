@@ -23,7 +23,7 @@ function MainPage() {
                     <button onClick={() => handleShopWallsBtn()}>Shop Wallpaper</button>
                 </div>
                 <div className="overShade"></div>
-                <i class="fa-solid fa-angles-down"></i>
+                <i className="fa-solid fa-angles-down"></i>
             </main>
             <br />
 

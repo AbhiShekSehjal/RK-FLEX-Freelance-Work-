@@ -8,145 +8,24 @@
     font-family: var(--font-heading);
 }
 
-.ourAllWallsforSelectedColor {
-    width: 100vw;
-}
-
-.wallsforSelectedColor {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.wallCardforSelectedColor {
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-}
-
-.wallCardforSelectedColor:hover .moreInfoforSelectedColor {
-    bottom: 0px;
-}
-
-.moreInfoforSelectedColor {
-    width: 100%;
-    background-color: var(--color-bg-soft);
-    position: absolute;
-    bottom: -130px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px 0;
-    transition: all 0.3s ease-in;
-    border-bottom: 1px solid gray;
-}
-
-.wallNameforSelectedColor {
-    font-family: var(--font-body);
-}
-
-.wallDiscriptionforSelectedColor,
-.wallRatingforSelectedColor,
-.wallPriceforSelectedColor {
-    font-family: var(--font-heading);
-}
-
-.wallPriceforSelectedColor {
-    color: var(--color-secondary);
-    font-weight: bold;
-}
-
-.wallImageforSelectedColor {
-    transition: all 0.2s ease;
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.wallCardforSelectedColor:hover .wallImageforSelectedColor {
-    transform: scale(1.2);
-}
-
-.buyOrAddCartforSelectedColor {
-    display: flex;
-    gap: 20px;
-    margin: 5px 0;
-}
-
-.buyWallforSelectedColor {
-    padding: 6px 10px;
-    border: none;
-    background-color: #046C4E;
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.buyWallforSelectedColor:hover {
-    background-color: var(--color-secondary);
-}
-
-.addOnCartWallforSelectedColor {
-    padding: 6px 10px;
-    border: none;
-    background-color: var(--color-primary);
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.addOnCartWallforSelectedColor:hover {
-    background-color: var(--color-secondary);
-}
-
-
 /* For tablets */
 @media (max-width: 1024px) {
 
     .haedingTextforSelectedColor {
         font-size: 28px;
     }
-
-
-    .moreInfoforSelectedColor {
-        bottom: 0;
-    }
-
-    .buyWallforSelectedColor ,
-    .addOnCartWallforSelectedColor{
-        width: 100%;
-    }
-
 }
 
 /* For mobile phones */
 @media (max-width: 768px) {
-
     .haedingTextforSelectedColor {
         font-size: 24px;
     }
-
-    .moreInfoforSelectedColor {
-        bottom: 0;
-    }
-
 }
 
 /* For mini mobile phones */
 @media (max-width: 530px) {
-
     .haedingTextforSelectedColor {
         font-size: 18px;
     }
-
-    .moreInfoforSelectedColor {
-        bottom: 0;
-    }
-
 }

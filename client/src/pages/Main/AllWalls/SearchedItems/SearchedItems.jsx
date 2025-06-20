@@ -10,9 +10,9 @@ function SearchedItems() {
     const { productCard, selectedProductCard, searchedItemInput, searchedInput } = useWallsStore();
 
     const handleShowProductCard = (id) => {
-        productCard(id);
+        productCard(id.id);
         if (selectedProductCard) {
-            navigate(`/productCard/${id.id}`);
+            navigate(`/walls/${id.id}`);
         }
     }
 
@@ -43,38 +43,32 @@ function SearchedItems() {
             <br />
             <br />
 
-            <div className="ourAllWallsforSearchedItems">
+            <div className="walls">
+                {searchedItemInput && searchedItemInput.length > 0 ? (
+                    searchedItemInput.map((wall) => (
+                        <div className="wallCard" key={wall._id}>
+                            <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
+                                <img
+                                    src={wall.wallImages[0]?.url}
+                                    alt={wall.wallImages[0]?.altText || "Wallpaper"}
+                                />
+                            </div>
 
-                <div className="wallsforSearchedItems">
-                    {searchedItemInput && searchedItemInput.length > 0 ? (
-                        searchedItemInput.map((wall) => (
-                            <div className="wallCardforSearchedItems" key={wall._id}>
-                                <div className="wallImageforSearchedItems" onClick={() => handleShowProductCard({ id: wall._id })}>
-                                    <img
-                                        src={wall.wallImages[1]?.url}
-                                        alt={wall.wallImages[1]?.altText || "Wallpaper"}
-                                    />
-                                </div>
+                            <div className="moreInfo">
+                                <div className="wallName">{wall.wallName}</div>
+                                <div className="wallPrice">Rs. {wall.wallPrice.toLocaleString('en-IN')}</div>
+                                <div className="wallRating">{wall.wallRating} stars &#9733;</div>
 
-                                <div className="moreInfoforSearchedItems">
-                                    <div className="wallNameforSearchedItems"><b>{wall.wallName}</b></div>
-                                    <div className="wallDiscriptionforSearchedItems">{wall.wallDiscription}</div>
-                                    <div className="wallPriceforSearchedItems">Rs. {wall.wallPrice}</div>
-                                    <div className="wallRatingforSearchedItems">{wall.wallRating} stars</div>
-
-                                    <div className="buyOrAddCartforSearchedItems">
-                                        <button className='buyWallforSearchedItems'>Buy</button>
-                                        <button className='addOnCartWallforSearchedItems' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
-                                    </div>
+                                <div className="buyOrAddCart">
+                                    <button className='addOnCartWall' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
                                 </div>
                             </div>
-                        ))
-                    ) : (
-                        <div className="emptyTextForPage">No wallpaper yet, coming soon are wallpapers for {searchedInput}</div>
-                    )}
-                </div>
-
-            </div >
+                        </div>
+                    ))
+                ) : (
+                    <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
+                )}
+            </div>
         </>
     )
 }

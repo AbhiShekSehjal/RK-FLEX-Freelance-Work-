@@ -13,13 +13,17 @@ function SelectByRoom() {
         // console.log(room);
         selectedByRoom(room);
         if (selectedRoom) {
-            navigate(`/selectedRoom/${room}`);
+            navigate(`/walls/room/${room}`);
         }
     }
 
     return (
         <section className="selectByRoom">
             <div className="haedingText">Select Wallpaper by Rooms</div>
+             <small className="littleDiscription">A clean and intuitive section that lets users pick wallpapers by room type, making it simple to find the perfect design for any space—from kids' rooms to kitchens.</small>
+            <br />
+            <br />
+            <br />
 
             <div className="typeOfRooms">
                 <div className="kidsRoom" onClick={() => SelectByRomm("Kids Room")}>

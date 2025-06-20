@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-    baseURL: "https://rk-flex.onrender.com",
+    baseURL: "http://localhost:9000/api",
     withCredentials: true
 });

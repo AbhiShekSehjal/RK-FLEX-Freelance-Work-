@@ -11,6 +11,9 @@ function AllWalls() {
     const [selectDesign, setSelectDesign] = useState(false);
     const [priceRange, setPriceRange] = useState(2500);
 
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 6;
+
     const { allWall, allAllWalls, selectByDesign, selectedWallByDesign, productCard, selectedProductCard } = useWallsStore();
 
     useEffect(() => {
@@ -30,9 +33,9 @@ function AllWalls() {
     }
 
     const handleShowProductCard = (id) => {
-        productCard(id);
+        productCard(id.id);
         if (selectedProductCard) {
-            navigate(`/productCard/${id.id}`);
+            navigate(`/walls/${id.id}`);
         }
     }
 
@@ -54,9 +57,14 @@ function AllWalls() {
         : allWall
     )?.filter(wall => wall.wallPrice <= priceRange);
 
+    const totalPages = Math.ceil((filteredWalls?.length || 0) / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedWalls = filteredWalls?.slice(startIndex, endIndex);
+
     return (
         <>
-            <div className="haedingText">Special design Wallpapers</div>
+            <div className="haedingText">Discover Our Wallpapers</div>
 
             <div className="ourAllWalls">
 
@@ -65,7 +73,6 @@ function AllWalls() {
                         <h2 className="filterHeading">Choose Your Style</h2>
                     </div>
 
-                    <hr className="luxuryDivider" />
 
 
                     <div className="byPrice">
@@ -88,8 +95,7 @@ function AllWalls() {
                         <h4 className="filterSubHeading">Filter by Design</h4>
                         <ul className="selectByDesignList">
                             {[
-                                "Botanical", "Solid", "Damask", "Texture", "Stripes",
-                                "Metallic", "Minimal", "Gradient", "Marble", "Floral", "Wood"
+                                "Floral", "3D", "Abstract", "Geometric", "Textured", "Damask"
                             ].map((design) => (
                                 <li key={design} className="selectByDesignListItem">
                                     <input
@@ -105,27 +111,26 @@ function AllWalls() {
 
                     <hr className="luxuryDivider" />
                 </div>
+                <hr className="luxuryDivider" />
 
 
                 <div className="walls">
-                    {filteredWalls && filteredWalls.length > 0 ? (
-                        filteredWalls.map((wall) => (
+                    {paginatedWalls && paginatedWalls.length > 0 ? (
+                        paginatedWalls.map((wall) => (
                             <div className="wallCard" key={wall._id}>
                                 <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
                                     <img
-                                        src={wall.wallImages[1]?.url}
-                                        alt={wall.wallImages[1]?.altText || "Wallpaper"}
+                                        src={wall.wallImages[0]?.url}
+                                        alt={wall.wallImages[0]?.altText || "Wallpaper"}
                                     />
                                 </div>
 
                                 <div className="moreInfo">
-                                    <div className="wallName"><b>{wall.wallName}</b></div>
-                                    <div className="wallDiscription">{wall.wallDiscription}</div>
-                                    <div className="wallPrice">Rs. {wall.wallPrice}</div>
-                                    <div className="wallRating">{wall.wallRating} stars</div>
+                                    <div className="wallName">{wall.wallName}</div>
+                                    <div className="wallPrice">Rs. {wall.wallPrice.toLocaleString('en-IN')}</div>
+                                    <div className="wallRating">{wall.wallRating} stars &#9733;</div>
 
                                     <div className="buyOrAddCart">
-                                        <button className='buyWall'>Buy</button>
                                         <button className='addOnCartWall' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
                                     </div>
                                 </div>
@@ -136,6 +141,20 @@ function AllWalls() {
                     )}
                 </div>
             </div>
+
+            {totalPages > 1 && (
+                <div className="paginationControls">
+                    {Array.from({ length: totalPages }, (_, index) => (
+                        <button
+                            key={index}
+                            className={`paginationBtn ${currentPage === index + 1 ? "activePage" : ""}`}
+                            onClick={() => setCurrentPage(index + 1)}
+                        >
+                            {index + 1}
+                        </button>
+                    ))}
+                </div>
+            )}
         </>
     );
 }

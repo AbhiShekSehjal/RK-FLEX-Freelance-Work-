@@ -1,2303 +1,423 @@
 const WallsData = [
   {
-    "wallName": "Ocean Wave Pattern 1",
-    "wallPrice": 2477,
+    "wallName": "Designer Wallpaper 1",
+    "wallPrice": 1896,
     "wallRating": 3.8,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper1/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper2/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper3/300/500",
-        "altText": "Damask design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396880/39._400_Designs_3D_200_b_0177-0177_1_fywyxs.jpg",
+        "altText": "Wallpaper design image 1"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 1.",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 1.",
     "wallColorType": "Pink",
-    "wallDesignType": "Damask",
+    "wallDesignType": "Floral",
     "wallRoomType": "Living Room"
   },
   {
-    "wallName": "Vintage Damask Gold 2",
-    "wallPrice": 2648,
+    "wallName": "Designer Wallpaper 2",
+    "wallPrice": 2378,
+    "wallRating": 4.6,
+    "wallImages": [
+      {
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396880/39._400_Designs_3D_200_b_0173-0173_1_iaczad.jpg",
+        "altText": "Wallpaper design image 2"
+      }
+    ],
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 2.",
+    "wallColorType": "Gold",
+    "wallDesignType": "3D",
+    "wallRoomType": "Hall"
+  },
+  {
+    "wallName": "Designer Wallpaper 3",
+    "wallPrice": 2652,
+    "wallRating": 4.6,
+    "wallImages": [
+      {
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396879/39._400_Designs_3D_200_b_0174-0174_1_huhwtm.jpg",
+        "altText": "Wallpaper design image 3"
+      }
+    ],
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 3.",
+    "wallColorType": "Green",
+    "wallDesignType": "Abstract",
+    "wallRoomType": "Bedroom"
+  },
+  {
+    "wallName": "Designer Wallpaper 4",
+    "wallPrice": 2166,
+    "wallRating": 4.9,
+    "wallImages": [
+      {
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396876/39._400_Designs_3D_200_b_0175-0175_1_kwxwjj.jpg",
+        "altText": "Wallpaper design image 4"
+      }
+    ],
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 4.",
+    "wallColorType": "Beige",
+    "wallDesignType": "Geometric",
+    "wallRoomType": "Hall"
+  },
+  {
+    "wallName": "Designer Wallpaper 5",
+    "wallPrice": 2376,
     "wallRating": 5.0,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper2/300/500",
-        "altText": "Floral design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper3/300/500",
-        "altText": "Floral design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper4/300/500",
-        "altText": "Floral design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396874/39._400_Designs_3D_200_b_0176-0176_1_wndovy.jpg",
+        "altText": "Wallpaper design image 5"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 2.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Floral",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 5.",
+    "wallColorType": "Gold",
+    "wallDesignType": "Textured",
+    "wallRoomType": "Dining Room"
+  },
+  {
+    "wallName": "Designer Wallpaper 6",
+    "wallPrice": 2261,
+    "wallRating": 3.6,
+    "wallImages": [
+      {
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396864/39._400_Designs_3D_200_b_0169-0169_1_j59ida.jpg",
+        "altText": "Wallpaper design image 6"
+      }
+    ],
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 6.",
+    "wallColorType": "Green",
+    "wallDesignType": "Geometric",
+    "wallRoomType": "Hall"
+  },
+  {
+    "wallName": "Designer Wallpaper 7",
+    "wallPrice": 1976,
+    "wallRating": 4.4,
+    "wallImages": [
+      {
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396849/39._400_Designs_3D_200_b_0170-0170_1_ovyfna.jpg",
+        "altText": "Wallpaper design image 7"
+      }
+    ],
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 7.",
+    "wallColorType": "Gold",
+    "wallDesignType": "Damask",
     "wallRoomType": "Office"
   },
   {
-    "wallName": "Vintage Damask Gold 3",
-    "wallPrice": 2333,
-    "wallRating": 3.5,
+    "wallName": "Designer Wallpaper 8",
+    "wallPrice": 1740,
+    "wallRating": 4.2,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper3/300/500",
-        "altText": "Brick design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper4/300/500",
-        "altText": "Brick design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper5/300/500",
-        "altText": "Brick design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396849/39._400_Designs_3D_200_b_0171-0171_1_kbxir8.jpg",
+        "altText": "Wallpaper design image 8"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 3.",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 8.",
+    "wallColorType": "Pink",
+    "wallDesignType": "3D",
+    "wallRoomType": "Bedroom"
+  },
+  {
+    "wallName": "Designer Wallpaper 9",
+    "wallPrice": 1612,
+    "wallRating": 3.9,
+    "wallImages": [
+      {
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396848/39._400_Designs_3D_200_b_0172-0172_1_iaywdr.jpg",
+        "altText": "Wallpaper design image 9"
+      }
+    ],
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 9.",
     "wallColorType": "Blue",
-    "wallDesignType": "Brick",
-    "wallRoomType": "Kitchen"
+    "wallDesignType": "Geometric",
+    "wallRoomType": "Hall"
   },
   {
-    "wallName": "Modern Abstract Blue 4",
-    "wallPrice": 2197,
-    "wallRating": 4.3,
+    "wallName": "Designer Wallpaper 10",
+    "wallPrice": 2877,
+    "wallRating": 4.8,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper4/300/500",
-        "altText": "Brick design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper5/300/500",
-        "altText": "Brick design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper6/300/500",
-        "altText": "Brick design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396830/39._400_Designs_3D_200_b_0193-0193_1_xbxu2o.jpg",
+        "altText": "Wallpaper design image 10"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 4.",
-    "wallColorType": "Gold",
-    "wallDesignType": "Brick",
-    "wallRoomType": "Kitchen"
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 10.",
+    "wallColorType": "Grey",
+    "wallDesignType": "Floral",
+    "wallRoomType": "Bedroom"
   },
   {
-    "wallName": "Classic White Brick 5",
+    "wallName": "Designer Wallpaper 11",
+    "wallPrice": 2329,
+    "wallRating": 3.8,
+    "wallImages": [
+      {
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396817/39._400_Designs_3D_200_b_0168-0168_1_ob9yeq.jpg",
+        "altText": "Wallpaper design image 11"
+      }
+    ],
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 11.",
+    "wallColorType": "Blue",
+    "wallDesignType": "Floral",
+    "wallRoomType": "Living Room"
+  },
+  {
+    "wallName": "Designer Wallpaper 12",
+    "wallPrice": 1985,
+    "wallRating": 4.7,
+    "wallImages": [
+      {
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396815/39._400_Designs_3D_200_b_0167-0167_1_qqhiaz.jpg",
+        "altText": "Wallpaper design image 12"
+      }
+    ],
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 12.",
+    "wallColorType": "Grey",
+    "wallDesignType": "Textured",
+    "wallRoomType": "Office"
+  },
+  {
+    "wallName": "Designer Wallpaper 13",
     "wallPrice": 2822,
-    "wallRating": 3.6,
+    "wallRating": 3.8,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper5/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper6/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper7/300/500",
-        "altText": "Wood design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396799/39._400_Designs_3D_200_b_0194-0194_1_fi4vnu.jpg",
+        "altText": "Wallpaper design image 13"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 5.",
-    "wallColorType": "Green",
-    "wallDesignType": "Wood",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 13.",
+    "wallColorType": "White",
+    "wallDesignType": "Textured",
     "wallRoomType": "Living Room"
   },
   {
-    "wallName": "Tropical Jungle Vibe 6",
-    "wallPrice": 1292,
-    "wallRating": 3.6,
+    "wallName": "Designer Wallpaper 14",
+    "wallPrice": 2950,
+    "wallRating": 4.2,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper6/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper7/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper8/300/500",
-        "altText": "Marble design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396799/39._400_Designs_3D_200_b_0195-0195_1_uqookv.jpg",
+        "altText": "Wallpaper design image 14"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 6.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Kitchen"
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 14.",
+    "wallColorType": "Beige",
+    "wallDesignType": "Abstract",
+    "wallRoomType": "Bedroom"
   },
   {
-    "wallName": "Tropical Jungle Vibe 7",
-    "wallPrice": 1108,
-    "wallRating": 4.3,
+    "wallName": "Designer Wallpaper 15",
+    "wallPrice": 1829,
+    "wallRating": 4.1,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper7/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper8/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper9/300/500",
-        "altText": "Wood design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396798/39._400_Designs_3D_200_b_0189-0189_1_jgtfqj.jpg",
+        "altText": "Wallpaper design image 15"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 7.",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 15.",
     "wallColorType": "Gold",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Hallway"
+    "wallDesignType": "Floral",
+    "wallRoomType": "Bedroom"
   },
   {
-    "wallName": "Minimalist Concrete 8",
-    "wallPrice": 2154,
-    "wallRating": 4.4,
+    "wallName": "Designer Wallpaper 16",
+    "wallPrice": 1608,
+    "wallRating": 3.2,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper8/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper9/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper10/300/500",
-        "altText": "Tropical design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396797/39._400_Designs_3D_200_b_0190-0190_1_gzclog.jpg",
+        "altText": "Wallpaper design image 16"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 8.",
-    "wallColorType": "Black",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Living Room"
-  },
-  {
-    "wallName": "Tropical Jungle Vibe 9",
-    "wallPrice": 1684,
-    "wallRating": 4.9,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper9/300/500",
-        "altText": "Concrete design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper10/300/500",
-        "altText": "Concrete design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper11/300/500",
-        "altText": "Concrete design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 9.",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 16.",
     "wallColorType": "Green",
-    "wallDesignType": "Concrete",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Golden Leaf Textures 10",
-    "wallPrice": 2992,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper10/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper11/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper12/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 10.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Tropical",
+    "wallDesignType": "Textured",
     "wallRoomType": "Living Room"
   },
   {
-    "wallName": "Tropical Jungle Vibe 11",
-    "wallPrice": 1246,
-    "wallRating": 4.5,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper11/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper12/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper13/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 11.",
-    "wallColorType": "Gold",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Living Room"
-  },
-  {
-    "wallName": "Golden Leaf Textures 12",
-    "wallPrice": 2886,
+    "wallName": "Designer Wallpaper 17",
+    "wallPrice": 1566,
     "wallRating": 3.5,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper12/300/500",
-        "altText": "Floral design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper13/300/500",
-        "altText": "Floral design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper14/300/500",
-        "altText": "Floral design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396797/39._400_Designs_3D_200_b_0191-0191_1_ezungr.jpg",
+        "altText": "Wallpaper design image 17"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 12.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Floral",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 17.",
+    "wallColorType": "Pink",
+    "wallDesignType": "Abstract",
+    "wallRoomType": "Dining Room"
+  },
+  {
+    "wallName": "Designer Wallpaper 18",
+    "wallPrice": 1780,
+    "wallRating": 3.1,
+    "wallImages": [
+      {
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396779/39._400_Designs_3D_200_b_0187-0187_1_qeimrq.jpg",
+        "altText": "Wallpaper design image 18"
+      }
+    ],
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 18.",
+    "wallColorType": "Gold",
+    "wallDesignType": "Textured",
     "wallRoomType": "Living Room"
   },
   {
-    "wallName": "Modern Abstract Blue 13",
-    "wallPrice": 2724,
-    "wallRating": 3.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper13/300/500",
-        "altText": "Wave design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper14/300/500",
-        "altText": "Wave design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper15/300/500",
-        "altText": "Wave design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 13.",
-    "wallColorType": "Blue",
-    "wallDesignType": "Wave",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Golden Leaf Textures 14",
-    "wallPrice": 1998,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper14/300/500",
-        "altText": "Brick design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper15/300/500",
-        "altText": "Brick design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper16/300/500",
-        "altText": "Brick design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 14.",
-    "wallColorType": "Green",
-    "wallDesignType": "Brick",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Elegant Grey Marble 15",
-    "wallPrice": 2495,
-    "wallRating": 4.5,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper15/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper16/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper17/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 15.",
-    "wallColorType": "White",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Golden Leaf Textures 16",
-    "wallPrice": 1329,
-    "wallRating": 3.9,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper16/300/500",
-        "altText": "Floral design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper17/300/500",
-        "altText": "Floral design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper18/300/500",
-        "altText": "Floral design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 16.",
-    "wallColorType": "Green",
-    "wallDesignType": "Floral",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Minimalist Concrete 17",
-    "wallPrice": 1851,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper17/300/500",
-        "altText": "Brick design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper18/300/500",
-        "altText": "Brick design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper19/300/500",
-        "altText": "Brick design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 17.",
-    "wallColorType": "Black",
-    "wallDesignType": "Brick",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Minimalist Concrete 18",
-    "wallPrice": 1086,
-    "wallRating": 4.1,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper18/300/500",
-        "altText": "Concrete design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper19/300/500",
-        "altText": "Concrete design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper20/300/500",
-        "altText": "Concrete design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 18.",
-    "wallColorType": "Gold",
-    "wallDesignType": "Concrete",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Rustic Wood Finish 19",
-    "wallPrice": 1920,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper19/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper20/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper21/300/500",
-        "altText": "Damask design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 19.",
-    "wallColorType": "White",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Rustic Wood Finish 20",
-    "wallPrice": 1380,
-    "wallRating": 3.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper20/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper21/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper22/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 20.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Minimalist Concrete 21",
-    "wallPrice": 1138,
-    "wallRating": 4.3,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper21/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper22/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper23/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 21.",
-    "wallColorType": "Beige",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Rustic Wood Finish 22",
-    "wallPrice": 1059,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper22/300/500",
-        "altText": "Leaf design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper23/300/500",
-        "altText": "Leaf design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper24/300/500",
-        "altText": "Leaf design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 22.",
-    "wallColorType": "Beige",
-    "wallDesignType": "Leaf",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Floral Spring Bliss 23",
-    "wallPrice": 1832,
-    "wallRating": 4.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper23/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper24/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper25/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 23.",
-    "wallColorType": "Beige",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Classic White Brick 24",
-    "wallPrice": 2307,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper24/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper25/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper26/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 24.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Rustic Wood Finish 25",
-    "wallPrice": 1996,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper25/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper26/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper27/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 25.",
-    "wallColorType": "Gold",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Living Room"
-  },
-  {
-    "wallName": "Ocean Wave Pattern 26",
-    "wallPrice": 1909,
-    "wallRating": 4.1,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper26/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper27/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper28/300/500",
-        "altText": "Damask design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 26.",
-    "wallColorType": "Brown",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Modern Abstract Blue 27",
-    "wallPrice": 1550,
-    "wallRating": 4.4,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper27/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper28/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper29/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 27.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Vintage Damask Gold 28",
-    "wallPrice": 1213,
-    "wallRating": 4.8,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper28/300/500",
-        "altText": "Concrete design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper29/300/500",
-        "altText": "Concrete design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper30/300/500",
-        "altText": "Concrete design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 28.",
-    "wallColorType": "Blue",
-    "wallDesignType": "Concrete",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Tropical Jungle Vibe 29",
-    "wallPrice": 2079,
-    "wallRating": 3.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper29/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper30/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper31/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 29.",
-    "wallColorType": "Brown",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Vintage Damask Gold 30",
-    "wallPrice": 2943,
-    "wallRating": 4.3,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper30/300/500",
-        "altText": "Concrete design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper31/300/500",
-        "altText": "Concrete design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper32/300/500",
-        "altText": "Concrete design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 30.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Concrete",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Golden Leaf Textures 31",
-    "wallPrice": 1962,
-    "wallRating": 3.5,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper31/300/500",
-        "altText": "Leaf design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper32/300/500",
-        "altText": "Leaf design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper33/300/500",
-        "altText": "Leaf design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 31.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Leaf",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Golden Leaf Textures 32",
-    "wallPrice": 1802,
-    "wallRating": 3.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper32/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper33/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper34/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 32.",
-    "wallColorType": "Black",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Floral Spring Bliss 33",
-    "wallPrice": 2270,
+    "wallName": "Designer Wallpaper 19",
+    "wallPrice": 2144,
     "wallRating": 4.9,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper33/300/500",
-        "altText": "Leaf design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper34/300/500",
-        "altText": "Leaf design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper35/300/500",
-        "altText": "Leaf design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396770/39._400_Designs_3D_200_b_0192-0192_1_k3atwe.jpg",
+        "altText": "Wallpaper design image 19"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 33.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Leaf",
-    "wallRoomType": "Bathroom"
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 19.",
+    "wallColorType": "Grey",
+    "wallDesignType": "Textured",
+    "wallRoomType": "Bedroom"
   },
   {
-    "wallName": "Elegant Grey Marble 34",
-    "wallPrice": 1148,
-    "wallRating": 4.0,
+    "wallName": "Designer Wallpaper 20",
+    "wallPrice": 1661,
+    "wallRating": 4.2,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper34/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper35/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper36/300/500",
-        "altText": "Damask design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396761/39._400_Designs_3D_200_b_0185-0185_1_m9zbdo.jpg",
+        "altText": "Wallpaper design image 20"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 34.",
-    "wallColorType": "Green",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Minimalist Concrete 35",
-    "wallPrice": 1881,
-    "wallRating": 4.3,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper35/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper36/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper37/300/500",
-        "altText": "Damask design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 35.",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 20.",
     "wallColorType": "Blue",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Minimalist Concrete 36",
-    "wallPrice": 1285,
-    "wallRating": 3.9,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper36/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper37/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper38/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 36.",
-    "wallColorType": "Black",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Vintage Damask Gold 37",
-    "wallPrice": 1430,
-    "wallRating": 4.4,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper37/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper38/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper39/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 37.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Classic White Brick 38",
-    "wallPrice": 1644,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper38/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper39/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper40/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 38.",
-    "wallColorType": "Black",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Floral Spring Bliss 39",
-    "wallPrice": 1869,
-    "wallRating": 4.2,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper39/300/500",
-        "altText": "Wave design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper40/300/500",
-        "altText": "Wave design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper41/300/500",
-        "altText": "Wave design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 39.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Wave",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Modern Abstract Blue 40",
-    "wallPrice": 1330,
-    "wallRating": 3.5,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper40/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper41/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper42/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 40.",
-    "wallColorType": "Green",
-    "wallDesignType": "Wood",
+    "wallDesignType": "3D",
     "wallRoomType": "Living Room"
   },
   {
-    "wallName": "Ocean Wave Pattern 41",
-    "wallPrice": 2130,
-    "wallRating": 3.8,
+    "wallName": "Designer Wallpaper 21",
+    "wallPrice": 2591,
+    "wallRating": 5.0,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper41/300/500",
-        "altText": "Concrete design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper42/300/500",
-        "altText": "Concrete design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper43/300/500",
-        "altText": "Concrete design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396756/39._400_Designs_3D_200_b_0188-0188_1_b7tizv.jpg",
+        "altText": "Wallpaper design image 21"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 41.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Concrete",
-    "wallRoomType": "Bedroom"
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 21.",
+    "wallColorType": "Green",
+    "wallDesignType": "Textured",
+    "wallRoomType": "Office"
   },
   {
-    "wallName": "Tropical Jungle Vibe 42",
-    "wallPrice": 1865,
-    "wallRating": 4.1,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper42/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper43/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper44/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 42.",
-    "wallColorType": "Black",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Golden Leaf Textures 43",
-    "wallPrice": 1560,
+    "wallName": "Designer Wallpaper 22",
+    "wallPrice": 2797,
     "wallRating": 4.4,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper43/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper44/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper45/300/500",
-        "altText": "Marble design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396755/39._400_Designs_3D_200_b_0202-0202_1_nzorkb.jpg",
+        "altText": "Wallpaper design image 22"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 43.",
-    "wallColorType": "Beige",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Minimalist Concrete 44",
-    "wallPrice": 1472,
-    "wallRating": 3.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper44/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper45/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper46/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 44.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Elegant Grey Marble 45",
-    "wallPrice": 2406,
-    "wallRating": 3.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper45/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper46/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper47/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 45.",
-    "wallColorType": "Green",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Vintage Damask Gold 46",
-    "wallPrice": 1376,
-    "wallRating": 4.1,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper46/300/500",
-        "altText": "Wave design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper47/300/500",
-        "altText": "Wave design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper48/300/500",
-        "altText": "Wave design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 46.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Wave",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Classic White Brick 47",
-    "wallPrice": 2954,
-    "wallRating": 3.8,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper47/300/500",
-        "altText": "Wave design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper48/300/500",
-        "altText": "Wave design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper49/300/500",
-        "altText": "Wave design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 47.",
-    "wallColorType": "Gold",
-    "wallDesignType": "Wave",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Classic White Brick 48",
-    "wallPrice": 1674,
-    "wallRating": 3.9,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper48/300/500",
-        "altText": "Wave design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper49/300/500",
-        "altText": "Wave design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper50/300/500",
-        "altText": "Wave design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 48.",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 22.",
     "wallColorType": "White",
-    "wallDesignType": "Wave",
-    "wallRoomType": "Kitchen"
+    "wallDesignType": "Damask",
+    "wallRoomType": "Dining Room"
   },
   {
-    "wallName": "Elegant Grey Marble 49",
-    "wallPrice": 2641,
-    "wallRating": 3.9,
+    "wallName": "Designer Wallpaper 23",
+    "wallPrice": 2537,
+    "wallRating": 3.8,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper49/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper50/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper51/300/500",
-        "altText": "Wood design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396743/39._400_Designs_3D_200_b_0186-0186_1_y5tr9d.jpg",
+        "altText": "Wallpaper design image 23"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 49.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Vintage Damask Gold 50",
-    "wallPrice": 2410,
-    "wallRating": 4.4,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper50/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper51/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper52/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 50.",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 23.",
     "wallColorType": "Gold",
     "wallDesignType": "Abstract",
-    "wallRoomType": "Living Room"
+    "wallRoomType": "Hall"
   },
   {
-    "wallName": "Ocean Wave Pattern 51",
-    "wallPrice": 1603,
-    "wallRating": 4.8,
+    "wallName": "Designer Wallpaper 24",
+    "wallPrice": 2183,
+    "wallRating": 3.8,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper51/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper52/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper53/300/500",
-        "altText": "Wood design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396723/39._400_Designs_3D_200_b_0181-0181_1_tk7ng5.jpg",
+        "altText": "Wallpaper design image 24"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 51.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Tropical Jungle Vibe 52",
-    "wallPrice": 1215,
-    "wallRating": 4.2,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper52/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper53/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper54/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 52.",
-    "wallColorType": "Gold",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Rustic Wood Finish 53",
-    "wallPrice": 2984,
-    "wallRating": 4.5,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper53/300/500",
-        "altText": "Brick design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper54/300/500",
-        "altText": "Brick design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper55/300/500",
-        "altText": "Brick design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 53.",
-    "wallColorType": "Brown",
-    "wallDesignType": "Brick",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 24.",
+    "wallColorType": "Beige",
+    "wallDesignType": "Geometric",
     "wallRoomType": "Office"
   },
   {
-    "wallName": "Vintage Damask Gold 54",
-    "wallPrice": 1143,
+    "wallName": "Designer Wallpaper 25",
+    "wallPrice": 1506,
     "wallRating": 4.9,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper54/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper55/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper56/300/500",
-        "altText": "Wood design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396721/39._400_Designs_3D_200_b_0182-0182_1_qzaqqo.jpg",
+        "altText": "Wallpaper design image 25"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 54.",
-    "wallColorType": "Blue",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Modern Abstract Blue 55",
-    "wallPrice": 1855,
-    "wallRating": 3.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper55/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper56/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper57/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 55.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Tropical Jungle Vibe 56",
-    "wallPrice": 1559,
-    "wallRating": 4.4,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper56/300/500",
-        "altText": "Concrete design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper57/300/500",
-        "altText": "Concrete design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper58/300/500",
-        "altText": "Concrete design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 56.",
-    "wallColorType": "Brown",
-    "wallDesignType": "Concrete",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Rustic Wood Finish 57",
-    "wallPrice": 1654,
-    "wallRating": 4.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper57/300/500",
-        "altText": "Wave design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper58/300/500",
-        "altText": "Wave design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper59/300/500",
-        "altText": "Wave design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 57.",
-    "wallColorType": "White",
-    "wallDesignType": "Wave",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Vintage Damask Gold 58",
-    "wallPrice": 2098,
-    "wallRating": 4.5,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper58/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper59/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper60/300/500",
-        "altText": "Damask design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 58.",
-    "wallColorType": "White",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Floral Spring Bliss 59",
-    "wallPrice": 1098,
-    "wallRating": 4.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper59/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper60/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper61/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 59.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Modern Abstract Blue 60",
-    "wallPrice": 1644,
-    "wallRating": 4.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper60/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper61/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper62/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 60.",
-    "wallColorType": "White",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Floral Spring Bliss 61",
-    "wallPrice": 2234,
-    "wallRating": 3.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper61/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper62/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper63/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 61.",
-    "wallColorType": "Brown",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Golden Leaf Textures 62",
-    "wallPrice": 1162,
-    "wallRating": 3.8,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper62/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper63/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper64/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 62.",
-    "wallColorType": "Blue",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Living Room"
-  },
-  {
-    "wallName": "Tropical Jungle Vibe 63",
-    "wallPrice": 2612,
-    "wallRating": 4.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper63/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper64/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper65/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 63.",
-    "wallColorType": "Black",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Minimalist Concrete 64",
-    "wallPrice": 2840,
-    "wallRating": 4.3,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper64/300/500",
-        "altText": "Concrete design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper65/300/500",
-        "altText": "Concrete design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper66/300/500",
-        "altText": "Concrete design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 64.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Concrete",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Vintage Damask Gold 65",
-    "wallPrice": 1317,
-    "wallRating": 5.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper65/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper66/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper67/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 65.",
-    "wallColorType": "Silver",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Golden Leaf Textures 66",
-    "wallPrice": 1565,
-    "wallRating": 4.3,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper66/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper67/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper68/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 66.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Modern Abstract Blue 67",
-    "wallPrice": 1692,
-    "wallRating": 4.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper67/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper68/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper69/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 67.",
-    "wallColorType": "Blue",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Classic White Brick 68",
-    "wallPrice": 2824,
-    "wallRating": 4.8,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper68/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper69/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper70/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 68.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Floral Spring Bliss 69",
-    "wallPrice": 2826,
-    "wallRating": 4.2,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper69/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper70/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper71/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 69.",
-    "wallColorType": "Green",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Elegant Grey Marble 70",
-    "wallPrice": 2771,
-    "wallRating": 3.8,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper70/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper71/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper72/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 70.",
-    "wallColorType": "Gold",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Modern Abstract Blue 71",
-    "wallPrice": 1844,
-    "wallRating": 3.9,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper71/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper72/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper73/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 71.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Minimalist Concrete 72",
-    "wallPrice": 2162,
-    "wallRating": 4.2,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper72/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper73/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper74/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 72.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Ocean Wave Pattern 73",
-    "wallPrice": 1260,
-    "wallRating": 4.4,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper73/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper74/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper75/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 73.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Living Room"
-  },
-  {
-    "wallName": "Modern Abstract Blue 74",
-    "wallPrice": 1229,
-    "wallRating": 3.8,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper74/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper75/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper76/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 74.",
-    "wallColorType": "Blue",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Ocean Wave Pattern 75",
-    "wallPrice": 2063,
-    "wallRating": 3.8,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper75/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper76/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper77/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 75.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Vintage Damask Gold 76",
-    "wallPrice": 2139,
-    "wallRating": 3.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper76/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper77/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper78/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 76.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Minimalist Concrete 77",
-    "wallPrice": 2161,
-    "wallRating": 3.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper77/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper78/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper79/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 77.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Rustic Wood Finish 78",
-    "wallPrice": 1901,
-    "wallRating": 3.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper78/300/500",
-        "altText": "Leaf design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper79/300/500",
-        "altText": "Leaf design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper80/300/500",
-        "altText": "Leaf design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 78.",
-    "wallColorType": "Beige",
-    "wallDesignType": "Leaf",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Rustic Wood Finish 79",
-    "wallPrice": 1596,
-    "wallRating": 4.4,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper79/300/500",
-        "altText": "Abstract design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper80/300/500",
-        "altText": "Abstract design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper81/300/500",
-        "altText": "Abstract design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 79.",
-    "wallColorType": "Blue",
-    "wallDesignType": "Abstract",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Modern Abstract Blue 80",
-    "wallPrice": 1921,
-    "wallRating": 5.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper80/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper81/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper82/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 80.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Floral Spring Bliss 81",
-    "wallPrice": 2556,
-    "wallRating": 4.5,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper81/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper82/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper83/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 81.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Wood",
-    "wallRoomType": "Hallway"
-  },
-  {
-    "wallName": "Rustic Wood Finish 82",
-    "wallPrice": 1715,
-    "wallRating": 4.4,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper82/300/500",
-        "altText": "Tropical design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper83/300/500",
-        "altText": "Tropical design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper84/300/500",
-        "altText": "Tropical design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 82.",
-    "wallColorType": "Brown",
-    "wallDesignType": "Tropical",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Ocean Wave Pattern 83",
-    "wallPrice": 1481,
-    "wallRating": 3.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper83/300/500",
-        "altText": "Brick design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper84/300/500",
-        "altText": "Brick design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper85/300/500",
-        "altText": "Brick design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 83.",
-    "wallColorType": "Beige",
-    "wallDesignType": "Brick",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Vintage Damask Gold 84",
-    "wallPrice": 1865,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper84/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper85/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper86/300/500",
-        "altText": "Damask design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 84.",
-    "wallColorType": "Black",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Living Room"
-  },
-  {
-    "wallName": "Modern Abstract Blue 85",
-    "wallPrice": 1186,
-    "wallRating": 4.4,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper85/300/500",
-        "altText": "Brick design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper86/300/500",
-        "altText": "Brick design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper87/300/500",
-        "altText": "Brick design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 85.",
-    "wallColorType": "Green",
-    "wallDesignType": "Brick",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Tropical Jungle Vibe 86",
-    "wallPrice": 2473,
-    "wallRating": 3.6,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper86/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper87/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper88/300/500",
-        "altText": "Damask design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 86.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Floral Spring Bliss 87",
-    "wallPrice": 1714,
-    "wallRating": 4.1,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper87/300/500",
-        "altText": "Floral design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper88/300/500",
-        "altText": "Floral design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper89/300/500",
-        "altText": "Floral design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 87.",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 25.",
     "wallColorType": "Gold",
     "wallDesignType": "Floral",
-    "wallRoomType": "Office"
+    "wallRoomType": "Dining Room"
   },
   {
-    "wallName": "Classic White Brick 88",
-    "wallPrice": 2698,
-    "wallRating": 4.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper88/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper89/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper90/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 88.",
-    "wallColorType": "Beige",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Rustic Wood Finish 89",
-    "wallPrice": 1238,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper89/300/500",
-        "altText": "Marble design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper90/300/500",
-        "altText": "Marble design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper91/300/500",
-        "altText": "Marble design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 89.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Marble",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Tropical Jungle Vibe 90",
-    "wallPrice": 1039,
-    "wallRating": 4.1,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper90/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper91/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper92/300/500",
-        "altText": "Damask design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 90.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Living Room"
-  },
-  {
-    "wallName": "Floral Spring Bliss 91",
-    "wallPrice": 1061,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper91/300/500",
-        "altText": "Leaf design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper92/300/500",
-        "altText": "Leaf design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper93/300/500",
-        "altText": "Leaf design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 91.",
-    "wallColorType": "Beige",
-    "wallDesignType": "Leaf",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Minimalist Concrete 92",
-    "wallPrice": 1615,
+    "wallName": "Designer Wallpaper 26",
+    "wallPrice": 1669,
     "wallRating": 3.9,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper92/300/500",
-        "altText": "Wave design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper93/300/500",
-        "altText": "Wave design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper94/300/500",
-        "altText": "Wave design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396721/39._400_Designs_3D_200_b_0184-0184_1_v1kvcj.jpg",
+        "altText": "Wallpaper design image 26"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 92.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Wave",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Tropical Jungle Vibe 93",
-    "wallPrice": 2473,
-    "wallRating": 4.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper93/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper94/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper95/300/500",
-        "altText": "Damask design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 93.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Bedroom"
-  },
-  {
-    "wallName": "Modern Abstract Blue 94",
-    "wallPrice": 2195,
-    "wallRating": 4.8,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper94/300/500",
-        "altText": "Concrete design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper95/300/500",
-        "altText": "Concrete design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper96/300/500",
-        "altText": "Concrete design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 94.",
-    "wallColorType": "Grey",
-    "wallDesignType": "Concrete",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Modern Abstract Blue 95",
-    "wallPrice": 2558,
-    "wallRating": 3.7,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper95/300/500",
-        "altText": "Leaf design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper96/300/500",
-        "altText": "Leaf design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper97/300/500",
-        "altText": "Leaf design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 95.",
-    "wallColorType": "Black",
-    "wallDesignType": "Leaf",
-    "wallRoomType": "Bathroom"
-  },
-  {
-    "wallName": "Minimalist Concrete 96",
-    "wallPrice": 1548,
-    "wallRating": 3.8,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper96/300/500",
-        "altText": "Concrete design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper97/300/500",
-        "altText": "Concrete design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper98/300/500",
-        "altText": "Concrete design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 96.",
-    "wallColorType": "Pink",
-    "wallDesignType": "Concrete",
-    "wallRoomType": "Office"
-  },
-  {
-    "wallName": "Elegant Grey Marble 97",
-    "wallPrice": 1220,
-    "wallRating": 4.5,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper97/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper98/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper99/300/500",
-        "altText": "Damask design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 97.",
-    "wallColorType": "Gold",
-    "wallDesignType": "Damask",
-    "wallRoomType": "Kitchen"
-  },
-  {
-    "wallName": "Classic White Brick 98",
-    "wallPrice": 2629,
-    "wallRating": 4.0,
-    "wallImages": [
-      {
-        "url": "https://picsum.photos/seed/wallpaper98/300/500",
-        "altText": "Wood design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper99/300/500",
-        "altText": "Wood design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper100/300/500",
-        "altText": "Wood design image 3"
-      }
-    ],
-    "wallDiscription": "This is a unique description for wallpaper design number 98.",
-    "wallColorType": "Blue",
-    "wallDesignType": "Wood",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 26.",
+    "wallColorType": "Green",
+    "wallDesignType": "Abstract",
     "wallRoomType": "Living Room"
   },
   {
-    "wallName": "Tropical Jungle Vibe 99",
-    "wallPrice": 1975,
-    "wallRating": 4.7,
+    "wallName": "Designer Wallpaper 27",
+    "wallPrice": 2557,
+    "wallRating": 3.7,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper99/300/500",
-        "altText": "Damask design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper100/300/500",
-        "altText": "Damask design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper1/300/500",
-        "altText": "Damask design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396711/39._400_Designs_3D_200_b_0183-0183_1_qcu6ky.jpg",
+        "altText": "Wallpaper design image 27"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 99.",
-    "wallColorType": "Beige",
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 27.",
+    "wallColorType": "White",
     "wallDesignType": "Damask",
-    "wallRoomType": "Hallway"
+    "wallRoomType": "Living Room"
   },
   {
-    "wallName": "Floral Spring Bliss 100",
-    "wallPrice": 2727,
-    "wallRating": 5.0,
+    "wallName": "Designer Wallpaper 28",
+    "wallPrice": 2617,
+    "wallRating": 4.1,
     "wallImages": [
       {
-        "url": "https://picsum.photos/seed/wallpaper100/300/500",
-        "altText": "Leaf design image 1"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper1/300/500",
-        "altText": "Leaf design image 2"
-      },
-      {
-        "url": "https://picsum.photos/seed/wallpaper2/300/500",
-        "altText": "Leaf design image 3"
+        "url": "https://res.cloudinary.com/dtotogjvb/image/upload/v1750396705/39._400_Designs_3D_200_b_0203-0203_1_rs65mm.jpg",
+        "altText": "Wallpaper design image 28"
       }
     ],
-    "wallDiscription": "This is a unique description for wallpaper design number 100.",
-    "wallColorType": "Blue",
-    "wallDesignType": "Leaf",
-    "wallRoomType": "Hallway"
+    "wallDiscription": "This is a premium designer wallpaper ideal for modern interiors, design number 28.",
+    "wallColorType": "Grey",
+    "wallDesignType": "Geometric",
+    "wallRoomType": "Bedroom"
   }
 ]
 

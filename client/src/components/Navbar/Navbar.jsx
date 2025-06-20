@@ -98,7 +98,7 @@ function Navbar() {
     const handleSearchItem = (e) => {
         e.stopPropagation()
         if (e.key === "Enter" && searchItem.trim() !== "") {
-            navigate(`/search?query=${encodeURIComponent(searchItem)}`);
+            navigate(`/walls/search?query=${encodeURIComponent(searchItem)}`);
             setIsOpenSearchBar(false);
             setSearchItem("");
         }
@@ -125,7 +125,7 @@ function Navbar() {
             <nav className="navbar" id="navbar">
                 <div className="logo" onClick={() => navigate("/")}></div>
 
-                <div className="search-box" onClick={openSearchBox} style={{ width: isOpenSearchBar ? "35%" : "30%", borderRadius: isOpenSearchBar ? "0px" : "30px" }}>
+                <div className="search-box" onClick={openSearchBox} style={{ width: isOpenSearchBar ? "35%" : "25%", borderRadius: isOpenSearchBar ? "0px" : "30px" }}>
                     <i className="fa-solid fa-magnifying-glass"></i>
                     <input
                         type="text"
@@ -186,7 +186,7 @@ function Navbar() {
                                             <span key={index}>{part}</span>
                                         )
                                     )}
-                                    <img src={wall.wallImages[2].url} alt={wall.wallImages[2].altText} width={60} style={{ marginLeft: "10px" }} />
+                                    <img src={wall.wallImages[0].url} alt={wall.wallImages[0].altText} width={60} style={{ marginLeft: "10px" }} />
                                 </li>
                             );
                         })}

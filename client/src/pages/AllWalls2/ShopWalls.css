@@ -8,145 +8,23 @@
     font-family: var(--font-heading);
 }
 
-.ourAllWallsforShopWalls {
-    /* width: 100vw; */
-    /* padding: 0 20px; */
-}
-
-.wallsforShopWalls {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.wallCardforShopWalls {
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-}
-
-.wallCardforShopWalls:hover .moreInfoforShopWalls {
-    bottom: 0px;
-}
-
-.moreInfoforShopWalls {
-    width: 100%;
-    background-color: var(--color-bg-soft);
-    position: absolute;
-    bottom: -130px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px 0;
-    transition: all 0.3s ease-in;
-}
-
-.wallNameforShopWalls {
-    font-family: var(--font-body);
-}
-
-.wallDiscriptionforShopWalls,
-.wallRatingforShopWalls,
-.wallPriceforShopWalls {
-    font-family: var(--font-heading);
-}
-
-.wallPriceforShopWalls {
-    color: var(--color-secondary);
-    font-weight: bold;
-}
-
-.wallImageforShopWalls {
-    transition: all 0.2s ease;
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.wallCardforShopWalls:hover .wallImageforShopWalls {
-    transform: scale(1.2);
-}
-
-.buyOrAddCartforShopWalls {
-    display: flex;
-    gap: 20px;
-    margin: 5px 0;
-}
-
-.buyWallforShopWalls {
-    padding: 6px 10px;
-    border: none;
-    background-color: #046C4E;
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.buyWallforShopWalls:hover {
-    background-color: var(--color-secondary);
-}
-
-.addOnCartWallforShopWalls {
-    padding: 6px 10px;
-    border: none;
-    background-color: var(--color-primary);
-    color: var(--color-bg-soft);
-    font-weight: bold;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.addOnCartWallforShopWalls:hover {
-    background-color: var(--color-secondary);
-}
-
-
 /* For tablets */
 @media (max-width: 1024px) {
-
     .haedingTextforShopWallsPage {
         font-size: 28px;
     }
-
-
-    .moreInfoforShopWalls {
-        bottom: 0;
-    }
-
-    .buyWallforShopWalls ,
-    .addOnCartWallforShopWalls{
-        width: 100%;
-    }
-
 }
 
 /* For mobile phones */
 @media (max-width: 768px) {
-
     .haedingTextforShopWallsPage {
         font-size: 24px;
     }
-
-    .moreInfoforShopWalls {
-        bottom: 0;
-    }
-
 }
 
 /* For mini mobile phones */
 @media (max-width: 530px) {
-
     .haedingTextforShopWallsPage {
         font-size: 18px;
     }
-
-    .moreInfoforShopWalls {
-        bottom: 0;
-    }
-
 }

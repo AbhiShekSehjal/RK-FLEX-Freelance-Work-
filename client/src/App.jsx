@@ -33,14 +33,15 @@ function App() {
       <ScrollToTop/>
 
       <Routes>
+        <Route path="*" element={<div style={{ paddingTop: "8rem", textAlign: "center",fontSize:"24px" }}>404 - Page Not Found</div>} />
         <Route path='/' element={authUser ? <MainPage /> : <Navigate to="/login" replace />} />
         <Route path="/login" element={!authUser ? <LogIn /> : <Navigate to="/" replace />} />
         <Route path='/signup' element={!authUser ? <SignUp /> : <Navigate to="/" replace />} />
         <Route path="/userProfile" element={authUser ? <UserProfile /> : <Navigate to="/login" replace />} />
-        <Route path="/productCard/:id" element={authUser ? <ProductCard /> : <Navigate to="/login" replace />} />
-        <Route path="/selectedRoom/:id" element={authUser ? <SelectedRoom /> : <Navigate to="/login" replace />} />
-        <Route path="/selectedColor/:id" element={authUser ? <SelectedColor /> : <Navigate to="/login" replace />} />
-        <Route path="/search" element={authUser ? <SearchedItems /> : <Navigate to="/login" replace />} />
+        <Route path="/walls/:id" element={authUser ? <ProductCard /> : <Navigate to="/login" replace />} />
+        <Route path="/walls/room/:id" element={authUser ? <SelectedRoom /> : <Navigate to="/login" replace />} />
+        <Route path="/walls/color/:id" element={authUser ? <SelectedColor /> : <Navigate to="/login" replace />} />
+        <Route path="/walls/search" element={authUser ? <SearchedItems /> : <Navigate to="/login" replace />} />
         <Route path="/cart" element={authUser ? <Cart /> : <Navigate to="/login" replace />} />
         <Route path="/shopWalls" element={authUser ? <ShopWalls /> : <Navigate to="/login" replace />} />
         <Route path="/cartPage" element={authUser ? <CartPage /> : <Navigate to="/login" replace />} />

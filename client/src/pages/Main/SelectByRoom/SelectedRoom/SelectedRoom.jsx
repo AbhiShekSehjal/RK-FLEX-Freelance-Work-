@@ -10,9 +10,9 @@ function SelectedRoom() {
     const { productCard, selectedProductCard, selectedRoomType, selectedRoom } = useWallsStore();
 
     const handleShowProductCard = (id) => {
-        productCard(id);
+        productCard(id.id);
         if (selectedProductCard) {
-            navigate(`/productCard/${id.id}`);
+            navigate(`/walls/${id.id}`);
         }
     }
 
@@ -42,38 +42,32 @@ function SelectedRoom() {
             <br />
             <br />
 
-            <div className="ourAllWallsforSelectedRoom">
+            <div className="walls">
+                {selectedRoom && selectedRoom.length > 0 ? (
+                    selectedRoom.map((wall) => (
+                        <div className="wallCard" key={wall._id}>
+                            <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
+                                <img
+                                    src={wall.wallImages[0]?.url}
+                                    alt={wall.wallImages[0]?.altText || "Wallpaper"}
+                                />
+                            </div>
 
-                <div className="wallsforSelectedRoom">
-                    {selectedRoom && selectedRoom.length > 0 ? (
-                        selectedRoom.map((wall) => (
-                            <div className="wallCardforSelectedRoom" key={wall._id}>
-                                <div className="wallImageforSelectedRoom" onClick={() => handleShowProductCard({ id: wall._id })}>
-                                    <img
-                                        src={wall.wallImages[1]?.url}
-                                        alt={wall.wallImages[1]?.altText || "Wallpaper"}
-                                    />
-                                </div>
+                            <div className="moreInfo">
+                                <div className="wallName">{wall.wallName}</div>
+                                <div className="wallPrice">Rs. {wall.wallPrice.toLocaleString('en-IN')}</div>
+                                <div className="wallRating">{wall.wallRating} stars &#9733;</div>
 
-                                <div className="moreInfoforSelectedRoom">
-                                    <div className="wallNameforSelectedRoom"><b>{wall.wallName}</b></div>
-                                    <div className="wallDiscriptionforSelectedRoom">{wall.wallDiscription}</div>
-                                    <div className="wallPriceforSelectedRoom">Rs. {wall.wallPrice}</div>
-                                    <div className="wallRatingforSelectedRoom">{wall.wallRating} stars</div>
-
-                                    <div className="buyOrAddCartforSelectedRoom">
-                                        <button className='buyWallforSelectedRoom'>Buy</button>
-                                        <button className='addOnCartWallforSelectedRoom' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
-                                    </div>
+                                <div className="buyOrAddCart">
+                                    <button className='addOnCartWall' onClick={() => handleOnClickAddOnCart(wall)}>Add on Cart</button>
                                 </div>
                             </div>
-                        ))
-                    ) : (
-                        <div className="emptyTextForPage">No wallpaper yet, coming soon are wallpapers for {selectedRoom}</div>
-                    )}
-                </div>
-
-            </div >
+                        </div>
+                    ))
+                ) : (
+                    <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
+                )}
+            </div>
         </>
     )
 }
