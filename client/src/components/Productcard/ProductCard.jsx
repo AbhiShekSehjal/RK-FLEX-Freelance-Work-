@@ -2,11 +2,18 @@ import "./ProductCard.css"
 import { useWallsStore } from "../../store/useAllWallpapers.js"
 import { useNavigate } from 'react-router-dom';
 import toast from "react-hot-toast";
+import { useState } from "react";
 
 function ProductCard() {
 
   const navigate = useNavigate();
   const { selectedProductCard, allWall, productCard } = useWallsStore();
+
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [zoomBackground, setZoomBackground] = useState({
+    image: "",
+    position: "center",
+  });
 
   const handleShowProductCard = (id) => {
     productCard(id.id);
@@ -32,11 +39,46 @@ function ProductCard() {
     }
   }
 
+  const handleWhatsappOrder = () => {
+    const { wallName, wallPrice, wallColorType, wallDesignType, wallRoomType } = selectedProductCard;
+
+    const message = `Hello, I want to place an order. Here are the product details:
+  
+  *Product ID:* ${selectedProductCard._id}
+  *Wallpaper Name:* ${wallName}
+  *Price:* Rs. ${wallPrice}
+  *Color Type:* ${wallColorType}
+  *Design Type:* ${wallDesignType}
+  *Room Type:* ${wallRoomType}
+
+Please assist me with the order.`;
+
+    const phoneNumber = "917888339203";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  }
+
   return (
     <>
       <div className="productCard responsiveCardWrapper">
 
-        <div className="leftSideCard">
+        <div className="leftSideCard"
+          onPointerMove={(e) => {
+            const bounds = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX - bounds.left;
+            const y = e.clientY - bounds.top;
+
+            const percentX = (x / bounds.width) * 100;
+            const percentY = (y / bounds.height) * 100;
+
+            setPosition({ x, y });
+            setZoomBackground({
+              image: selectedProductCard.wallImages[0]?.url || "",
+              position: `${percentX}% ${percentY}%`
+            });
+          }}
+
+        >
           {selectedProductCard.wallImages ? (
             selectedProductCard.wallImages.map((image) => (
               <img src={image.url} alt={image.altText} key={image._id} className="selectedProductCardWallImage" />
@@ -46,6 +88,18 @@ function ProductCard() {
               <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
             </div>
           )}
+
+          <div
+            className="zoomOutBox"
+            style={{
+              left: position.x - 100,
+              top: position.y - 100,
+              backgroundImage: `url(${zoomBackground.image})`,
+              backgroundPosition: zoomBackground.position,
+              backgroundSize: "800%",
+              opacity: 1,
+            }}
+          ></div>
         </div>
 
         <div className="rightSideCard">
@@ -62,7 +116,7 @@ function ProductCard() {
             <button className='buyWall2'>Buy</button>
             <button className='addOnCartWall2' onClick={() => handleOnClickAddOnCart(selectedProductCard)}>Add on Cart</button>
             or
-            <button className='orderOnWhatsapp'>
+            <button className='orderOnWhatsapp' onClick={handleWhatsappOrder}>
               <img
                 src="https://res.cloudinary.com/dtotogjvb/image/upload/v1749883648/whatsapp_k92ryi.png"
                 alt="whatsapp_logo"

@@ -65,10 +65,9 @@
     cursor: pointer;
     background-color: var(--color-bg-soft);
     box-shadow: var(--shadow-soft);
-    font-family: var(--font-heading);
-    padding: 10px 20px;
-    font-weight: bolder;
-    font-size: 1.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 7px 14px;
+    font-size: 1.3rem;
     transition: all 0.3s ease;
     border: none;
 }
