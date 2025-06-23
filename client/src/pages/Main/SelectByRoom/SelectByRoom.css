@@ -15,7 +15,7 @@
 }
 
 .kidsRoom {
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575980/kids_wtn8pb.webp");
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750661342/kids_giqbbb.webp");
     height: 200px;
     width: 200px;
     background-position: center;
@@ -26,10 +26,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
-.boysRoom {
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575978/boys_qxl9fa.jpg");
+.OfficeRoom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750661336/boys_bhrnzd.jpg");
     height: 200px;
     width: 200px;
     background-position: center;
@@ -40,10 +41,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
-.girlsRoom {
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575979/girls_oyav34.webp");
+.Hall {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750661344/girls_geoqqe.webp");
     height: 200px;
     width: 200px;
     background-position: center;
@@ -54,10 +56,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .pujaRoom {
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575992/puja_k52o1m.jpg");
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750661354/puja_cfj1qg.jpg");
     height: 200px;
     width: 200px;
     background-position: center;
@@ -68,10 +71,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
-.drawingRoom {
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575989/living_belnmf.avif");
+.Bedroom {
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750661332/drawing_t5radu.jpg");
     height: 200px;
     width: 200px;
     background-position: center;
@@ -82,10 +86,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .kitchenroom {
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575988/kitchen_jar3vv.jpg");
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750661345/kitchen_et63cd.jpg");
     height: 200px;
     width: 200px;
     background-position: center;
@@ -96,10 +101,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .livingRoom {
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575978/forTestimonials_wgmxxc.avif");
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750661354/living_j0uy2j.avif");
     height: 200px;
     width: 200px;
     background-position: center;
@@ -110,10 +116,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .library {
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575990/library_hld74z.webp");
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750662297/library_rfkumm.webp");
     height: 200px;
     width: 200px;
     background-position: center;
@@ -124,10 +131,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .diningRoom {
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1749575976/dining_osjstq.webp");
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750661334/dining_bawyan.webp");
     height: 200px;
     width: 200px;
     background-position: center;
@@ -138,13 +146,14 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .kidsRoom h1,
-.boysRoom h1,
-.girlsRoom h1,
+.OfficeRoom h1,
+.Hall h1,
 .pujaRoom h1,
-.drawingRoom h1,
+.Bedroom h1,
 .kitchenroom h1,
 .livingRoom h1,
 .library h1,
@@ -153,17 +162,34 @@
     color: var(--color-bg-soft);
     font-size: 1.5rem;
     text-align: center;
+    z-index: 111;
 }
 
-.kidsRoom:hover,
-.boysRoom:hover,
-.girlsRoom:hover,
-.pujaRoom:hover,
-.drawingRoom:hover,
-.kitchenroom:hover,
-.livingRoom:hover,
-.library:hover,
-.diningRoom:hover {
-    background-position: right;
-    background-size: cover;
+.kidsRoom .overFade,
+.OfficeRoom .overFade,
+.Hall .overFade,
+.pujaRoom .overFade,
+.Bedroom .overFade,
+.kitchenroom .overFade,
+.livingRoom .overFade,
+.library .overFade,
+.diningRoom .overFade {
+    background: rgba(0, 0, 0, 0.368);
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease;
+}
+
+.kidsRoom:hover .overFade,
+.OfficeRoom:hover .overFade,
+.Hall:hover .overFade,
+.pujaRoom:hover .overFade,
+.Bedroom:hover .overFade,
+.kitchenroom:hover .overFade,
+.livingRoom:hover .overFade,
+.library:hover .overFade,
+.diningRoom:hover .overFade {
+    opacity: 0;
 }

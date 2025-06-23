@@ -48,7 +48,7 @@ function CartPage() {
                 {cartItems.length === 0 ? (
                     <div className="cart-empty">
                         <img
-                            src="https://res.cloudinary.com/dtotogjvb/image/upload/v1750051743/empty-cart_x2vq2d.png"
+                            src="https://res.cloudinary.com/dtotogjvb/image/upload/v1750660993/empty-cart_ozyrcf.png"
                             alt="Empty Cart"
                             className="empty-image"
                         />

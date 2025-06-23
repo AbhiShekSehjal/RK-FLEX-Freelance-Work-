@@ -8,7 +8,7 @@
     background-color: white;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 100100;
     box-shadow: var(--shadow-soft);
 }
 
@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750134407/Firefly_we_have_a_business_for_designing_walls_with_wallpaper__designing_wallpapers___so_for__3976922-removebg-preview_1_1_afrehb.png");
+    background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750660997/Firefly_we_have_a_business_for_designing_walls_with_wallpaper__designing_wallpapers___so_for__3976922-removebg-preview_1_1_ijn3by.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

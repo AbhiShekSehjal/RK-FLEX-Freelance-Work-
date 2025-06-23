@@ -70,7 +70,7 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
             <div className="selectedProducts">
                 {cartItems.length === 0 ? (
                     <div className="noProductInCart">
-                        <img src="https://res.cloudinary.com/dtotogjvb/image/upload/v1750051743/empty-cart_x2vq2d.png" alt="" width={400} />
+                        <img src="https://res.cloudinary.com/dtotogjvb/image/upload/v1750660993/empty-cart_ozyrcf.png" alt="" width={400} />
                     </div>
                 ) : (
                     cartItems.map((item) => (
