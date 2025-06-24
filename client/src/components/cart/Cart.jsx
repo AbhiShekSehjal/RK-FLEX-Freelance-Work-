@@ -1,12 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { useWallsStore } from "../../store/useAllWallpapers.js";
+// import { useOrders } from "../../store/useOrders.js";
 import "./Cart.css";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
+import { axiosInstance } from "../../lib/axios.js";
+import { useOrders } from "../../store/useOrders.js";
 
 function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
 
     const { productCard, selectedProductCard, cartItems, setCartItems } = useWallsStore();
+    const { handler } = useOrders();
 
     const navigate = useNavigate();
 
@@ -15,6 +19,14 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
         style: 'currency',
         currency: 'INR',
     });
+
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://checkout.razorpay.com/v1/checkout.js";
+        script.async = true;
+        document.body.appendChild(script);
+    }, []);
+
 
     useEffect(() => {
         const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -43,6 +55,53 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
 
         } catch {
             toast.error("Failed to removed product from cart");
+        }
+    }
+
+    async function CheckoutButton() {
+
+        if (cartItems.length === 0) return;
+
+        try {
+            const amount = totalPrice;
+
+            const res = await axiosInstance.post("/order/createOrder", {
+                amount: amount,
+                currency: "INR",
+                products: cartItems,
+            });
+
+            const order = res.data;
+
+            if (!order.id) {
+                toast.error("Failed to create Razorpay order");
+                return;
+            }
+
+            const options = {
+                key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+                amount: order.amount,
+                currency: order.currency,
+                name: "RK Flex",
+                description: "Wallpaper Purchase",
+                image: "https://your-logo-url.png",
+                order_id: order.id,
+                handler: handler, // from zustand
+                prefill: {
+                    name: "Test User",
+                    email: "test@example.com",
+                    contact: "9999999999",
+                },
+                theme: {
+                    color: "#3399cc",
+                },
+            };
+
+            const rzp = new window.Razorpay(options);
+            rzp.open();
+        } catch (error) {
+            toast.error("Something went wrong during checkout");
+            console.error(error);
         }
     }
 
@@ -110,7 +169,7 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
                             <b className="totalPrice">{formattedTotalPrice}</b>
                         </div>
 
-                        <div className="totalPriceBottomContainer">
+                        <div className="totalPriceBottomContainer" onClick={CheckoutButton}>
                             <p>Check out</p>
                         </div>
 

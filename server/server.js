@@ -17,9 +17,12 @@ connectDB();
 
 import allWallsRoute from "./routes/allWallsRoute.js";
 import authUserRoute from "./routes/authUserRoute.js"
+import orderRoute from "./routes/orderRoute.js";
 
 app.use("/api", allWallsRoute);
 app.use("/api/auth", authUserRoute);
+app.use("/api/order",orderRoute);
+
 
 // 404 Not Found
 app.use((req, res, next) => {

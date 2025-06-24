@@ -98,5 +98,10 @@ export const useWallsStore = create((set) => ({
         } catch (error) {
             console.error("Error in setCartItems:", error);
         }
+    },
+
+    clearCart: () => {
+        localStorage.removeItem("cart");
+        set({ cartItems: [] });
     }
 }));

@@ -3,6 +3,7 @@
 .selectByRoom {
     width: 100vw;
     text-align: center;
+    padding: 0 20px;
 }
 
 .typeOfRooms {

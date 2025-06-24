@@ -17,6 +17,7 @@ import SelectedRoom from "./pages/Main/SelectByRoom/SelectedRoom/SelectedRoom.js
 import ShopWalls from "./pages/AllWalls2/ShopWalls.jsx";
 import CartPage from "./components/cart/CartPage/CartPage.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
+import MyOrders from "./pages/Myorders/Myorders.jsx";
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
         <Route path="/cart" element={authUser ? <Cart /> : <Navigate to="/login" replace />} />
         <Route path="/shopWalls" element={authUser ? <ShopWalls /> : <Navigate to="/login" replace />} />
         <Route path="/cartPage" element={authUser ? <CartPage /> : <Navigate to="/login" replace />} />
+        <Route path="/myorders" element={authUser ? <MyOrders /> : <Navigate to="/login" replace />} />
       </Routes>
 
       <Footer />

@@ -1,0 +1,52 @@
+.my-orders-container {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.order-card {
+  background-color: #fdfdfd;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  border-left: 5px solid #2ecc71;
+}
+
+
+.order-card p {
+  margin: 8px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.order-card p span {
+  font-weight: 600;
+  color: #333;
+}
+
+.order-card .status {
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+.order-card .date {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.emptyImage {
+  background: url("https://res.cloudinary.com/dtotogjvb/image/upload/v1750757650/ChatGPT_Image_Jun_24_2025_02_54_43_PM_rsd94q.png");
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

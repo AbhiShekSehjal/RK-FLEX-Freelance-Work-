@@ -55,16 +55,21 @@
     padding: 0px 20px;
 }
 
-.littleDiscription{
+.littleDiscription {
     font-size: 16px;
     color: var(--color-accent);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 /* For tablets */
 @media (max-width: 1024px) {
     .haedingText {
         font-size: 28px;
+    }
+
+    .littleDiscription {
+        font-size: 14px;
     }
 }
 
@@ -73,6 +78,10 @@
     .haedingText {
         font-size: 24px;
     }
+
+    .littleDiscription {
+        font-size: 13px;
+    }
 }
 
 /* For mini mobile phones */
@@ -80,8 +89,13 @@
     .haedingText {
         font-size: 18px;
     }
+
     .emptyTextForPage,
     .redirectLink {
         font-size: 16px;
+    }
+
+    .littleDiscription {
+        font-size: 12px;
     }
 }

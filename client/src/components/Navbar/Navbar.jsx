@@ -195,11 +195,11 @@ function Navbar() {
 
 
                 <ul className="nav-links" id="navLinks">
-                    <li><a href="/">Home</a></li>
+                    <li><a onClick={() => navigate("/")}>Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/ourworks">Our works</a></li>
-                    <li><a href="/joinus">Join us</a></li>
-                    <li><a onClick={() => handleCartLinkClick()}>Cart</a></li>
+                    <li><a onClick={() => navigate("/myOrders")}>History</a></li>
+                    {/* <li><a onClick={() => handleCartLinkClick()}>Cart</a></li> */}
                 </ul>
 
                 <div className="authUserSection">
@@ -224,10 +224,10 @@ function Navbar() {
 
                 <div className="sidebar" id="sidebar">
                     <ul className="sidebar-nav-links">
-                        <li onClick={closeSideNavabar}><a href="/" id="link">Home</a></li>
+                        <li onClick={closeSideNavabar}><a onClick={() => navigate("/")}>Home</a></li>
                         <li onClick={closeSideNavabar}><a href="#about" id="link">About</a></li>
                         <li onClick={closeSideNavabar}><a href="#ourworks" id="link">Our works</a></li>
-                        <li onClick={closeSideNavabar}><a href="#joinus" id="link">Join us</a></li>
+                        <li onClick={closeSideNavabar}><a onClick={() => navigate("/myOrders")}>History</a></li>
                         <li onClick={() => { handleCartLinkClick(); closeSideNavabar(); }}>
                             <a>Cart</a>
                         </li>

@@ -1,11 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import { useWallsStore } from '../../../store/useAllWallpapers';
+import { useWallsStore } from '../../../store/useAllWallpapers.js';
 import { useEffect } from 'react';
 import './CartPage.css';
+import { axiosInstance } from '../../../lib/axios.js';
+import { useOrders } from '../../../store/useOrders.js';
 
 function CartPage() {
     const { productCard, selectedProductCard, cartItems, setCartItems } = useWallsStore();
+    const { handler } = useOrders();
     const navigate = useNavigate();
 
     const totalPrice = cartItems.reduce((acc, item) => acc + item.wallPrice, 0);
@@ -37,14 +40,61 @@ function CartPage() {
         }
     };
 
+    async function CheckoutButton() {
+
+        if (cartItems.length === 0) return;
+
+        try {
+            const amount = totalPrice;
+
+            const res = await axiosInstance.post("/order/createOrder", {
+                amount: amount,
+                currency: "INR",
+                products: cartItems,
+            });
+
+            const order = res.data;
+
+            if (!order.id) {
+                toast.error("Failed to create Razorpay order");
+                return;
+            }
+
+            const options = {
+                key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+                amount: order.amount,
+                currency: order.currency,
+                name: "RK Flex",
+                description: "Wallpaper Purchase",
+                image: "https://your-logo-url.png",
+                order_id: order.id,
+                handler: handler, // from zustand
+                prefill: {
+                    name: "Test User",
+                    email: "test@example.com",
+                    contact: "9999999999",
+                },
+                theme: {
+                    color: "#3399cc",
+                },
+            };
+
+            const rzp = new window.Razorpay(options);
+            rzp.open();
+        } catch (error) {
+            toast.error("Something went wrong during checkout");
+            console.error(error);
+        }
+    }
+
     return (
         <>
 
             <div className="cart-container">
-            <div className="haedingTextforCartPage">Your Cart</div>
-            <br />
-            <hr />
-            <br />
+                <div className="haedingTextforCartPage">Your Cart</div>
+                <br />
+                <hr />
+                <br />
                 {cartItems.length === 0 ? (
                     <div className="cart-empty">
                         <img
@@ -85,7 +135,7 @@ function CartPage() {
                                 <h4>Total</h4>
                                 <h4>{formattedTotalPrice}</h4>
                             </div>
-                            <button className="checkout-btn">Checkout</button>
+                            <button className="checkout-btn" onClick={CheckoutButton}>Checkout</button>
                         </div>
                     </div>
                 )}
