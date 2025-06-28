@@ -21,7 +21,7 @@ import orderRoute from "./routes/orderRoute.js";
 
 app.use("/api", allWallsRoute);
 app.use("/api/auth", authUserRoute);
-app.use("/order",orderRoute);
+app.use("/api/order",orderRoute);
 
 
 // 404 Not Found
