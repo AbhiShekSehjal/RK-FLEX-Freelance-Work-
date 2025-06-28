@@ -11,8 +11,8 @@
     text-align: center;
     margin-top: 100px;
     font-size: 2rem;
-    letter-spacing: 0.3rem;
-    font-family: var(--font-heading);
+    letter-spacing: 0.2rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .loginForm {
@@ -50,4 +50,32 @@
 .authBtn:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: var(--color-hover);
+}
+
+
+/* For tablets */
+@media (max-width: 1024px) {
+    .loginText {
+        font-size: 30px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+    .loginText {
+        font-size: 28px;
+    }
+}
+
+/* For mini mobile phones */
+@media (max-width: 530px) {
+
+    .loginText {
+        font-size: 24px;
+    }
+
+    .loginForm {
+        background-color: transparent;
+        box-shadow: none;
+    }
 }

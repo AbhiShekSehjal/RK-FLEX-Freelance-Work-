@@ -43,7 +43,7 @@ function SelectedColor() {
             <br />
             <br />
 
-           <div className="walls">
+            <div className="walls">
                 {selectedColorWalls && selectedColorWalls.length > 0 ? (
                     selectedColorWalls.map((wall) => (
                         <div className="wallCard" key={wall._id}>
@@ -66,7 +66,7 @@ function SelectedColor() {
                         </div>
                     ))
                 ) : (
-                    <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
+                    <div className="emptyTextForPage">No wallpaper yet, coming soon are wallpapers for {selectedColorType}</div>
                 )}
             </div>
         </>

@@ -66,7 +66,7 @@ function SearchedItems() {
                         </div>
                     ))
                 ) : (
-                    <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
+                    <div className="emptyTextForPage">No wallpaper yet, coming soon are wallpapers for {searchedInput}</div>
                 )}
             </div>
         </>

@@ -144,6 +144,11 @@
 }
 
 @media (max-width: 768px) {
+
+    .zoomOutBox {
+        display: none;
+    }
+
     .productCard {
         flex-direction: column;
         padding: 20px;

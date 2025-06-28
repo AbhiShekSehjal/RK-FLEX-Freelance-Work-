@@ -1,1 +1,0 @@
-                        <div className="emptyTextForPage">No wallpaper yet, coming soon are wallpapers for {selectedColorType}</div>
