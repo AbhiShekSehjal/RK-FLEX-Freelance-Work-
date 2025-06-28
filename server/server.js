@@ -6,7 +6,7 @@ import connectDB from "./lib/db.js";
 import cookieParser from "cookie-parser";
 const port = 9000;
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "https://rk-flex-frontend.onrender.com", credentials: true }));
 
 app.use(cookieParser());
 app.use(express.json());
@@ -19,9 +19,9 @@ import allWallsRoute from "./routes/allWallsRoute.js";
 import authUserRoute from "./routes/authUserRoute.js"
 import orderRoute from "./routes/orderRoute.js";
 
-app.use("/api", allWallsRoute);
-app.use("/api/auth", authUserRoute);
-app.use("/api/order",orderRoute);
+app.use("/", allWallsRoute);
+app.use("/auth", authUserRoute);
+app.use("/order",orderRoute);
 
 
 // 404 Not Found
