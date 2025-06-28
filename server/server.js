@@ -19,7 +19,7 @@ import allWallsRoute from "./routes/allWallsRoute.js";
 import authUserRoute from "./routes/authUserRoute.js"
 import orderRoute from "./routes/orderRoute.js";
 
-app.use("/", allWallsRoute);
+app.use("/api", allWallsRoute);
 app.use("/auth", authUserRoute);
 app.use("/order",orderRoute);
 
