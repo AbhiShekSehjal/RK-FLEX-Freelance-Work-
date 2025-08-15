@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { axiosInstance } from "../../lib/axios.js";
 import { useOrders } from "../../store/useOrders.js";
 
-function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
+function Cart({ className, onClose, refreshTrigger }) {
 
     const { productCard, cartItems, setCartItems } = useWallsStore();
     const { handler } = useOrders();
@@ -37,7 +37,7 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
         onClose();
         productCard(id.id);
         // if (selectedProductCard) {
-            navigate(`/walls/${id.id}`);
+        navigate(`/walls/${id.id}`);
         // }
     }
 
@@ -115,16 +115,18 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
                     &times;
                 </div>
 
-                <button className="bookmarkBtn" onClick={handleRefresh}>
+                {/* <button className="bookmarkBtn" onClick={handleRefresh}>
                     <span className="IconContainer">
                         <div className="svg-wrapper">
                             <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.793 2.293a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414L14.086 7H12.5C8.952 7 6 9.952 6 13.5S8.952 20 12.5 20s6.5-2.952 6.5-6.5a1 1 0 1 1 2 0c0 4.652-3.848 8.5-8.5 8.5S4 18.152 4 13.5 7.848 5 12.5 5h1.586l-1.293-1.293a1 1 0 0 1 0-1.414z" fill="#0D0D0D" /></svg>
                         </div>
                     </span>
-                    <p className="text">Refresh</p>
+                    <span className="text">Refresh</span>
                 </button>
+                {cartItems.length !== 0 &&
+                    <p>Refreah to See new added product</p>
+                } */}
             </div>
-
 
             <div className="selectedProducts">
                 {cartItems.length === 0 ? (
