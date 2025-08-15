@@ -14,7 +14,7 @@ function AllWalls() {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 6;
 
-    const { allWall, allAllWalls, selectByDesign, selectedWallByDesign, productCard, selectedProductCard } = useWallsStore();
+    const { allWall, allAllWalls, selectByDesign, selectedWallByDesign, productCard } = useWallsStore();
 
     useEffect(() => {
         allAllWalls();
@@ -34,9 +34,9 @@ function AllWalls() {
 
     const handleShowProductCard = (id) => {
         productCard(id.id);
-        if (selectedProductCard) {
+        // if (selectedProductCard) {
             navigate(`/walls/${id.id}`);
-        }
+        // }
     }
 
     const handleOnClickAddOnCart = (product) => {

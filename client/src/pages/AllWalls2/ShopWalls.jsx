@@ -8,7 +8,7 @@ function ShopWalls() {
 
     const navigate = useNavigate();
 
-    const { allWall, allAllWalls, selectByDesign, productCard, selectedProductCard } = useWallsStore();
+    const { allWall, allAllWalls, selectByDesign, productCard } = useWallsStore();
 
     useEffect(() => {
         allAllWalls();
@@ -19,9 +19,9 @@ function ShopWalls() {
         productCard(id.id);
         console.log(id.id);
 
-        if (selectedProductCard) {
+        // if (selectedProductCard) {
             navigate(`/walls/${id.id}`);
-        }
+        // }
     }
 
     const handleOnClickAddOnCart = (product) => {

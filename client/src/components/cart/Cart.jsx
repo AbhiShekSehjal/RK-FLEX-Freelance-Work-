@@ -9,7 +9,7 @@ import { useOrders } from "../../store/useOrders.js";
 
 function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
 
-    const { productCard, selectedProductCard, cartItems, setCartItems } = useWallsStore();
+    const { productCard, cartItems, setCartItems } = useWallsStore();
     const { handler } = useOrders();
 
     const navigate = useNavigate();
@@ -36,9 +36,9 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
     const handleShowProductCard2 = (id) => {
         onClose();
         productCard(id.id);
-        if (selectedProductCard) {
+        // if (selectedProductCard) {
             navigate(`/walls/${id.id}`);
-        }
+        // }
     }
 
     const handleRemoveProductFromCart = (product) => {
@@ -84,7 +84,7 @@ function Cart({ className, onClose, handleRefresh, refreshTrigger }) {
                 currency: order.currency,
                 name: "RK Flex",
                 description: "Wallpaper Purchase",
-                image: "https://your-logo-url.png",
+                image: "https://res.cloudinary.com/dtotogjvb/image/upload/v1755250721/Firefly_we_have_a_business_for_designing_walls_with_wallpaper__designing_wallpapers___so_for__3976922-removebg-preview_1_1_cfdioi.png",
                 order_id: order.id,
                 handler: handler, // from zustand
                 prefill: {

@@ -7,13 +7,13 @@ function SelectedColor() {
 
     const navigate = useNavigate();
 
-    const { productCard, selectedProductCard, selectedColorType, selectedColorWalls } = useWallsStore();
+    const { productCard, selectedColorType, selectedColorWalls } = useWallsStore();
 
     const handleShowProductCard = (id) => {
         productCard(id.id);
-        if (selectedProductCard) {
+        // if (selectedProductCard) {
             navigate(`/walls/${id.id}`);
-        }
+        // }
     }
 
     const handleOnClickAddOnCart = (product) => {

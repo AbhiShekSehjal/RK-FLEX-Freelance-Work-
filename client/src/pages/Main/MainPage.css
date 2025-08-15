@@ -66,10 +66,15 @@
     background-color: var(--color-bg-soft);
     box-shadow: var(--shadow-soft);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 7px 14px;
+    padding: 8px 14px;
     font-size: 1rem;
     transition: all 0.3s ease;
     border: none;
+    box-sizing: border-box;
+}
+
+.shopBtn button:hover{
+    transform: translateY(-2px);
 }
 
 .overShade {

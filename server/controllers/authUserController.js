@@ -2,9 +2,6 @@ import User from "../models/userModel.js";
 import bcrypt from "bcrypt";
 import { generateToken } from "../utils/jwt.js";
 
-// @desc   Register a new user
-// @route  POST /api/auth/signup
-// @access Public
 export const signUp = async (req, res) => {
     const { userName, userEmail, userPassword } = req.body;
 
@@ -49,9 +46,6 @@ export const signUp = async (req, res) => {
     }
 };
 
-// @desc   Log in existing user
-// @route  POST /api/auth/login
-// @access Public
 export const logIn = async (req, res) => {
     const { userEmail, userPassword } = req.body;
 
@@ -83,9 +77,6 @@ export const logIn = async (req, res) => {
     }
 };
 
-// @desc   Log out user
-// @route  POST /api/auth/logout
-// @access Private
 export const logOut = (req, res) => {
     try {
         res.clearCookie("jwt", {
@@ -101,14 +92,63 @@ export const logOut = (req, res) => {
     }
 };
 
-// @desc   Check user authentication
-// @route  GET /api/auth/check
-// @access Private (middleware should attach user to req)
 export const checkAuth = (req, res) => {
     try {
         res.status(200).json(req.user);
     } catch (error) {
         console.error("Error in checkAuth:", error);
         res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const updateProfilePic = async (req, res) => {
+    try {
+        const { userId, userProfilePic } = req.body;
+
+        // Validate input
+        if (!userId || !userProfilePic) {
+            return res.status(400).json({ message: "User ID and profile picture URL are required" });
+        }
+
+        // Update user document
+        const user = await User.findByIdAndUpdate(
+            userId,
+            { userProfilePic },
+            { new: true, runValidators: true }
+        );
+
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.status(200).json({ userProfilePic: user.userProfilePic });
+    } catch (error) {
+        console.error("Error updating profile picture:", error);
+        res.status(500).json({ message: "Server error" });
+    }
+}
+
+export const updateAddress = async (req, res) => {
+    try {
+        const { userId, address } = req.body;
+
+        if (!userId || !address) {
+            return res.status(400).json({ message: "User ID and address are required" });
+        }
+
+        const user = await User.findByIdAndUpdate(
+            userId,
+            { address },
+            { new: true, runValidators: true }
+        );
+
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.status(200).json({ address: user.address });
+    } catch (error) {
+        console.error("Error updating address:", error);
+        res.status(500).json({ message: "Server error" });
     }
 };

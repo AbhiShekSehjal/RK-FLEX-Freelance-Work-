@@ -19,6 +19,10 @@ const userSchema = new schema({
     userProfilePic: {
         type: String,
         default: ""
+    },
+    address: {
+        type: String,
+        default: ""
     }
 },
     { timestamps: true }

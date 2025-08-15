@@ -52,6 +52,16 @@
     background-color: var(--color-hover);
 }
 
+.eye-btn {
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
 
 /* For tablets */
 @media (max-width: 1024px) {

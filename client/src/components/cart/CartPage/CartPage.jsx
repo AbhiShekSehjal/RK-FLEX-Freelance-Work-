@@ -66,7 +66,7 @@ function CartPage() {
                 currency: order.currency,
                 name: "RK Flex",
                 description: "Wallpaper Purchase",
-                image: "https://your-logo-url.png",
+                image: "https://res.cloudinary.com/dtotogjvb/image/upload/v1755250721/Firefly_we_have_a_business_for_designing_walls_with_wallpaper__designing_wallpapers___so_for__3976922-removebg-preview_1_1_cfdioi.png",
                 order_id: order.id,
                 handler: handler, // from zustand
                 prefill: {

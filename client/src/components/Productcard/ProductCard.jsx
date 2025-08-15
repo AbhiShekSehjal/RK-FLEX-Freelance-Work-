@@ -1,11 +1,10 @@
-import "./ProductCard.css"
-import { useWallsStore } from "../../store/useAllWallpapers.js"
+import "./ProductCard.css";
+import { useWallsStore } from "../../store/useAllWallpapers.js";
 import { useNavigate } from 'react-router-dom';
 import toast from "react-hot-toast";
 import { useState } from "react";
 
 function ProductCard() {
-
   const navigate = useNavigate();
   const { selectedProductCard, allWall, productCard } = useWallsStore();
 
@@ -15,12 +14,11 @@ function ProductCard() {
     position: "center",
   });
 
-  const handleShowProductCard = (id) => {
-    productCard(id.id);
-    if (selectedProductCard) {
-      navigate(`/walls/${id.id}`);
-    }
-  }
+  const handleShowProductCard = (wall) => {
+    // Call the store function to fetch and set the product
+    productCard(wall._id);
+    navigate(`/walls/${wall._id}`);
+  };
 
   if (!selectedProductCard) {
     return <div className="productCard"><i className="fa-solid fa-spinner fa-spin fa-2xl"></i></div>;
@@ -28,16 +26,16 @@ function ProductCard() {
 
   const handleOnClickAddOnCart = (product) => {
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-    const isAllreadyInCart = existingCart.find(item => item._id == product._id);
+    const isAlreadyInCart = existingCart.find(item => item._id === product._id);
 
-    if (!isAllreadyInCart) {
+    if (!isAlreadyInCart) {
       const updatedCart = [product, ...existingCart];
       localStorage.setItem("cart", JSON.stringify(updatedCart));
       toast.success("Product added to cart");
     } else {
       toast.error("Product already in cart");
     }
-  }
+  };
 
   const handleWhatsappOrder = () => {
     const { wallName, wallPrice, wallColorType, wallDesignType, wallRoomType } = selectedProductCard;
@@ -56,7 +54,7 @@ Please assist me with the order.`;
     const phoneNumber = "917888339203";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
-  }
+  };
 
   return (
     <>
@@ -77,7 +75,6 @@ Please assist me with the order.`;
               position: `${percentX}% ${percentY}%`
             });
           }}
-
         >
           {selectedProductCard.wallImages ? (
             selectedProductCard.wallImages.map((image) => (
@@ -142,7 +139,7 @@ Please assist me with the order.`;
         {allWall && allWall.length > 0 ? (
           allWall.map((wall) => (
             <div className="wallCard" key={wall._id}>
-              <div className="wallImage" onClick={() => handleShowProductCard({ id: wall._id })}>
+              <div className="wallImage" onClick={() => handleShowProductCard(wall)}>
                 <img
                   src={wall.wallImages[0]?.url}
                   alt={wall.wallImages[0]?.altText || "Wallpaper"}
@@ -165,7 +162,7 @@ Please assist me with the order.`;
         )}
       </div>
     </>
-  )
+  );
 }
 
 export default ProductCard;

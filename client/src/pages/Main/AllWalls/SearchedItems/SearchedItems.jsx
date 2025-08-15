@@ -7,13 +7,13 @@ function SearchedItems() {
 
     const navigate = useNavigate();
 
-    const { productCard, selectedProductCard, searchedItemInput, searchedInput } = useWallsStore();
+    const { productCard, searchedItemInput, searchedInput } = useWallsStore();
 
     const handleShowProductCard = (id) => {
         productCard(id.id);
-        if (selectedProductCard) {
+        // if (selectedProductCard) {
             navigate(`/walls/${id.id}`);
-        }
+        // }
     }
 
     const handleOnClickAddOnCart = (product) => {

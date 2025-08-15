@@ -7,13 +7,13 @@ function SelectedRoom() {
 
     const navigate = useNavigate();
 
-    const { productCard, selectedProductCard, selectedRoomType, selectedRoom } = useWallsStore();
+    const { productCard, selectedRoomType, selectedRoom } = useWallsStore();
 
     const handleShowProductCard = (id) => {
         productCard(id.id);
-        if (selectedProductCard) {
+        // if (selectedProductCard) {
             navigate(`/walls/${id.id}`);
-        }
+        // }
     }
 
     const handleOnClickAddOnCart = (product) => {
