@@ -12,7 +12,7 @@
     margin-top: 100px;
     font-size: 2rem;
     letter-spacing: 0.2rem;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .loginForm {
@@ -60,6 +60,11 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+.popupError {
+    color: rgba(255, 0, 0, 0.714);
+    margin: 10px;
 }
 
 
