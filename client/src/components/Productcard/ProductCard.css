@@ -256,11 +256,16 @@
     font-size: 1.2rem;
 }
 
+.haedingTextforShopWallsPage{
+    padding: 0 10px;
+}
+
 
 /* Responsive */
 @media (max-width: 1024px) {
     .productCard {
         padding: 30px 40px;
+        margin-top: 10px;
     }
 
     .rightSideCardWallName {
