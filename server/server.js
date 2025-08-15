@@ -6,7 +6,11 @@ import connectDB from "./lib/db.js";
 import cookieParser from "cookie-parser";
 const port = 9000;
 
-app.use(cors({ origin: "https://rk-flex-freelance-work.vercel.app", credentials: true }));
+app.use(cors({
+    origin: ["https://rk-flex-freelance-work.vercel.app", "https://rk-flex-frontend.onrender.com"],
+    credentials: true
+}));
+
 
 app.use(cookieParser());
 app.use(express.json());

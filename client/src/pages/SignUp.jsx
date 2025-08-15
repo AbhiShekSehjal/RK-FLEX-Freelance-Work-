@@ -35,9 +35,11 @@ function SignUp() {
             await signUp(formData);
             setErrorMsg("");
         } catch (error) {
-            setErrorMsg(error?.response?.data?.message || "Sign up failed. Please try again.");
+            setErrorMsg(error?.response?.data?.message || `Sign up failed. Please try again.`);
         }
     };
+
+    // <p style={{color:'red'}}>Sign up failed. Please try again.<p/>
 
     return (
         <div className="signUpPage">
