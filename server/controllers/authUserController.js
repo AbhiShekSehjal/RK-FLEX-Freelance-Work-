@@ -1,22 +1,26 @@
-import User from "../models/userModel.js"
+import User from "../models/userModel.js";
 import bcrypt from "bcrypt";
 import { generateToken } from "../utils/jwt.js";
 
+// @desc   Register a new user
+// @route  POST /api/auth/signup
+// @access Public
 export const signUp = async (req, res) => {
     const { userName, userEmail, userPassword } = req.body;
+
     try {
         if (!userName || !userEmail || !userPassword) {
             return res.status(400).json({ message: "All fields are required" });
         }
 
         if (userPassword.length < 6) {
-            return res.status(400).json({ message: "Password must be at least 6 characters" });
+            return res.status(400).json({ message: "Password must be at least 6 characters long" });
         }
 
-        const user = await User.findOne({ userEmail });
+        const existingUser = await User.findOne({ userEmail });
 
-        if (user) {
-            return res.status(400).json({ message: "Email already exists" })
+        if (existingUser) {
+            return res.status(400).json({ message: "Email already exists" });
         }
 
         const salt = await bcrypt.genSalt(10);
@@ -28,42 +32,40 @@ export const signUp = async (req, res) => {
             userPassword: hashedPassword,
         });
 
-        if (newUser) {
-            generateToken(newUser._id, res);
-            await newUser.save();
+        await newUser.save();
 
-            res.status(201).json({
-                userName: newUser.userName,
-                userEmail: newUser.userEmail,
-                userPassword: newUser.userPassword,
-                userProfilePic: newUser.userProfilePic
-            });
-        } else {
-            res.status(400).json({ message: "Invalid user data" })
-        }
+        generateToken(newUser._id, res);
+
+        res.status(201).json({
+            _id: newUser._id,
+            userName: newUser.userName,
+            userEmail: newUser.userEmail,
+            userProfilePic: newUser.userProfilePic,
+        });
 
     } catch (error) {
-        console.log("Error happened in signUp at authUserController : ", error);
+        console.error("Error in signUp:", error);
         res.status(500).json({ message: "Internal server error" });
     }
 };
 
+// @desc   Log in existing user
+// @route  POST /api/auth/login
+// @access Public
 export const logIn = async (req, res) => {
-
     const { userEmail, userPassword } = req.body;
 
     try {
-
         const user = await User.findOne({ userEmail });
 
         if (!user) {
-            return res.status(400).json({ message: "Invaild credentials" });
-        };
+            return res.status(400).json({ message: "Invalid credentials" });
+        }
 
-        const isCorrectPassword = await bcrypt.compare(userPassword, user.userPassword);
+        const isMatch = await bcrypt.compare(userPassword, user.userPassword);
 
-        if (!isCorrectPassword) {
-            return res.status(400).json({ message: "Invaild credentials" });
+        if (!isMatch) {
+            return res.status(400).json({ message: "Invalid credentials" });
         }
 
         generateToken(user._id, res);
@@ -76,37 +78,37 @@ export const logIn = async (req, res) => {
         });
 
     } catch (error) {
-        console.log("Error happened in logIn at authUserController : ", error);
+        console.error("Error in logIn:", error);
         res.status(500).json({ message: "Internal server error" });
     }
 };
 
+// @desc   Log out user
+// @route  POST /api/auth/logout
+// @access Private
 export const logOut = (req, res) => {
     try {
-        res.cookie("jwt", "", { maxAge: 0 });
-       
-        res.status(200).json({ message: "Logout successfully" })
+        res.clearCookie("jwt", {
+            httpOnly: true,
+            secure: true,
+            sameSite: "Strict",
+        });
+
+        res.status(200).json({ message: "Logout successful" });
     } catch (error) {
-        console.log("Error happened in logOut at authUserController : ", error);
+        console.error("Error in logOut:", error);
         res.status(500).json({ message: "Internal server error" });
     }
 };
 
+// @desc   Check user authentication
+// @route  GET /api/auth/check
+// @access Private (middleware should attach user to req)
 export const checkAuth = (req, res) => {
     try {
         res.status(200).json(req.user);
     } catch (error) {
-        console.log("Error happened in checkAuth at authUserController : ", error);
+        console.error("Error in checkAuth:", error);
         res.status(500).json({ message: "Internal server error" });
     }
-
-}
-
-
-
-
- // res.clearCookie("Token", {
-        //     httpOnly: true,
-        //     secure: true,
-        //     sameSite: "Strict",
-        // })
+};

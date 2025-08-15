@@ -6,7 +6,7 @@ import connectDB from "./lib/db.js";
 import cookieParser from "cookie-parser";
 const port = 9000;
 
-app.use(cors({ origin: "https://rk-flex-frontend.onrender.com", credentials: true }));
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
 app.use(cookieParser());
 app.use(express.json());

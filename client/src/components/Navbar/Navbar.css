@@ -229,6 +229,7 @@
     .nav-links {
         display: none;
     }
+
     .authUserSection {
         display: none;
     }
@@ -253,7 +254,7 @@
         font-size: 26px;
     }
 
-    
+
 }
 
 /* For mini mobile phones */

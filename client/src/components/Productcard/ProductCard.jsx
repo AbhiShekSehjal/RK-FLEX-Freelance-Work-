@@ -118,7 +118,7 @@ Please assist me with the order.`;
             or
             <button className='orderOnWhatsapp' onClick={handleWhatsappOrder}>
               <img
-                src="https://res.cloudinary.com/dtotogjvb/image/upload/v1749883648/whatsapp_k92ryi.png"
+                src="https://res.cloudinary.com/dtotogjvb/image/upload/v1753626440/whatsapp-logo-png-2263_ffxi2d.png"
                 alt="whatsapp_logo"
               />
               <p>Order on Whatsapp</p>
