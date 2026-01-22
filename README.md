@@ -70,20 +70,27 @@ JavaScript (ES6+)
 
 --------------------------------------------------
 
+## 📁 3️⃣ Project Structure (Readable & Clean)
+
+```md
 ## 📁 Project Structure
 
+```plaintext
 RK-FLEX-Freelance-Work/
-├── public/
-│   └── index.html
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── App.js
-│   └── index.js
-├── .gitignore
+├── client/
+│   ├── public/
+│   └── src/
+│       ├── assets/
+│       ├── components/
+│       ├── pages/
+│       ├── App.js
+│       └── index.js
+├── server/
 ├── package.json
+├── package-lock.json
 └── README.md
+
+```
 
 --------------------------------------------------
 
