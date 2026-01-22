@@ -9,8 +9,16 @@ This project was built to improve frontend skills and demonstrate real-world web
 
 ## 📸 Screenshots
 
-![Homepage](images/homepage.png)
-![Mobile View](images/mobile-view.png)
+### Desktop View
+<p align="center">
+  <img src="screenshots/desktop.png" width="800" />
+</p>
+
+### Mobile View
+<p align="center">
+  <img src="screenshots/mobile.png" width="350" />
+</p>
+
 
 --------------------------------------------------
 
