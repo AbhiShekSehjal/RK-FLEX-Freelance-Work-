@@ -1,4 +1,4 @@
-🚀 About the Project
+## 🚀 About the Project
 
 RK FLEX is a clean, modern, and fully responsive business website designed for a flex-printing service.
 It aims to present business information clearly and professionally to visitors on all devices.
@@ -11,18 +11,18 @@ This project was built to improve frontend skills and demonstrate real-world web
 
 ### Desktop View
 <p align="center">
-  <img src="project-pdf.pdf" width="800" />
+  <img src="screenshots/desktop.png" width="800" />
 </p>
 
 ### Mobile View
 <p align="center">
-  <img src="rk-flex-frontend.onrender.com_(iPhone SE).png" width="350" />
+  <img src="screenshots/mobile.png" width="350" />
 </p>
 
 
 --------------------------------------------------
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 Follow the steps below to set up and run the project locally on your machine.
 
@@ -38,12 +38,12 @@ npm install
 4️⃣ Start the development server
 npm start
 
---------------------------------------------------
-
 Once the server starts, the application will be available at:
 👉 http://localhost:3000/
 
-🛠 Tech Stack
+--------------------------------------------------
+
+## 🛠 Tech Stack
 
 React – UI Library
 
@@ -55,7 +55,7 @@ JavaScript (ES6+)
 
 --------------------------------------------------
 
-🔍 Features
+## 🔍 Features
 
 ✅ Fully responsive layout (mobile, tablet, desktop)
 ✅ Smooth user interface & navigation
@@ -64,7 +64,7 @@ JavaScript (ES6+)
 
 --------------------------------------------------
 
-📁 Project Structure
+## 📁 Project Structure
 
 RK-FLEX-Freelance-Work/
 ├── public/
@@ -81,7 +81,7 @@ RK-FLEX-Freelance-Work/
 
 --------------------------------------------------
 
-📌 Why I Built This
+## 📌 Why I Built This
 
 I created this project to:
 
@@ -93,15 +93,15 @@ Build a real business-style landing page for my portfolio
 
 --------------------------------------------------
 
-📣 Feedback & Contributions
+## 📣 Feedback & Contributions
 
 Your feedback means a lot!
 Feel free to open issues or send suggestions ⭐
 
 --------------------------------------------------
 
-🙌 Connect with Me
+## 🙌 Connect with Me
 
-👍 LinkedIn: https://www.linkedin.com/in/AbhiShekSehjal
+👍 LinkedIn: https://www.linkedin.com/in/abhishek-sehjal-4a78a5353/
 
-📧 Email: your-email@example.com
+📧 Email: shek54112@gmail.com
