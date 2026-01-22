@@ -11,7 +11,7 @@ This project was built to improve frontend skills and demonstrate real-world web
 
 ### Desktop View
 <p align="center">
-  <img src="screenshots/desktop.png" width="800" />
+  <img src="screenshots/project-pdf.pdf" width="800" />
 </p>
 
 ### Mobile View
