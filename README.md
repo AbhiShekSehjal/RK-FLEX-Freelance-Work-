@@ -73,9 +73,6 @@ JavaScript (ES6+)
 ## 📁 3️⃣ Project Structure (Readable & Clean)
 
 ```md
-## 📁 Project Structure
-
-```plaintext
 RK-FLEX-Freelance-Work/
 ├── client/
 │   ├── public/
