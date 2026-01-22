@@ -11,12 +11,12 @@ This project was built to improve frontend skills and demonstrate real-world web
 
 ### Desktop View
 <p align="center">
-  <img src="screenshots/desktop.png" width="800" />
+  <img src="project-pdf.pdf" width="800" />
 </p>
 
 ### Mobile View
 <p align="center">
-  <img src="screenshots/mobile.png" width="350" />
+  <img src="rk-flex-frontend.onrender.com_(iPhone SE).png" width="350" />
 </p>
 
 
