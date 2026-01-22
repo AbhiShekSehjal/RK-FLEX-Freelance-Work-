@@ -24,21 +24,27 @@ This project was built to improve frontend skills and demonstrate real-world web
 
 ## 🚀 Getting Started
 
-Follow the steps below to set up and run the project locally on your machine.
+Follow the steps below to set up and run the project locally.
 
-1️⃣ Clone the repository
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
 git clone https://github.com/AbhiShekSehjal/RK-FLEX-Freelance-Work-.git
 
-2️⃣ Navigate to the project directory
 cd RK-FLEX-Freelance-Work-
 
-3️⃣ Install dependencies
 npm install
 
-4️⃣ Start the development server
 npm start
 
-Once the server starts, the application will be available at:
+```
+
+The application will run at:
 👉 http://localhost:3000/
 
 --------------------------------------------------
